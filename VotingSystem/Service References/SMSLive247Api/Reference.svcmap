@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6f990d99-e6c2-49b2-88a1-33436df7ac53" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://www.smslive247.com/api/webservice/smssiteadmin.asmx" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SMSSiteAdmin.wsdl" MetadataType="Wsdl" ID="e42e3300-6aea-492b-8112-609d100477ee" SourceId="1" SourceUrl="http://www.smslive247.com/api/webservice/smssiteadmin.asmx" />
+    <MetadataFile FileName="smssiteadmin1.wsdl" MetadataType="Wsdl" ID="f539e5b9-f887-485a-b91c-9e0fcead6e88" SourceId="1" SourceUrl="http://www.smslive247.com/api/webservice/smssiteadmin.asmx?wsdl=wsdl0" />
+    <MetadataFile FileName="smssiteadmin.xsd" MetadataType="Schema" ID="502128d3-8ec1-4a20-bcab-e9c42dca140a" SourceId="1" SourceUrl="http://www.smslive247.com/api/webservice/smssiteadmin.asmx?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
