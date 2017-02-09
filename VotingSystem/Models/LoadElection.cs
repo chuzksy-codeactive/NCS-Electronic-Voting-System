@@ -32,7 +32,6 @@ namespace VotingSystem.Models
                                 Gender = dr["Gender"].ToString(),
                                 Manifesto = dr["Manifesto"].ToString(),
                                 Phonenumber = dr["PhoneNumber"].ToString(),
-                                Fullname = dr["Firstname"] +@" " +dr["Lastname"],
                                 Img = (byte[])dr["picImage"], 
                                 Post = dr["Post"].ToString()
                             });

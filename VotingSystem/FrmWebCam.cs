@@ -6,7 +6,7 @@ using AForge.Video.DirectShow;
 
 namespace VotingSystem
 {
-    public partial class FrmWebCam : Form
+    public partial class FrmWebCam : MetroFramework.Forms.MetroForm
     {
         public FrmWebCam()
         {

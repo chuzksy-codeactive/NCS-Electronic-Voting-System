@@ -8,7 +8,7 @@ using VotingSystem.Models;
 
 namespace VotingSystem
 {
-    public partial class FrmAddNewElection : Form
+    public partial class FrmAddNewElection : MetroFramework.Forms.MetroForm
     {
         private SqlConnection cnn;
         private SqlCommand cmd;
@@ -35,80 +35,22 @@ namespace VotingSystem
                 {
                     using (dr = cmd.ExecuteReader())
                     {
-                        if (dr.Read())
+                        while (dr.Read())
                         {
-                            while (dr.Read())
+                            var lst = new ListViewItem
                             {
-                                var lst = new ListViewItem
-                                {
-                                    ImageIndex = 0,
-                                    Text = dr["ElectionId"].ToString()
-                                };
-                                lst.SubItems.Add(dr["ElectionPost"].ToString());
-                                lst.SubItems.Add((dr["NoOfCandidates"]).ToString());
-                                lst.SubItems.Add(Convert.ToDateTime(dr["StartDate"].ToString()).ToShortDateString());
-                                lst.SubItems.Add(Convert.ToDateTime(dr["EndDate"].ToString()).ToShortDateString());
-                                lstViewElection.Items.Add(lst);
-                            }
+                                ImageIndex = 0,
+                                Text = dr["ElectionId"].ToString()
+                            };
+                            lst.SubItems.Add(dr["ElectionPost"].ToString());
+                            lst.SubItems.Add((dr["NoOfCandidates"]).ToString());
+                            lst.SubItems.Add(Convert.ToDateTime(dr["StartDate"].ToString()).ToShortDateString());
+                            lst.SubItems.Add(Convert.ToDateTime(dr["EndDate"].ToString()).ToShortDateString());
+                            lstViewElection.Items.Add(lst);
                         }
                     } 
                 }
             }
-        }
-
-        private void dtStartDate_ValueChanged(object sender, EventArgs e)
-        {
-            StartDate = dtStartDate.Value;
-        }
-
-        private void dtEndDate_ValueChanged(object sender, EventArgs e)
-        {
-            EndDate = dtEndDate.Value;
-            int result = DateTime.Compare(EndDate, StartDate);
-            if (result < 0)
-            {
-                errProvider.SetError(dtEndDate, "Election end date should be greater than start date");
-            }
-            else
-            {
-                errProvider.SetError(dtEndDate, "");
-            }
-        }
-
-        private void btnSubmit_Click(object sender, EventArgs e)
-        {
-            StartDate = dtStartDate.Value;
-            EndDate = dtEndDate.Value;
-            int result = DateTime.Compare(EndDate, StartDate);
-            if (result < 0)
-            {
-                errProvider.SetError(dtEndDate, "Election end date should be greater than start date");
-            }
-            else
-            {
-                errProvider.SetError(dtEndDate, "");
-                var election = new Election
-                {
-                    ElectionId = txtElectionId.Text.Trim().ToUpper(),
-                    Post = txtElectionPost.Text.Trim().ToUpper(),
-                    NoOfCandidates = Convert.ToInt32(cmbNoOfCandidates.Text),
-                    StartDate = dtStartDate.Value,
-                    EndDate = dtEndDate.Value
-                };
-                if (AddNewElection.Read(txtElectionId.Text) > 0)
-                {
-                    var newElection = AddNewElection.NewElection(election);
-                    MessageBox.Show(newElection > 0 ? @"Successfully add a new election" : @"Error adding a new election",
-                        @"eVoting System"); 
-                }
-                else
-                {
-                    MessageBox.Show(@"Duplicate election Id is not allowed", @"eVoting System");;
-                }
-            }
-            lstViewElection.Items.Clear();
-            cmbNoOfCandidates.SelectedIndex = -1;
-            btnView_Click(null, null);
         }
 
         private void lstViewElection_SelectedIndexChanged(object sender, EventArgs e)
@@ -151,34 +93,22 @@ namespace VotingSystem
                 {
                     using (dr = cmd.ExecuteReader())
                     {
-                        if (dr.Read())
+                        while (dr.Read())
                         {
-                            while (dr.Read())
+                            var lst = new ListViewItem
                             {
-                                var lst = new ListViewItem
-                                {
-                                    ImageIndex = 0,
-                                    Text = dr["ElectionId"].ToString()
-                                };
-                                lst.SubItems.Add(dr["ElectionPost"].ToString());
-                                lst.SubItems.Add((dr["NoOfCandidates"]).ToString());
-                                lst.SubItems.Add(Convert.ToDateTime(dr["StartDate"].ToString()).ToShortDateString());
-                                lst.SubItems.Add(Convert.ToDateTime(dr["EndDate"].ToString()).ToShortDateString());
-                                lstViewElection.Items.Add(lst);
-                            }
+                                ImageIndex = 0,
+                                Text = dr["ElectionId"].ToString()
+                            };
+                            lst.SubItems.Add(dr["ElectionPost"].ToString());
+                            lst.SubItems.Add((dr["NoOfCandidates"]).ToString());
+                            lst.SubItems.Add(Convert.ToDateTime(dr["StartDate"].ToString()).ToShortDateString());
+                            lst.SubItems.Add(Convert.ToDateTime(dr["EndDate"].ToString()).ToShortDateString());
+                            lstViewElection.Items.Add(lst);
                         }
                     }
                 }
             }
-        }
-
-        private void btnNew_Click(object sender, EventArgs e)
-        {
-            txtElectionId.Clear();
-            txtElectionPost.Clear();
-            btnDelete.Enabled = false;
-            btnUpdate.Enabled = false;
-            btnSubmit.Enabled = true;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -227,9 +157,73 @@ namespace VotingSystem
             }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnCancel_Click_1(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnSubmit_Click_1(object sender, EventArgs e)
+        {
+            StartDate = dtStartDate.Value;
+            EndDate = dtEndDate.Value;
+            int result = DateTime.Compare(EndDate, StartDate);
+            if (result < 0)
+            {
+                errProvider.SetError(dtEndDate, "Election end date should be greater than start date");
+            }
+            else
+            {
+                errProvider.SetError(dtEndDate, "");
+                var election = new Election
+                {
+                    ElectionId = txtElectionId.Text.Trim().ToUpper(),
+                    Post = txtElectionPost.Text.Trim().ToUpper(),
+                    NoOfCandidates = Convert.ToInt32(cmbNoOfCandidates.Text),
+                    StartDate = dtStartDate.Value,
+                    EndDate = dtEndDate.Value
+                };
+                if (AddNewElection.Read(txtElectionId.Text) > 0)
+                {
+                    var newElection = AddNewElection.NewElection(election);
+                    MessageBox.Show(newElection > 0 ? @"Successfully add a new election" : @"Error adding a new election",
+                        @"eVoting System");
+                }
+                else
+                {
+                    MessageBox.Show(@"Duplicate election Id is not allowed", @"eVoting System"); ;
+                }
+            }
+            lstViewElection.Items.Clear();
+            cmbNoOfCandidates.SelectedIndex = -1;
+            btnView_Click(null, null);
+        }
+
+        private void btnNew_Click_1(object sender, EventArgs e)
+        {
+            txtElectionId.Clear();
+            txtElectionPost.Clear();
+            btnDelete.Enabled = false;
+            btnUpdate.Enabled = false;
+            btnSubmit.Enabled = true;
+        }
+
+        private void dtStartDate_ValueChanged_1(object sender, EventArgs e)
+        {
+            StartDate = dtStartDate.Value;
+        }
+
+        private void dtEndDate_ValueChanged_1(object sender, EventArgs e)
+        {
+            EndDate = dtEndDate.Value;
+            int result = DateTime.Compare(EndDate, StartDate);
+            if (result < 0)
+            {
+                errProvider.SetError(dtEndDate, "Election end date should be greater than start date");
+            }
+            else
+            {
+                errProvider.SetError(dtEndDate, "");
+            }
         }
     }
 }

@@ -28,178 +28,183 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblPost = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblManifesto = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblPhonenumber = new System.Windows.Forms.Label();
-            this.lblFullname = new System.Windows.Forms.Label();
-            this.lblCandidatePin = new System.Windows.Forms.Label();
             this.picImage = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.profileTab = new MetroFramework.Controls.MetroTabControl();
+            this.positionTab = new MetroFramework.Controls.MetroTabPage();
+            this.lblManifesto = new MetroFramework.Controls.MetroLabel();
+            this.lblEmail = new MetroFramework.Controls.MetroLabel();
+            this.lblPhonenumber = new MetroFramework.Controls.MetroLabel();
+            this.lblFullname = new MetroFramework.Controls.MetroLabel();
+            this.lblCandidatePin = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.btnClose = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
+            this.profileTab.SuspendLayout();
+            this.positionTab.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblPost
-            // 
-            this.lblPost.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblPost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblPost.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPost.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblPost.Location = new System.Drawing.Point(23, 34);
-            this.lblPost.Name = "lblPost";
-            this.lblPost.Size = new System.Drawing.Size(405, 34);
-            this.lblPost.TabIndex = 5;
-            this.lblPost.Text = "Post";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.lblManifesto);
-            this.panel1.Controls.Add(this.lblEmail);
-            this.panel1.Controls.Add(this.lblPhonenumber);
-            this.panel1.Controls.Add(this.lblFullname);
-            this.panel1.Controls.Add(this.lblCandidatePin);
-            this.panel1.Controls.Add(this.picImage);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(26, 81);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(402, 248);
-            this.panel1.TabIndex = 6;
-            // 
-            // lblManifesto
-            // 
-            this.lblManifesto.Location = new System.Drawing.Point(109, 149);
-            this.lblManifesto.Name = "lblManifesto";
-            this.lblManifesto.Size = new System.Drawing.Size(280, 87);
-            this.lblManifesto.TabIndex = 20;
-            this.lblManifesto.Text = "label6";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(109, 117);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(35, 13);
-            this.lblEmail.TabIndex = 19;
-            this.lblEmail.Text = "label6";
-            // 
-            // lblPhonenumber
-            // 
-            this.lblPhonenumber.AutoSize = true;
-            this.lblPhonenumber.Location = new System.Drawing.Point(109, 85);
-            this.lblPhonenumber.Name = "lblPhonenumber";
-            this.lblPhonenumber.Size = new System.Drawing.Size(35, 13);
-            this.lblPhonenumber.TabIndex = 18;
-            this.lblPhonenumber.Text = "label6";
-            // 
-            // lblFullname
-            // 
-            this.lblFullname.AutoSize = true;
-            this.lblFullname.Location = new System.Drawing.Point(109, 53);
-            this.lblFullname.Name = "lblFullname";
-            this.lblFullname.Size = new System.Drawing.Size(35, 13);
-            this.lblFullname.TabIndex = 16;
-            this.lblFullname.Text = "label6";
-            // 
-            // lblCandidatePin
-            // 
-            this.lblCandidatePin.AutoSize = true;
-            this.lblCandidatePin.Location = new System.Drawing.Point(109, 21);
-            this.lblCandidatePin.Name = "lblCandidatePin";
-            this.lblCandidatePin.Size = new System.Drawing.Size(35, 13);
-            this.lblCandidatePin.TabIndex = 15;
-            this.lblCandidatePin.Text = "label6";
             // 
             // picImage
             // 
             this.picImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picImage.Location = new System.Drawing.Point(306, 21);
+            this.picImage.Location = new System.Drawing.Point(345, 7);
             this.picImage.Name = "picImage";
             this.picImage.Size = new System.Drawing.Size(83, 102);
             this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picImage.TabIndex = 14;
             this.picImage.TabStop = false;
             // 
-            // label7
+            // profileTab
             // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label7.Location = new System.Drawing.Point(46, 149);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 13);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Manifesto:";
+            this.profileTab.Controls.Add(this.positionTab);
+            this.profileTab.FontSize = MetroFramework.MetroTabControlSize.Tall;
+            this.profileTab.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
+            this.profileTab.Location = new System.Drawing.Point(24, 31);
+            this.profileTab.Name = "profileTab";
+            this.profileTab.SelectedIndex = 0;
+            this.profileTab.Size = new System.Drawing.Size(449, 295);
+            this.profileTab.TabIndex = 8;
+            this.profileTab.UseSelectable = true;
             // 
-            // label5
+            // positionTab
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label5.Location = new System.Drawing.Point(26, 117);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Email Address:";
+            this.positionTab.Controls.Add(this.picImage);
+            this.positionTab.Controls.Add(this.lblManifesto);
+            this.positionTab.Controls.Add(this.lblEmail);
+            this.positionTab.Controls.Add(this.lblPhonenumber);
+            this.positionTab.Controls.Add(this.lblFullname);
+            this.positionTab.Controls.Add(this.lblCandidatePin);
+            this.positionTab.Controls.Add(this.metroLabel5);
+            this.positionTab.Controls.Add(this.metroLabel4);
+            this.positionTab.Controls.Add(this.metroLabel3);
+            this.positionTab.Controls.Add(this.metroLabel2);
+            this.positionTab.Controls.Add(this.metroLabel1);
+            this.positionTab.HorizontalScrollbarBarColor = true;
+            this.positionTab.HorizontalScrollbarHighlightOnWheel = false;
+            this.positionTab.HorizontalScrollbarSize = 10;
+            this.positionTab.Location = new System.Drawing.Point(4, 38);
+            this.positionTab.Name = "positionTab";
+            this.positionTab.Size = new System.Drawing.Size(441, 253);
+            this.positionTab.TabIndex = 0;
+            this.positionTab.Text = "position";
+            this.positionTab.VerticalScrollbarBarColor = true;
+            this.positionTab.VerticalScrollbarHighlightOnWheel = false;
+            this.positionTab.VerticalScrollbarSize = 10;
             // 
-            // label4
+            // lblManifesto
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label4.Location = new System.Drawing.Point(23, 85);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 13);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Phonenumber: ";
+            this.lblManifesto.Location = new System.Drawing.Point(145, 155);
+            this.lblManifesto.Name = "lblManifesto";
+            this.lblManifesto.Size = new System.Drawing.Size(283, 87);
+            this.lblManifesto.TabIndex = 11;
+            this.lblManifesto.Text = "Candidate Pin:";
             // 
-            // label2
+            // lblEmail
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label2.Location = new System.Drawing.Point(13, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Candidate Name:";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(145, 122);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(94, 19);
+            this.lblEmail.TabIndex = 10;
+            this.lblEmail.Text = "Candidate Pin:";
             // 
-            // label1
+            // lblPhonenumber
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(26, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Candidate Pin:";
+            this.lblPhonenumber.AutoSize = true;
+            this.lblPhonenumber.Location = new System.Drawing.Point(145, 89);
+            this.lblPhonenumber.Name = "lblPhonenumber";
+            this.lblPhonenumber.Size = new System.Drawing.Size(94, 19);
+            this.lblPhonenumber.TabIndex = 9;
+            this.lblPhonenumber.Text = "Candidate Pin:";
+            // 
+            // lblFullname
+            // 
+            this.lblFullname.AutoSize = true;
+            this.lblFullname.Location = new System.Drawing.Point(145, 57);
+            this.lblFullname.Name = "lblFullname";
+            this.lblFullname.Size = new System.Drawing.Size(94, 19);
+            this.lblFullname.TabIndex = 8;
+            this.lblFullname.Text = "Candidate Pin:";
+            // 
+            // lblCandidatePin
+            // 
+            this.lblCandidatePin.AutoSize = true;
+            this.lblCandidatePin.Location = new System.Drawing.Point(145, 23);
+            this.lblCandidatePin.Name = "lblCandidatePin";
+            this.lblCandidatePin.Size = new System.Drawing.Size(94, 19);
+            this.lblCandidatePin.TabIndex = 7;
+            this.lblCandidatePin.Text = "Candidate Pin:";
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel5.Location = new System.Drawing.Point(55, 156);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(79, 19);
+            this.metroLabel5.TabIndex = 6;
+            this.metroLabel5.Text = "Manifesto:";
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel4.Location = new System.Drawing.Point(29, 123);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(107, 19);
+            this.metroLabel4.TabIndex = 5;
+            this.metroLabel4.Text = "Email Address:";
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel3.Location = new System.Drawing.Point(28, 90);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(108, 19);
+            this.metroLabel3.TabIndex = 4;
+            this.metroLabel3.Text = "Phonenumber:";
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel2.Location = new System.Drawing.Point(12, 57);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(125, 19);
+            this.metroLabel2.TabIndex = 3;
+            this.metroLabel2.Text = "Candidate Name:";
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel1.Location = new System.Drawing.Point(30, 24);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(106, 19);
+            this.metroLabel1.TabIndex = 2;
+            this.metroLabel1.Text = "Candidate Pin:";
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(353, 345);
+            this.btnClose.Location = new System.Drawing.Point(398, 346);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 7;
+            this.btnClose.TabIndex = 9;
             this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.UseSelectable = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // FrmCandidateProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(467, 395);
+            this.ClientSize = new System.Drawing.Size(499, 395);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lblPost);
+            this.Controls.Add(this.profileTab);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -207,28 +212,28 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Candidate Profile";
             this.Load += new System.EventHandler(this.FrmCandidateProfile_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
+            this.profileTab.ResumeLayout(false);
+            this.positionTab.ResumeLayout(false);
+            this.positionTab.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblPost;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox picImage;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblManifesto;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblPhonenumber;
-        private System.Windows.Forms.Label lblFullname;
-        private System.Windows.Forms.Label lblCandidatePin;
-        private System.Windows.Forms.Button btnClose;
+        private MetroFramework.Controls.MetroTabControl profileTab;
+        private MetroFramework.Controls.MetroTabPage positionTab;
+        private MetroFramework.Controls.MetroLabel lblManifesto;
+        private MetroFramework.Controls.MetroLabel lblEmail;
+        private MetroFramework.Controls.MetroLabel lblPhonenumber;
+        private MetroFramework.Controls.MetroLabel lblFullname;
+        private MetroFramework.Controls.MetroLabel lblCandidatePin;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroButton btnClose;
     }
 }

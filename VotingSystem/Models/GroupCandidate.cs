@@ -51,7 +51,8 @@ namespace VotingSystem.Models
                             candidateList.Add(new Candidate()
                             {
                                 CandidatePin = dr["CandidatePin"].ToString(),
-                                Fullname = dr["Firstname"] +" " +dr["Lastname"],
+                                Firstname = dr["Firstname"].ToString(),
+                                Lastname = dr["Lastname"].ToString(),
                                 Gender = dr["Gender"].ToString(),
                                 Email = dr["Email"].ToString(),
                                 Post = dr["Post"].ToString()

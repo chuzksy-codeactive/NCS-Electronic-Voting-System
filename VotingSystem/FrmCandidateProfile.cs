@@ -18,7 +18,7 @@ namespace VotingSystem
         {
             var candidates = Candidates;
 
-            lblPost.Text = candidates[0].Post;
+            positionTab.Text = candidates[0].Post;
             lblCandidatePin.Text = candidates[0].CandidatePin;
             lblFullname.Text = candidates[0].Firstname + @" " + candidates[0].Lastname;
             lblPhonenumber.Text = candidates[0].Phonenumber;

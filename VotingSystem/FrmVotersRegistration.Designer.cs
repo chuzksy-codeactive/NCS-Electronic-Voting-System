@@ -28,579 +28,704 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.picImage = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.txtSearch = new MetroFramework.Controls.MetroTextBox();
+            this.btnSearch = new MetroFramework.Controls.MetroButton();
+            this.tbRegistration = new MetroFramework.Controls.MetroTabControl();
+            this.tbVoterInfo = new MetroFramework.Controls.MetroTabPage();
+            this.panel2 = new MetroFramework.Controls.MetroPanel();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.cmbDeviceName = new MetroFramework.Controls.MetroComboBox();
+            this.pnlBiometric = new MetroFramework.Controls.MetroPanel();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.btnRegister = new MetroFramework.Controls.MetroButton();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.btnCaptureR3 = new MetroFramework.Controls.MetroButton();
+            this.btnCaptureR2 = new MetroFramework.Controls.MetroButton();
+            this.btnCaptureR1 = new MetroFramework.Controls.MetroButton();
+            this.pgbR3 = new MetroFramework.Controls.MetroProgressBar();
+            this.pgbR2 = new MetroFramework.Controls.MetroProgressBar();
+            this.pgbR1 = new MetroFramework.Controls.MetroProgressBar();
+            this.imgR1 = new System.Windows.Forms.PictureBox();
+            this.imgR2 = new System.Windows.Forms.PictureBox();
+            this.imgR3 = new System.Windows.Forms.PictureBox();
+            this.btnUpload = new MetroFramework.Controls.MetroButton();
+            this.btnWebCam = new MetroFramework.Controls.MetroButton();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.txtPhoneNumber = new MetroFramework.Controls.MetroTextBox();
+            this.txtEmail = new MetroFramework.Controls.MetroTextBox();
+            this.cmbGender = new MetroFramework.Controls.MetroComboBox();
+            this.txtLastname = new MetroFramework.Controls.MetroTextBox();
+            this.txtFirstname = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.btnNew = new MetroFramework.Controls.MetroButton();
+            this.btnSubmit = new MetroFramework.Controls.MetroButton();
+            this.btnUpdate = new MetroFramework.Controls.MetroButton();
+            this.btnDelete = new MetroFramework.Controls.MetroButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statusBar = new System.Windows.Forms.ToolStripStatusLabel();
-            this.btnRegister = new System.Windows.Forms.Button();
-            this.pnlBiometric = new System.Windows.Forms.Panel();
-            this.pgbR3 = new System.Windows.Forms.ProgressBar();
-            this.btnCaptureR3 = new System.Windows.Forms.Button();
-            this.pgbR2 = new System.Windows.Forms.ProgressBar();
-            this.btnCaptureR2 = new System.Windows.Forms.Button();
-            this.pgbR1 = new System.Windows.Forms.ProgressBar();
-            this.btnCaptureR1 = new System.Windows.Forms.Button();
-            this.imgR3 = new System.Windows.Forms.PictureBox();
-            this.imgR2 = new System.Windows.Forms.PictureBox();
-            this.imgR1 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnEnum = new System.Windows.Forms.Button();
-            this.btnInit = new System.Windows.Forms.Button();
-            this.cmbDeviceName = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtFirstname = new System.Windows.Forms.TextBox();
-            this.txtLastname = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
-            this.cmbGender = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnUpload = new System.Windows.Forms.Button();
-            this.btnWebcam = new System.Windows.Forms.Button();
-            this.picImage = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btnSubmit = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnNew = new System.Windows.Forms.Button();
-            this.panel2.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
-            this.pnlBiometric.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgR3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgR2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgR1)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
+            this.tbRegistration.SuspendLayout();
+            this.tbVoterInfo.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.pnlBiometric.SuspendLayout();
+            this.metroPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgR1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgR2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgR3)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Search by Voters PIN:";
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(27, 57);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(234, 20);
-            this.txtSearch.TabIndex = 0;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(261, 56);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 1;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 92);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Personal Information";
-            // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.statusStrip1);
-            this.panel2.Controls.Add(this.btnRegister);
-            this.panel2.Controls.Add(this.pnlBiometric);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Location = new System.Drawing.Point(387, 115);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(433, 340);
-            this.panel2.TabIndex = 3;
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.statusBar});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 314);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(429, 22);
-            this.statusStrip1.TabIndex = 13;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // statusBar
-            // 
-            this.statusBar.Name = "statusBar";
-            this.statusBar.Size = new System.Drawing.Size(0, 17);
-            // 
-            // btnRegister
-            // 
-            this.btnRegister.Location = new System.Drawing.Point(334, 250);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(75, 23);
-            this.btnRegister.TabIndex = 2;
-            this.btnRegister.Text = "Register";
-            this.btnRegister.UseVisualStyleBackColor = true;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
-            // 
-            // pnlBiometric
-            // 
-            this.pnlBiometric.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlBiometric.Controls.Add(this.pgbR3);
-            this.pnlBiometric.Controls.Add(this.btnCaptureR3);
-            this.pnlBiometric.Controls.Add(this.pgbR2);
-            this.pnlBiometric.Controls.Add(this.btnCaptureR2);
-            this.pnlBiometric.Controls.Add(this.pgbR1);
-            this.pnlBiometric.Controls.Add(this.btnCaptureR1);
-            this.pnlBiometric.Controls.Add(this.imgR3);
-            this.pnlBiometric.Controls.Add(this.imgR2);
-            this.pnlBiometric.Controls.Add(this.imgR1);
-            this.pnlBiometric.Location = new System.Drawing.Point(19, 90);
-            this.pnlBiometric.Name = "pnlBiometric";
-            this.pnlBiometric.Size = new System.Drawing.Size(390, 154);
-            this.pnlBiometric.TabIndex = 1;
-            // 
-            // pgbR3
-            // 
-            this.pgbR3.Location = new System.Drawing.Point(266, 103);
-            this.pgbR3.Name = "pgbR3";
-            this.pgbR3.Size = new System.Drawing.Size(75, 10);
-            this.pgbR3.TabIndex = 8;
-            // 
-            // btnCaptureR3
-            // 
-            this.btnCaptureR3.Location = new System.Drawing.Point(266, 115);
-            this.btnCaptureR3.Name = "btnCaptureR3";
-            this.btnCaptureR3.Size = new System.Drawing.Size(75, 23);
-            this.btnCaptureR3.TabIndex = 2;
-            this.btnCaptureR3.Text = "Capture";
-            this.btnCaptureR3.UseVisualStyleBackColor = true;
-            this.btnCaptureR3.Click += new System.EventHandler(this.btnCaptureR3_Click);
-            // 
-            // pgbR2
-            // 
-            this.pgbR2.Location = new System.Drawing.Point(164, 103);
-            this.pgbR2.Name = "pgbR2";
-            this.pgbR2.Size = new System.Drawing.Size(75, 10);
-            this.pgbR2.TabIndex = 6;
-            // 
-            // btnCaptureR2
-            // 
-            this.btnCaptureR2.Location = new System.Drawing.Point(164, 115);
-            this.btnCaptureR2.Name = "btnCaptureR2";
-            this.btnCaptureR2.Size = new System.Drawing.Size(75, 23);
-            this.btnCaptureR2.TabIndex = 1;
-            this.btnCaptureR2.Text = "Capture";
-            this.btnCaptureR2.UseVisualStyleBackColor = true;
-            this.btnCaptureR2.Click += new System.EventHandler(this.btnCaptureR2_Click);
-            // 
-            // pgbR1
-            // 
-            this.pgbR1.Location = new System.Drawing.Point(64, 103);
-            this.pgbR1.Name = "pgbR1";
-            this.pgbR1.Size = new System.Drawing.Size(75, 10);
-            this.pgbR1.TabIndex = 4;
-            // 
-            // btnCaptureR1
-            // 
-            this.btnCaptureR1.Location = new System.Drawing.Point(64, 115);
-            this.btnCaptureR1.Name = "btnCaptureR1";
-            this.btnCaptureR1.Size = new System.Drawing.Size(75, 23);
-            this.btnCaptureR1.TabIndex = 0;
-            this.btnCaptureR1.Text = "Capture";
-            this.btnCaptureR1.UseVisualStyleBackColor = true;
-            this.btnCaptureR1.Click += new System.EventHandler(this.btnCaptureR1_Click);
-            // 
-            // imgR3
-            // 
-            this.imgR3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imgR3.Location = new System.Drawing.Point(266, 17);
-            this.imgR3.Name = "imgR3";
-            this.imgR3.Size = new System.Drawing.Size(75, 86);
-            this.imgR3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgR3.TabIndex = 2;
-            this.imgR3.TabStop = false;
-            this.imgR3.Tag = "Third Thumb";
-            // 
-            // imgR2
-            // 
-            this.imgR2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imgR2.Location = new System.Drawing.Point(164, 17);
-            this.imgR2.Name = "imgR2";
-            this.imgR2.Size = new System.Drawing.Size(75, 86);
-            this.imgR2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgR2.TabIndex = 1;
-            this.imgR2.TabStop = false;
-            this.imgR2.Tag = "Second Thumb";
-            // 
-            // imgR1
-            // 
-            this.imgR1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imgR1.Location = new System.Drawing.Point(64, 17);
-            this.imgR1.Name = "imgR1";
-            this.imgR1.Size = new System.Drawing.Size(75, 86);
-            this.imgR1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgR1.TabIndex = 0;
-            this.imgR1.TabStop = false;
-            this.imgR1.Tag = "First Thumb";
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.btnEnum);
-            this.panel3.Controls.Add(this.btnInit);
-            this.panel3.Controls.Add(this.cmbDeviceName);
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Location = new System.Drawing.Point(19, 19);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(390, 54);
-            this.panel3.TabIndex = 0;
-            // 
-            // btnEnum
-            // 
-            this.btnEnum.Location = new System.Drawing.Point(311, 14);
-            this.btnEnum.Name = "btnEnum";
-            this.btnEnum.Size = new System.Drawing.Size(51, 23);
-            this.btnEnum.TabIndex = 2;
-            this.btnEnum.Text = "Enum";
-            this.btnEnum.UseVisualStyleBackColor = true;
-            this.btnEnum.Click += new System.EventHandler(this.btnEnum_Click);
-            // 
-            // btnInit
-            // 
-            this.btnInit.Location = new System.Drawing.Point(254, 14);
-            this.btnInit.Name = "btnInit";
-            this.btnInit.Size = new System.Drawing.Size(51, 23);
-            this.btnInit.TabIndex = 1;
-            this.btnInit.Text = "Init";
-            this.btnInit.UseVisualStyleBackColor = true;
-            this.btnInit.Click += new System.EventHandler(this.btnInit_Click);
-            // 
-            // cmbDeviceName
-            // 
-            this.cmbDeviceName.FormattingEnabled = true;
-            this.cmbDeviceName.Location = new System.Drawing.Point(88, 14);
-            this.cmbDeviceName.Name = "cmbDeviceName";
-            this.cmbDeviceName.Size = new System.Drawing.Size(160, 21);
-            this.cmbDeviceName.TabIndex = 0;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(13, 17);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(78, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Device Name: ";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 274);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(327, 26);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "Note that the Right Thumb fingerprint should be captured 3x. \r\nSo as to save the " +
-    "best fingerprint image extraction into the database\r\n";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 19);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Firstname: ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 56);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Lastname: ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(50, 93);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Gender:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(60, 130);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Email:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 167);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Phone number:";
-            // 
-            // txtFirstname
-            // 
-            this.txtFirstname.Location = new System.Drawing.Point(101, 16);
-            this.txtFirstname.Name = "txtFirstname";
-            this.txtFirstname.Size = new System.Drawing.Size(219, 20);
-            this.txtFirstname.TabIndex = 0;
-            this.txtFirstname.Tag = "Firstname";
-            this.txtFirstname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFirstname_KeyPress);
-            // 
-            // txtLastname
-            // 
-            this.txtLastname.Location = new System.Drawing.Point(101, 53);
-            this.txtLastname.Name = "txtLastname";
-            this.txtLastname.Size = new System.Drawing.Size(219, 20);
-            this.txtLastname.TabIndex = 1;
-            this.txtLastname.Tag = "Lastname";
-            this.txtLastname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFirstname_KeyPress);
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(101, 127);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(219, 20);
-            this.txtEmail.TabIndex = 3;
-            this.txtEmail.Tag = "Email";
-            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
-            // 
-            // txtPhoneNumber
-            // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(101, 164);
-            this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(219, 20);
-            this.txtPhoneNumber.TabIndex = 4;
-            this.txtPhoneNumber.Tag = "Phonenumber";
-            this.txtPhoneNumber.Validating += new System.ComponentModel.CancelEventHandler(this.txtPhoneNumber_Validating);
-            // 
-            // cmbGender
-            // 
-            this.cmbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbGender.FormattingEnabled = true;
-            this.cmbGender.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.cmbGender.Location = new System.Drawing.Point(101, 90);
-            this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(218, 21);
-            this.cmbGender.TabIndex = 2;
-            this.cmbGender.Tag = "Gender";
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.btnUpload);
-            this.panel1.Controls.Add(this.btnWebcam);
-            this.panel1.Controls.Add(this.picImage);
-            this.panel1.Controls.Add(this.cmbGender);
-            this.panel1.Controls.Add(this.txtPhoneNumber);
-            this.panel1.Controls.Add(this.txtEmail);
-            this.panel1.Controls.Add(this.txtLastname);
-            this.panel1.Controls.Add(this.txtFirstname);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(27, 115);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(345, 307);
-            this.panel1.TabIndex = 2;
-            // 
-            // btnUpload
-            // 
-            this.btnUpload.Location = new System.Drawing.Point(191, 236);
-            this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(75, 23);
-            this.btnUpload.TabIndex = 6;
-            this.btnUpload.Text = "Upload";
-            this.btnUpload.UseVisualStyleBackColor = true;
-            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
-            // 
-            // btnWebcam
-            // 
-            this.btnWebcam.Location = new System.Drawing.Point(191, 206);
-            this.btnWebcam.Name = "btnWebcam";
-            this.btnWebcam.Size = new System.Drawing.Size(75, 23);
-            this.btnWebcam.TabIndex = 5;
-            this.btnWebcam.Text = "WebCam";
-            this.btnWebcam.UseVisualStyleBackColor = true;
-            this.btnWebcam.Click += new System.EventHandler(this.btnWebcam_Click);
             // 
             // picImage
             // 
             this.picImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picImage.Location = new System.Drawing.Point(101, 203);
+            this.picImage.Location = new System.Drawing.Point(117, 170);
             this.picImage.Name = "picImage";
-            this.picImage.Size = new System.Drawing.Size(84, 92);
+            this.picImage.Size = new System.Drawing.Size(103, 124);
             this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picImage.TabIndex = 10;
             this.picImage.TabStop = false;
-            this.picImage.Tag = "Passport";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(383, 92);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(146, 20);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Fingerprint Capture";
-            // 
-            // btnSubmit
-            // 
-            this.btnSubmit.Location = new System.Drawing.Point(144, 428);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
-            this.btnSubmit.TabIndex = 4;
-            this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = true;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(219, 428);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdate.TabIndex = 5;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(294, 428);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 6;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.picImage.Tag = "Image";
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // txtSearch
+            // 
+            // 
+            // 
+            // 
+            this.txtSearch.CustomButton.Image = null;
+            this.txtSearch.CustomButton.Location = new System.Drawing.Point(260, 2);
+            this.txtSearch.CustomButton.Name = "";
+            this.txtSearch.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSearch.CustomButton.TabIndex = 1;
+            this.txtSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSearch.CustomButton.UseSelectable = true;
+            this.txtSearch.CustomButton.Visible = false;
+            this.txtSearch.DisplayIcon = true;
+            this.txtSearch.Icon = global::VotingSystem.Properties.Resources.search_accounts1;
+            this.txtSearch.Lines = new string[0];
+            this.txtSearch.Location = new System.Drawing.Point(558, 63);
+            this.txtSearch.MaxLength = 32767;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PromptText = "Search by Voters\' PIN";
+            this.txtSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.SelectionLength = 0;
+            this.txtSearch.SelectionStart = 0;
+            this.txtSearch.ShortcutsEnabled = true;
+            this.txtSearch.Size = new System.Drawing.Size(284, 26);
+            this.txtSearch.TabIndex = 0;
+            this.txtSearch.UseSelectable = true;
+            this.txtSearch.WaterMark = "Search by Voters\' PIN";
+            this.txtSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(842, 63);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(50, 26);
+            this.btnSearch.TabIndex = 1;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseSelectable = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // tbRegistration
+            // 
+            this.tbRegistration.Controls.Add(this.tbVoterInfo);
+            this.tbRegistration.FontWeight = MetroFramework.MetroTabControlWeight.Regular;
+            this.tbRegistration.ItemSize = new System.Drawing.Size(200, 34);
+            this.tbRegistration.Location = new System.Drawing.Point(24, 92);
+            this.tbRegistration.Name = "tbRegistration";
+            this.tbRegistration.SelectedIndex = 0;
+            this.tbRegistration.Size = new System.Drawing.Size(868, 401);
+            this.tbRegistration.TabIndex = 0;
+            this.tbRegistration.UseSelectable = true;
+            // 
+            // tbVoterInfo
+            // 
+            this.tbVoterInfo.Controls.Add(this.panel2);
+            this.tbVoterInfo.Controls.Add(this.pnlBiometric);
+            this.tbVoterInfo.Controls.Add(this.btnUpload);
+            this.tbVoterInfo.Controls.Add(this.btnWebCam);
+            this.tbVoterInfo.Controls.Add(this.metroLabel6);
+            this.tbVoterInfo.Controls.Add(this.txtPhoneNumber);
+            this.tbVoterInfo.Controls.Add(this.txtEmail);
+            this.tbVoterInfo.Controls.Add(this.picImage);
+            this.tbVoterInfo.Controls.Add(this.cmbGender);
+            this.tbVoterInfo.Controls.Add(this.txtLastname);
+            this.tbVoterInfo.Controls.Add(this.txtFirstname);
+            this.tbVoterInfo.Controls.Add(this.metroLabel5);
+            this.tbVoterInfo.Controls.Add(this.metroLabel4);
+            this.tbVoterInfo.Controls.Add(this.metroLabel3);
+            this.tbVoterInfo.Controls.Add(this.metroLabel2);
+            this.tbVoterInfo.Controls.Add(this.metroLabel1);
+            this.tbVoterInfo.HorizontalScrollbarBarColor = true;
+            this.tbVoterInfo.HorizontalScrollbarHighlightOnWheel = false;
+            this.tbVoterInfo.HorizontalScrollbarSize = 10;
+            this.tbVoterInfo.Location = new System.Drawing.Point(4, 38);
+            this.tbVoterInfo.Name = "tbVoterInfo";
+            this.tbVoterInfo.Size = new System.Drawing.Size(860, 359);
+            this.tbVoterInfo.TabIndex = 0;
+            this.tbVoterInfo.Text = "Voter Information";
+            this.tbVoterInfo.VerticalScrollbarBarColor = true;
+            this.tbVoterInfo.VerticalScrollbarHighlightOnWheel = false;
+            this.tbVoterInfo.VerticalScrollbarSize = 10;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.metroButton2);
+            this.panel2.Controls.Add(this.metroButton1);
+            this.panel2.Controls.Add(this.cmbDeviceName);
+            this.panel2.HorizontalScrollbarBarColor = true;
+            this.panel2.HorizontalScrollbarHighlightOnWheel = false;
+            this.panel2.HorizontalScrollbarSize = 10;
+            this.panel2.Location = new System.Drawing.Point(400, 13);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(415, 67);
+            this.panel2.TabIndex = 18;
+            this.panel2.VerticalScrollbarBarColor = true;
+            this.panel2.VerticalScrollbarHighlightOnWheel = false;
+            this.panel2.VerticalScrollbarSize = 10;
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.Location = new System.Drawing.Point(329, 19);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(75, 29);
+            this.metroButton2.TabIndex = 19;
+            this.metroButton2.Text = "Enum Device";
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.btnEnum_Click);
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(259, 19);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(64, 29);
+            this.metroButton1.TabIndex = 18;
+            this.metroButton1.Text = "Init Device";
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.btnInit_Click);
+            // 
+            // cmbDeviceName
+            // 
+            this.cmbDeviceName.FormattingEnabled = true;
+            this.cmbDeviceName.ItemHeight = 23;
+            this.cmbDeviceName.Location = new System.Drawing.Point(27, 19);
+            this.cmbDeviceName.Name = "cmbDeviceName";
+            this.cmbDeviceName.Size = new System.Drawing.Size(226, 29);
+            this.cmbDeviceName.TabIndex = 17;
+            this.cmbDeviceName.UseSelectable = true;
+            // 
+            // pnlBiometric
+            // 
+            this.pnlBiometric.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlBiometric.Controls.Add(this.metroPanel1);
+            this.pnlBiometric.Controls.Add(this.btnCaptureR3);
+            this.pnlBiometric.Controls.Add(this.btnCaptureR2);
+            this.pnlBiometric.Controls.Add(this.btnCaptureR1);
+            this.pnlBiometric.Controls.Add(this.pgbR3);
+            this.pnlBiometric.Controls.Add(this.pgbR2);
+            this.pnlBiometric.Controls.Add(this.pgbR1);
+            this.pnlBiometric.Controls.Add(this.imgR1);
+            this.pnlBiometric.Controls.Add(this.imgR2);
+            this.pnlBiometric.Controls.Add(this.imgR3);
+            this.pnlBiometric.HorizontalScrollbarBarColor = true;
+            this.pnlBiometric.HorizontalScrollbarHighlightOnWheel = false;
+            this.pnlBiometric.HorizontalScrollbarSize = 10;
+            this.pnlBiometric.Location = new System.Drawing.Point(400, 86);
+            this.pnlBiometric.Name = "pnlBiometric";
+            this.pnlBiometric.Size = new System.Drawing.Size(416, 274);
+            this.pnlBiometric.TabIndex = 17;
+            this.pnlBiometric.VerticalScrollbarBarColor = true;
+            this.pnlBiometric.VerticalScrollbarHighlightOnWheel = false;
+            this.pnlBiometric.VerticalScrollbarSize = 10;
+            // 
+            // metroPanel1
+            // 
+            this.metroPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.metroPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.metroPanel1.Controls.Add(this.btnRegister);
+            this.metroPanel1.Controls.Add(this.metroLabel8);
+            this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(0, 207);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(414, 65);
+            this.metroPanel1.TabIndex = 9;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // btnRegister
+            // 
+            this.btnRegister.Location = new System.Drawing.Point(315, 12);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(75, 23);
+            this.btnRegister.TabIndex = 12;
+            this.btnRegister.Text = "Register";
+            this.btnRegister.UseSelectable = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
+            // metroLabel8
+            // 
+            this.metroLabel8.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.metroLabel8.ForeColor = System.Drawing.Color.Red;
+            this.metroLabel8.Location = new System.Drawing.Point(3, 2);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(306, 49);
+            this.metroLabel8.TabIndex = 11;
+            this.metroLabel8.Text = "Note that the Right Thumb fingerprint should be\r\ncaptured 3x. So as to save the b" +
+    "est fingerprint image\r\nextraction into the database\r\n\r\n";
+            // 
+            // btnCaptureR3
+            // 
+            this.btnCaptureR3.Location = new System.Drawing.Point(275, 154);
+            this.btnCaptureR3.Name = "btnCaptureR3";
+            this.btnCaptureR3.Size = new System.Drawing.Size(96, 23);
+            this.btnCaptureR3.TabIndex = 8;
+            this.btnCaptureR3.Text = "Capture";
+            this.btnCaptureR3.UseSelectable = true;
+            this.btnCaptureR3.Click += new System.EventHandler(this.btnCaptureR3_Click);
+            // 
+            // btnCaptureR2
+            // 
+            this.btnCaptureR2.Location = new System.Drawing.Point(153, 154);
+            this.btnCaptureR2.Name = "btnCaptureR2";
+            this.btnCaptureR2.Size = new System.Drawing.Size(96, 23);
+            this.btnCaptureR2.TabIndex = 7;
+            this.btnCaptureR2.Text = "Capture";
+            this.btnCaptureR2.UseSelectable = true;
+            this.btnCaptureR2.Click += new System.EventHandler(this.btnCaptureR2_Click);
+            // 
+            // btnCaptureR1
+            // 
+            this.btnCaptureR1.Location = new System.Drawing.Point(26, 154);
+            this.btnCaptureR1.Name = "btnCaptureR1";
+            this.btnCaptureR1.Size = new System.Drawing.Size(96, 23);
+            this.btnCaptureR1.TabIndex = 6;
+            this.btnCaptureR1.Text = "Capture";
+            this.btnCaptureR1.UseSelectable = true;
+            this.btnCaptureR1.Click += new System.EventHandler(this.btnCaptureR1_Click);
+            // 
+            // pgbR3
+            // 
+            this.pgbR3.Location = new System.Drawing.Point(275, 134);
+            this.pgbR3.Name = "pgbR3";
+            this.pgbR3.Size = new System.Drawing.Size(96, 13);
+            this.pgbR3.TabIndex = 5;
+            // 
+            // pgbR2
+            // 
+            this.pgbR2.Location = new System.Drawing.Point(153, 133);
+            this.pgbR2.Name = "pgbR2";
+            this.pgbR2.Size = new System.Drawing.Size(96, 13);
+            this.pgbR2.TabIndex = 4;
+            // 
+            // pgbR1
+            // 
+            this.pgbR1.Location = new System.Drawing.Point(26, 134);
+            this.pgbR1.Name = "pgbR1";
+            this.pgbR1.Size = new System.Drawing.Size(96, 13);
+            this.pgbR1.TabIndex = 3;
+            // 
+            // imgR1
+            // 
+            this.imgR1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imgR1.Location = new System.Drawing.Point(26, 16);
+            this.imgR1.Name = "imgR1";
+            this.imgR1.Size = new System.Drawing.Size(96, 111);
+            this.imgR1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgR1.TabIndex = 0;
+            this.imgR1.TabStop = false;
+            this.imgR1.Tag = "First Thumb";
+            // 
+            // imgR2
+            // 
+            this.imgR2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imgR2.Location = new System.Drawing.Point(153, 16);
+            this.imgR2.Name = "imgR2";
+            this.imgR2.Size = new System.Drawing.Size(96, 111);
+            this.imgR2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgR2.TabIndex = 1;
+            this.imgR2.TabStop = false;
+            this.imgR2.Tag = "Second Thumb";
+            // 
+            // imgR3
+            // 
+            this.imgR3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imgR3.Location = new System.Drawing.Point(275, 16);
+            this.imgR3.Name = "imgR3";
+            this.imgR3.Size = new System.Drawing.Size(96, 111);
+            this.imgR3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgR3.TabIndex = 2;
+            this.imgR3.TabStop = false;
+            this.imgR3.Tag = "Third Thumb";
+            // 
+            // btnUpload
+            // 
+            this.btnUpload.Location = new System.Drawing.Point(226, 271);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(75, 23);
+            this.btnUpload.TabIndex = 6;
+            this.btnUpload.Text = "Upload";
+            this.btnUpload.UseSelectable = true;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
+            // 
+            // btnWebCam
+            // 
+            this.btnWebCam.Location = new System.Drawing.Point(226, 241);
+            this.btnWebCam.Name = "btnWebCam";
+            this.btnWebCam.Size = new System.Drawing.Size(75, 23);
+            this.btnWebCam.TabIndex = 5;
+            this.btnWebCam.Text = "WebCam";
+            this.btnWebCam.UseSelectable = true;
+            this.btnWebCam.Click += new System.EventHandler(this.btnWebcam_Click);
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Location = new System.Drawing.Point(62, 181);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(49, 19);
+            this.metroLabel6.TabIndex = 12;
+            this.metroLabel6.Text = "Image:";
+            // 
+            // txtPhoneNumber
+            // 
+            // 
+            // 
+            // 
+            this.txtPhoneNumber.CustomButton.Image = null;
+            this.txtPhoneNumber.CustomButton.Location = new System.Drawing.Point(227, 1);
+            this.txtPhoneNumber.CustomButton.Name = "";
+            this.txtPhoneNumber.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtPhoneNumber.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtPhoneNumber.CustomButton.TabIndex = 1;
+            this.txtPhoneNumber.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtPhoneNumber.CustomButton.UseSelectable = true;
+            this.txtPhoneNumber.CustomButton.Visible = false;
+            this.txtPhoneNumber.Lines = new string[0];
+            this.txtPhoneNumber.Location = new System.Drawing.Point(117, 141);
+            this.txtPhoneNumber.MaxLength = 32767;
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.PasswordChar = '\0';
+            this.txtPhoneNumber.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtPhoneNumber.SelectedText = "";
+            this.txtPhoneNumber.SelectionLength = 0;
+            this.txtPhoneNumber.SelectionStart = 0;
+            this.txtPhoneNumber.ShortcutsEnabled = true;
+            this.txtPhoneNumber.Size = new System.Drawing.Size(249, 23);
+            this.txtPhoneNumber.TabIndex = 4;
+            this.txtPhoneNumber.Tag = "Phone Number";
+            this.txtPhoneNumber.UseSelectable = true;
+            this.txtPhoneNumber.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtPhoneNumber.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPhoneNumber.Validating += new System.ComponentModel.CancelEventHandler(this.txtPhoneNumber_Validating);
+            // 
+            // txtEmail
+            // 
+            // 
+            // 
+            // 
+            this.txtEmail.CustomButton.Image = null;
+            this.txtEmail.CustomButton.Location = new System.Drawing.Point(227, 1);
+            this.txtEmail.CustomButton.Name = "";
+            this.txtEmail.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtEmail.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtEmail.CustomButton.TabIndex = 1;
+            this.txtEmail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtEmail.CustomButton.UseSelectable = true;
+            this.txtEmail.CustomButton.Visible = false;
+            this.txtEmail.Lines = new string[0];
+            this.txtEmail.Location = new System.Drawing.Point(117, 111);
+            this.txtEmail.MaxLength = 32767;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PasswordChar = '\0';
+            this.txtEmail.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtEmail.SelectedText = "";
+            this.txtEmail.SelectionLength = 0;
+            this.txtEmail.SelectionStart = 0;
+            this.txtEmail.ShortcutsEnabled = true;
+            this.txtEmail.Size = new System.Drawing.Size(249, 23);
+            this.txtEmail.TabIndex = 3;
+            this.txtEmail.Tag = "Email";
+            this.txtEmail.UseSelectable = true;
+            this.txtEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
+            // 
+            // cmbGender
+            // 
+            this.cmbGender.FormattingEnabled = true;
+            this.cmbGender.ItemHeight = 23;
+            this.cmbGender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.cmbGender.Location = new System.Drawing.Point(117, 76);
+            this.cmbGender.Name = "cmbGender";
+            this.cmbGender.Size = new System.Drawing.Size(249, 29);
+            this.cmbGender.TabIndex = 2;
+            this.cmbGender.Tag = "Gender";
+            this.cmbGender.UseSelectable = true;
+            // 
+            // txtLastname
+            // 
+            // 
+            // 
+            // 
+            this.txtLastname.CustomButton.Image = null;
+            this.txtLastname.CustomButton.Location = new System.Drawing.Point(227, 1);
+            this.txtLastname.CustomButton.Name = "";
+            this.txtLastname.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtLastname.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtLastname.CustomButton.TabIndex = 1;
+            this.txtLastname.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtLastname.CustomButton.UseSelectable = true;
+            this.txtLastname.CustomButton.Visible = false;
+            this.txtLastname.Lines = new string[0];
+            this.txtLastname.Location = new System.Drawing.Point(117, 47);
+            this.txtLastname.MaxLength = 32767;
+            this.txtLastname.Name = "txtLastname";
+            this.txtLastname.PasswordChar = '\0';
+            this.txtLastname.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtLastname.SelectedText = "";
+            this.txtLastname.SelectionLength = 0;
+            this.txtLastname.SelectionStart = 0;
+            this.txtLastname.ShortcutsEnabled = true;
+            this.txtLastname.Size = new System.Drawing.Size(249, 23);
+            this.txtLastname.TabIndex = 1;
+            this.txtLastname.Tag = "Lastname";
+            this.txtLastname.UseSelectable = true;
+            this.txtLastname.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtLastname.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtLastname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFirstname_KeyPress);
+            this.txtLastname.Validating += new System.ComponentModel.CancelEventHandler(this.txtLastname_Validating);
+            // 
+            // txtFirstname
+            // 
+            // 
+            // 
+            // 
+            this.txtFirstname.CustomButton.Image = null;
+            this.txtFirstname.CustomButton.Location = new System.Drawing.Point(227, 1);
+            this.txtFirstname.CustomButton.Name = "";
+            this.txtFirstname.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtFirstname.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtFirstname.CustomButton.TabIndex = 1;
+            this.txtFirstname.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtFirstname.CustomButton.UseSelectable = true;
+            this.txtFirstname.CustomButton.Visible = false;
+            this.txtFirstname.Lines = new string[0];
+            this.txtFirstname.Location = new System.Drawing.Point(117, 18);
+            this.txtFirstname.MaxLength = 32767;
+            this.txtFirstname.Name = "txtFirstname";
+            this.txtFirstname.PasswordChar = '\0';
+            this.txtFirstname.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtFirstname.SelectedText = "";
+            this.txtFirstname.SelectionLength = 0;
+            this.txtFirstname.SelectionStart = 0;
+            this.txtFirstname.ShortcutsEnabled = true;
+            this.txtFirstname.Size = new System.Drawing.Size(249, 23);
+            this.txtFirstname.TabIndex = 0;
+            this.txtFirstname.Tag = "Firstname";
+            this.txtFirstname.UseSelectable = true;
+            this.txtFirstname.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtFirstname.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtFirstname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFirstname_KeyPress);
+            this.txtFirstname.Validating += new System.ComponentModel.CancelEventHandler(this.txtFirstname_Validating);
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(15, 141);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(96, 19);
+            this.metroLabel5.TabIndex = 6;
+            this.metroLabel5.Text = "Phone number";
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(67, 112);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel4.TabIndex = 5;
+            this.metroLabel4.Text = "Email:";
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(55, 84);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(56, 19);
+            this.metroLabel3.TabIndex = 4;
+            this.metroLabel3.Text = "Gender:";
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(44, 50);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(67, 19);
+            this.metroLabel2.TabIndex = 3;
+            this.metroLabel2.Text = "Lastname:";
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(42, 20);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(69, 19);
+            this.metroLabel1.TabIndex = 2;
+            this.metroLabel1.Text = "Firstname:";
+            // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(69, 428);
+            this.btnNew.Location = new System.Drawing.Point(24, 499);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(75, 23);
-            this.btnNew.TabIndex = 12;
+            this.btnNew.TabIndex = 4;
             this.btnNew.Text = "New Record";
-            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.UseSelectable = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.Location = new System.Drawing.Point(105, 499);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmit.TabIndex = 5;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseSelectable = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(186, 499);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 6;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseSelectable = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(267, 499);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 7;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseSelectable = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusBar});
+            this.statusStrip1.Location = new System.Drawing.Point(20, 540);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(875, 22);
+            this.statusStrip1.TabIndex = 20;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // statusBar
+            // 
+            this.statusBar.Name = "statusBar";
+            this.statusBar.Size = new System.Drawing.Size(118, 17);
+            this.statusBar.Text = "toolStripStatusLabel1";
             // 
             // FrmVotersRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(846, 519);
-            this.Controls.Add(this.btnNew);
+            this.ClientSize = new System.Drawing.Size(915, 582);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnNew);
+            this.Controls.Add(this.tbRegistration);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.label1);
             this.Name = "FrmVotersRegistration";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Voters Registration";
+            this.Text = "Registration New Voter";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
+            this.tbRegistration.ResumeLayout(false);
+            this.tbVoterInfo.ResumeLayout(false);
+            this.tbVoterInfo.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnlBiometric.ResumeLayout(false);
+            this.metroPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.imgR1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgR2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgR3)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            this.pnlBiometric.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.imgR3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgR2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgR1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtFirstname;
-        private System.Windows.Forms.TextBox txtLastname;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtPhoneNumber;
-        private System.Windows.Forms.ComboBox cmbGender;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnRegister;
-        private System.Windows.Forms.Panel pnlBiometric;
-        private System.Windows.Forms.ProgressBar pgbR3;
-        private System.Windows.Forms.Button btnCaptureR3;
-        private System.Windows.Forms.ProgressBar pgbR2;
-        private System.Windows.Forms.Button btnCaptureR2;
-        private System.Windows.Forms.ProgressBar pgbR1;
-        private System.Windows.Forms.Button btnCaptureR1;
-        private System.Windows.Forms.PictureBox imgR3;
-        private System.Windows.Forms.PictureBox imgR2;
-        private System.Windows.Forms.PictureBox imgR1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnEnum;
-        private System.Windows.Forms.Button btnInit;
-        private System.Windows.Forms.ComboBox cmbDeviceName;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnUpload;
-        private System.Windows.Forms.Button btnWebcam;
         private System.Windows.Forms.PictureBox picImage;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private MetroFramework.Controls.MetroTextBox txtSearch;
+        private MetroFramework.Controls.MetroButton btnSearch;
+        private MetroFramework.Controls.MetroTabControl tbRegistration;
+        private MetroFramework.Controls.MetroTabPage tbVoterInfo;
+        private MetroFramework.Controls.MetroButton btnUpload;
+        private MetroFramework.Controls.MetroButton btnWebCam;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroTextBox txtPhoneNumber;
+        private MetroFramework.Controls.MetroTextBox txtEmail;
+        private MetroFramework.Controls.MetroComboBox cmbGender;
+        private MetroFramework.Controls.MetroTextBox txtLastname;
+        private MetroFramework.Controls.MetroTextBox txtFirstname;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroButton btnNew;
+        private MetroFramework.Controls.MetroButton btnSubmit;
+        private MetroFramework.Controls.MetroButton btnUpdate;
+        private MetroFramework.Controls.MetroButton btnDelete;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel statusBar;
-        private System.Windows.Forms.Button btnNew;
+        private MetroFramework.Controls.MetroPanel pnlBiometric;
+        private MetroFramework.Controls.MetroPanel metroPanel1;
+        private MetroFramework.Controls.MetroButton btnRegister;
+        private MetroFramework.Controls.MetroLabel metroLabel8;
+        private MetroFramework.Controls.MetroButton btnCaptureR3;
+        private MetroFramework.Controls.MetroButton btnCaptureR2;
+        private MetroFramework.Controls.MetroButton btnCaptureR1;
+        private MetroFramework.Controls.MetroProgressBar pgbR3;
+        private MetroFramework.Controls.MetroProgressBar pgbR2;
+        private MetroFramework.Controls.MetroProgressBar pgbR1;
+        private System.Windows.Forms.PictureBox imgR1;
+        private System.Windows.Forms.PictureBox imgR2;
+        private System.Windows.Forms.PictureBox imgR3;
+        private MetroFramework.Controls.MetroPanel panel2;
+        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroComboBox cmbDeviceName;
     }
 }
 

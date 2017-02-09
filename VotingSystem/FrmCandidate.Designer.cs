@@ -28,153 +28,356 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtManifesto = new System.Windows.Forms.TextBox();
-            this.cmbPost = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnUpload = new System.Windows.Forms.Button();
-            this.btnWebcam = new System.Windows.Forms.Button();
-            this.picImage = new System.Windows.Forms.PictureBox();
-            this.cmbGender = new System.Windows.Forms.ComboBox();
-            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtLastname = new System.Windows.Forms.TextBox();
-            this.txtFirstname = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnNew = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnSubmit = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.panel1.SuspendLayout();
+            this.btnSearch = new MetroFramework.Controls.MetroButton();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.txtFirstname = new MetroFramework.Controls.MetroTextBox();
+            this.txtLastname = new MetroFramework.Controls.MetroTextBox();
+            this.txtEmail = new MetroFramework.Controls.MetroTextBox();
+            this.txtPhoneNumber = new MetroFramework.Controls.MetroTextBox();
+            this.txtManifesto = new MetroFramework.Controls.MetroTextBox();
+            this.cmbGender = new MetroFramework.Controls.MetroComboBox();
+            this.cmbPost = new MetroFramework.Controls.MetroComboBox();
+            this.btnWebCam = new MetroFramework.Controls.MetroButton();
+            this.btnUpload = new MetroFramework.Controls.MetroButton();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.picImage = new System.Windows.Forms.PictureBox();
+            this.btnNew = new MetroFramework.Controls.MetroButton();
+            this.btnSubmit = new MetroFramework.Controls.MetroButton();
+            this.btnUpdate = new MetroFramework.Controls.MetroButton();
+            this.btnDelete = new MetroFramework.Controls.MetroButton();
+            this.listView1 = new MetroFramework.Controls.MetroListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txtSearch = new MetroFramework.Controls.MetroTextBox();
+            this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             this.SuspendLayout();
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(267, 42);
+            this.btnSearch.Location = new System.Drawing.Point(908, 41);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 4;
+            this.btnSearch.Size = new System.Drawing.Size(44, 26);
+            this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseSelectable = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // txtSearch
+            // metroLabel1
             // 
-            this.txtSearch.Location = new System.Drawing.Point(27, 44);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(234, 20);
-            this.txtSearch.TabIndex = 2;
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(49, 29);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(69, 19);
+            this.metroLabel1.TabIndex = 20;
+            this.metroLabel1.Text = "Firstname:";
             // 
-            // label1
+            // metroLabel2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Search by Voters PIN:";
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(52, 58);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(67, 19);
+            this.metroLabel2.TabIndex = 21;
+            this.metroLabel2.Text = "Lastname:";
             // 
-            // panel1
+            // metroLabel3
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.txtManifesto);
-            this.panel1.Controls.Add(this.cmbPost);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.btnUpload);
-            this.panel1.Controls.Add(this.btnWebcam);
-            this.panel1.Controls.Add(this.picImage);
-            this.panel1.Controls.Add(this.cmbGender);
-            this.panel1.Controls.Add(this.txtPhoneNumber);
-            this.panel1.Controls.Add(this.txtEmail);
-            this.panel1.Controls.Add(this.txtLastname);
-            this.panel1.Controls.Add(this.txtFirstname);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(27, 100);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(530, 302);
-            this.panel1.TabIndex = 5;
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(62, 93);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(56, 19);
+            this.metroLabel3.TabIndex = 22;
+            this.metroLabel3.Text = "Gender:";
             // 
-            // label8
+            // metroLabel4
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(34, 177);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 13);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Manisfesto:";
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(74, 122);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel4.TabIndex = 23;
+            this.metroLabel4.Text = "Email:";
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(18, 151);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(100, 19);
+            this.metroLabel5.TabIndex = 24;
+            this.metroLabel5.Text = "Phone number:";
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Location = new System.Drawing.Point(61, 186);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(57, 19);
+            this.metroLabel6.TabIndex = 25;
+            this.metroLabel6.Text = "Position:";
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(53, 220);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(66, 19);
+            this.metroLabel7.TabIndex = 26;
+            this.metroLabel7.Text = "Manifesto";
+            // 
+            // txtFirstname
+            // 
+            // 
+            // 
+            // 
+            this.txtFirstname.CustomButton.Image = null;
+            this.txtFirstname.CustomButton.Location = new System.Drawing.Point(200, 1);
+            this.txtFirstname.CustomButton.Name = "";
+            this.txtFirstname.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtFirstname.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtFirstname.CustomButton.TabIndex = 1;
+            this.txtFirstname.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtFirstname.CustomButton.UseSelectable = true;
+            this.txtFirstname.CustomButton.Visible = false;
+            this.txtFirstname.Lines = new string[0];
+            this.txtFirstname.Location = new System.Drawing.Point(125, 25);
+            this.txtFirstname.MaxLength = 32767;
+            this.txtFirstname.Name = "txtFirstname";
+            this.txtFirstname.PasswordChar = '\0';
+            this.txtFirstname.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtFirstname.SelectedText = "";
+            this.txtFirstname.SelectionLength = 0;
+            this.txtFirstname.SelectionStart = 0;
+            this.txtFirstname.ShortcutsEnabled = true;
+            this.txtFirstname.Size = new System.Drawing.Size(222, 23);
+            this.txtFirstname.TabIndex = 0;
+            this.txtFirstname.Tag = "Firstname";
+            this.txtFirstname.UseSelectable = true;
+            this.txtFirstname.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtFirstname.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtFirstname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFirstname_KeyPress);
+            // 
+            // txtLastname
+            // 
+            // 
+            // 
+            // 
+            this.txtLastname.CustomButton.Image = null;
+            this.txtLastname.CustomButton.Location = new System.Drawing.Point(200, 1);
+            this.txtLastname.CustomButton.Name = "";
+            this.txtLastname.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtLastname.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtLastname.CustomButton.TabIndex = 1;
+            this.txtLastname.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtLastname.CustomButton.UseSelectable = true;
+            this.txtLastname.CustomButton.Visible = false;
+            this.txtLastname.Lines = new string[0];
+            this.txtLastname.Location = new System.Drawing.Point(125, 54);
+            this.txtLastname.MaxLength = 32767;
+            this.txtLastname.Name = "txtLastname";
+            this.txtLastname.PasswordChar = '\0';
+            this.txtLastname.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtLastname.SelectedText = "";
+            this.txtLastname.SelectionLength = 0;
+            this.txtLastname.SelectionStart = 0;
+            this.txtLastname.ShortcutsEnabled = true;
+            this.txtLastname.Size = new System.Drawing.Size(222, 23);
+            this.txtLastname.TabIndex = 1;
+            this.txtLastname.Tag = "Lastname";
+            this.txtLastname.UseSelectable = true;
+            this.txtLastname.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtLastname.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtLastname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastname_KeyPress);
+            // 
+            // txtEmail
+            // 
+            // 
+            // 
+            // 
+            this.txtEmail.CustomButton.Image = null;
+            this.txtEmail.CustomButton.Location = new System.Drawing.Point(200, 1);
+            this.txtEmail.CustomButton.Name = "";
+            this.txtEmail.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtEmail.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtEmail.CustomButton.TabIndex = 1;
+            this.txtEmail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtEmail.CustomButton.UseSelectable = true;
+            this.txtEmail.CustomButton.Visible = false;
+            this.txtEmail.Lines = new string[0];
+            this.txtEmail.Location = new System.Drawing.Point(124, 118);
+            this.txtEmail.MaxLength = 32767;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PasswordChar = '\0';
+            this.txtEmail.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtEmail.SelectedText = "";
+            this.txtEmail.SelectionLength = 0;
+            this.txtEmail.SelectionStart = 0;
+            this.txtEmail.ShortcutsEnabled = true;
+            this.txtEmail.Size = new System.Drawing.Size(222, 23);
+            this.txtEmail.TabIndex = 3;
+            this.txtEmail.Tag = "Email";
+            this.txtEmail.UseSelectable = true;
+            this.txtEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
+            // 
+            // txtPhoneNumber
+            // 
+            // 
+            // 
+            // 
+            this.txtPhoneNumber.CustomButton.Image = null;
+            this.txtPhoneNumber.CustomButton.Location = new System.Drawing.Point(200, 1);
+            this.txtPhoneNumber.CustomButton.Name = "";
+            this.txtPhoneNumber.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtPhoneNumber.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtPhoneNumber.CustomButton.TabIndex = 1;
+            this.txtPhoneNumber.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtPhoneNumber.CustomButton.UseSelectable = true;
+            this.txtPhoneNumber.CustomButton.Visible = false;
+            this.txtPhoneNumber.Lines = new string[0];
+            this.txtPhoneNumber.Location = new System.Drawing.Point(124, 147);
+            this.txtPhoneNumber.MaxLength = 32767;
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.PasswordChar = '\0';
+            this.txtPhoneNumber.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtPhoneNumber.SelectedText = "";
+            this.txtPhoneNumber.SelectionLength = 0;
+            this.txtPhoneNumber.SelectionStart = 0;
+            this.txtPhoneNumber.ShortcutsEnabled = true;
+            this.txtPhoneNumber.Size = new System.Drawing.Size(222, 23);
+            this.txtPhoneNumber.TabIndex = 4;
+            this.txtPhoneNumber.Tag = "Phonenumber";
+            this.txtPhoneNumber.UseSelectable = true;
+            this.txtPhoneNumber.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtPhoneNumber.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPhoneNumber.Validating += new System.ComponentModel.CancelEventHandler(this.txtPhoneNumber_Validating);
             // 
             // txtManifesto
             // 
-            this.txtManifesto.Location = new System.Drawing.Point(106, 174);
+            // 
+            // 
+            // 
+            this.txtManifesto.CustomButton.Image = null;
+            this.txtManifesto.CustomButton.Location = new System.Drawing.Point(126, 2);
+            this.txtManifesto.CustomButton.Name = "";
+            this.txtManifesto.CustomButton.Size = new System.Drawing.Size(93, 93);
+            this.txtManifesto.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtManifesto.CustomButton.TabIndex = 1;
+            this.txtManifesto.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtManifesto.CustomButton.UseSelectable = true;
+            this.txtManifesto.CustomButton.Visible = false;
+            this.txtManifesto.Lines = new string[0];
+            this.txtManifesto.Location = new System.Drawing.Point(125, 211);
+            this.txtManifesto.MaxLength = 32767;
             this.txtManifesto.Multiline = true;
             this.txtManifesto.Name = "txtManifesto";
-            this.txtManifesto.Size = new System.Drawing.Size(219, 95);
+            this.txtManifesto.PasswordChar = '\0';
+            this.txtManifesto.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtManifesto.SelectedText = "";
+            this.txtManifesto.SelectionLength = 0;
+            this.txtManifesto.SelectionStart = 0;
+            this.txtManifesto.ShortcutsEnabled = true;
+            this.txtManifesto.Size = new System.Drawing.Size(222, 98);
             this.txtManifesto.TabIndex = 6;
-            this.txtManifesto.Tag = "Manifesto";
+            this.txtManifesto.UseSelectable = true;
+            this.txtManifesto.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtManifesto.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // cmbGender
+            // 
+            this.cmbGender.FormattingEnabled = true;
+            this.cmbGender.ItemHeight = 23;
+            this.cmbGender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.cmbGender.Location = new System.Drawing.Point(125, 83);
+            this.cmbGender.Name = "cmbGender";
+            this.cmbGender.Size = new System.Drawing.Size(221, 29);
+            this.cmbGender.TabIndex = 2;
+            this.cmbGender.Tag = "Gender";
+            this.cmbGender.UseSelectable = true;
             // 
             // cmbPost
             // 
-            this.cmbPost.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPost.FormattingEnabled = true;
-            this.cmbPost.Location = new System.Drawing.Point(106, 147);
+            this.cmbPost.ItemHeight = 23;
+            this.cmbPost.Location = new System.Drawing.Point(124, 176);
             this.cmbPost.Name = "cmbPost";
-            this.cmbPost.Size = new System.Drawing.Size(218, 21);
+            this.cmbPost.Size = new System.Drawing.Size(221, 29);
             this.cmbPost.TabIndex = 5;
-            this.cmbPost.Tag = "Post";
+            this.cmbPost.Tag = "Position";
+            this.cmbPost.UseSelectable = true;
             // 
-            // label2
+            // btnWebCam
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(64, 150);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 13);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Post:";
+            this.btnWebCam.Location = new System.Drawing.Point(443, 31);
+            this.btnWebCam.Name = "btnWebCam";
+            this.btnWebCam.Size = new System.Drawing.Size(61, 23);
+            this.btnWebCam.TabIndex = 7;
+            this.btnWebCam.Text = "WebCam";
+            this.btnWebCam.UseSelectable = true;
+            this.btnWebCam.Click += new System.EventHandler(this.btnWebcam_Click);
             // 
             // btnUpload
             // 
-            this.btnUpload.Location = new System.Drawing.Point(434, 52);
+            this.btnUpload.Location = new System.Drawing.Point(443, 60);
             this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(75, 23);
-            this.btnUpload.TabIndex = 6;
+            this.btnUpload.Size = new System.Drawing.Size(61, 23);
+            this.btnUpload.TabIndex = 8;
             this.btnUpload.Text = "Upload";
-            this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.UseSelectable = true;
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
-            // btnWebcam
+            // metroPanel1
             // 
-            this.btnWebcam.Location = new System.Drawing.Point(434, 22);
-            this.btnWebcam.Name = "btnWebcam";
-            this.btnWebcam.Size = new System.Drawing.Size(75, 23);
-            this.btnWebcam.TabIndex = 5;
-            this.btnWebcam.Text = "WebCam";
-            this.btnWebcam.UseVisualStyleBackColor = true;
-            this.btnWebcam.Click += new System.EventHandler(this.btnWebcam_Click);
+            this.metroPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.metroPanel1.Controls.Add(this.btnWebCam);
+            this.metroPanel1.Controls.Add(this.btnUpload);
+            this.metroPanel1.Controls.Add(this.cmbGender);
+            this.metroPanel1.Controls.Add(this.picImage);
+            this.metroPanel1.Controls.Add(this.cmbPost);
+            this.metroPanel1.Controls.Add(this.metroLabel1);
+            this.metroPanel1.Controls.Add(this.metroLabel2);
+            this.metroPanel1.Controls.Add(this.metroLabel3);
+            this.metroPanel1.Controls.Add(this.txtManifesto);
+            this.metroPanel1.Controls.Add(this.metroLabel4);
+            this.metroPanel1.Controls.Add(this.txtPhoneNumber);
+            this.metroPanel1.Controls.Add(this.metroLabel5);
+            this.metroPanel1.Controls.Add(this.txtEmail);
+            this.metroPanel1.Controls.Add(this.metroLabel6);
+            this.metroPanel1.Controls.Add(this.txtLastname);
+            this.metroPanel1.Controls.Add(this.metroLabel7);
+            this.metroPanel1.Controls.Add(this.txtFirstname);
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(24, 83);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(522, 343);
+            this.metroPanel1.TabIndex = 2;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
             // 
             // picImage
             // 
             this.picImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picImage.Location = new System.Drawing.Point(344, 19);
+            this.picImage.Location = new System.Drawing.Point(353, 25);
             this.picImage.Name = "picImage";
             this.picImage.Size = new System.Drawing.Size(84, 92);
             this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -182,235 +385,171 @@
             this.picImage.TabStop = false;
             this.picImage.Tag = "Passport";
             // 
-            // cmbGender
-            // 
-            this.cmbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbGender.FormattingEnabled = true;
-            this.cmbGender.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.cmbGender.Location = new System.Drawing.Point(107, 68);
-            this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(218, 21);
-            this.cmbGender.TabIndex = 2;
-            this.cmbGender.Tag = "Gender";
-            // 
-            // txtPhoneNumber
-            // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(106, 121);
-            this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(219, 20);
-            this.txtPhoneNumber.TabIndex = 4;
-            this.txtPhoneNumber.Tag = "Phonenumber";
-            this.txtPhoneNumber.Validating += new System.ComponentModel.CancelEventHandler(this.txtPhoneNumber_Validating);
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(106, 95);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(219, 20);
-            this.txtEmail.TabIndex = 3;
-            this.txtEmail.Tag = "Email";
-            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
-            // 
-            // txtLastname
-            // 
-            this.txtLastname.Location = new System.Drawing.Point(107, 42);
-            this.txtLastname.Name = "txtLastname";
-            this.txtLastname.Size = new System.Drawing.Size(219, 20);
-            this.txtLastname.TabIndex = 1;
-            this.txtLastname.Tag = "Lastname";
-            this.txtLastname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastname_KeyPress);
-            // 
-            // txtFirstname
-            // 
-            this.txtFirstname.Location = new System.Drawing.Point(107, 16);
-            this.txtFirstname.Name = "txtFirstname";
-            this.txtFirstname.Size = new System.Drawing.Size(219, 20);
-            this.txtFirstname.TabIndex = 0;
-            this.txtFirstname.Tag = "Firstname";
-            this.txtFirstname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFirstname_KeyPress);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 124);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Phone number:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(60, 98);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Email:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(50, 71);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Gender:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 45);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Lastname: ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 19);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Firstname: ";
-            // 
             // btnNew
             // 
             this.btnNew.Location = new System.Drawing.Point(23, 432);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(75, 23);
-            this.btnNew.TabIndex = 16;
+            this.btnNew.TabIndex = 3;
             this.btnNew.Text = "New Record";
-            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.UseSelectable = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(248, 432);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 15;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(173, 432);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdate.TabIndex = 14;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(98, 432);
+            this.btnSubmit.Location = new System.Drawing.Point(104, 432);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 23);
-            this.btnSubmit.TabIndex = 13;
+            this.btnSubmit.TabIndex = 4;
             this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.UseSelectable = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
-            // openFileDialog1
+            // btnUpdate
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.btnUpdate.Location = new System.Drawing.Point(185, 432);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 5;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseSelectable = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(266, 432);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 6;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseSelectable = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.listView1.Location = new System.Drawing.Point(572, 29);
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8});
+            this.listView1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.listView1.FullRowSelect = true;
+            this.listView1.Location = new System.Drawing.Point(553, 83);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(378, 373);
-            this.listView1.TabIndex = 17;
+            this.listView1.OwnerDraw = true;
+            this.listView1.Size = new System.Drawing.Size(399, 343);
+            this.listView1.TabIndex = 41;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.UseSelectable = true;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
-            // columnHeader1
+            // columnHeader5
             // 
-            this.columnHeader1.Text = "Name";
-            this.columnHeader1.Width = 144;
+            this.columnHeader5.Text = "Name";
+            this.columnHeader5.Width = 147;
             // 
-            // columnHeader2
+            // columnHeader6
             // 
-            this.columnHeader2.Text = "Gender";
-            this.columnHeader2.Width = 66;
+            this.columnHeader6.Text = "Gender";
+            this.columnHeader6.Width = 71;
             // 
-            // columnHeader3
+            // columnHeader7
             // 
-            this.columnHeader3.Text = "Email";
-            this.columnHeader3.Width = 107;
+            this.columnHeader7.Text = "Email Address";
+            this.columnHeader7.Width = 132;
             // 
-            // columnHeader4
+            // columnHeader8
             // 
-            this.columnHeader4.Text = "Post";
+            this.columnHeader8.Text = "Position";
+            this.columnHeader8.Width = 110;
+            // 
+            // txtSearch
+            // 
+            // 
+            // 
+            // 
+            this.txtSearch.CustomButton.Image = global::VotingSystem.Properties.Resources.application_form_magnify;
+            this.txtSearch.CustomButton.Location = new System.Drawing.Point(204, 2);
+            this.txtSearch.CustomButton.Name = "";
+            this.txtSearch.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSearch.CustomButton.TabIndex = 1;
+            this.txtSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSearch.CustomButton.UseSelectable = true;
+            this.txtSearch.CustomButton.Visible = false;
+            this.txtSearch.DisplayIcon = true;
+            this.txtSearch.Icon = global::VotingSystem.Properties.Resources.search_accounts1;
+            this.txtSearch.Lines = new string[0];
+            this.txtSearch.Location = new System.Drawing.Point(679, 41);
+            this.txtSearch.MaxLength = 32767;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PromptText = "Enter Candidate PIN to Search";
+            this.txtSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.SelectionLength = 0;
+            this.txtSearch.SelectionStart = 0;
+            this.txtSearch.ShortcutsEnabled = true;
+            this.txtSearch.Size = new System.Drawing.Size(228, 26);
+            this.txtSearch.TabIndex = 0;
+            this.txtSearch.UseSelectable = true;
+            this.txtSearch.WaterMark = "Enter Candidate PIN to Search";
+            this.txtSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // FrmCandidate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(975, 478);
+            this.ClientSize = new System.Drawing.Size(975, 509);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.btnNew);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnNew);
+            this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.label1);
             this.Name = "FrmCandidate";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Register Candidate";
+            this.Text = "Register New Candidate";
             this.Load += new System.EventHandler(this.FrmCandidate_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.metroPanel1.ResumeLayout(false);
+            this.metroPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnUpload;
-        private System.Windows.Forms.Button btnWebcam;
         private System.Windows.Forms.PictureBox picImage;
-        private System.Windows.Forms.ComboBox cmbGender;
-        private System.Windows.Forms.TextBox txtPhoneNumber;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtLastname;
-        private System.Windows.Forms.TextBox txtFirstname;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnNew;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtManifesto;
-        private System.Windows.Forms.ComboBox cmbPost;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private MetroFramework.Controls.MetroTextBox txtSearch;
+        private MetroFramework.Controls.MetroButton btnSearch;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroLabel metroLabel7;
+        private MetroFramework.Controls.MetroTextBox txtFirstname;
+        private MetroFramework.Controls.MetroTextBox txtLastname;
+        private MetroFramework.Controls.MetroTextBox txtEmail;
+        private MetroFramework.Controls.MetroTextBox txtPhoneNumber;
+        private MetroFramework.Controls.MetroTextBox txtManifesto;
+        private MetroFramework.Controls.MetroComboBox cmbGender;
+        private MetroFramework.Controls.MetroComboBox cmbPost;
+        private MetroFramework.Controls.MetroButton btnWebCam;
+        private MetroFramework.Controls.MetroButton btnUpload;
+        private MetroFramework.Controls.MetroPanel metroPanel1;
+        private MetroFramework.Controls.MetroButton btnNew;
+        private MetroFramework.Controls.MetroButton btnSubmit;
+        private MetroFramework.Controls.MetroButton btnUpdate;
+        private MetroFramework.Controls.MetroButton btnDelete;
+        private MetroFramework.Controls.MetroListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
     }
 }

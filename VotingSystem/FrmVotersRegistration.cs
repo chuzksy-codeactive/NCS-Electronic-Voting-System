@@ -6,13 +6,14 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using MetroFramework;
 using SecuGen.FDxSDKPro.Windows;
 using VotingSystem.Models;
 using VotingSystem.SMSLive247Api;
 
 namespace VotingSystem
 {
-    public partial class FrmVotersRegistration : Form
+    public partial class FrmVotersRegistration : MetroFramework.Forms.MetroForm
     {
         private static readonly ErrorProvider errProvider = new ErrorProvider();
         private SGFingerPrintManager _mFpm;
@@ -46,6 +47,7 @@ namespace VotingSystem
             _mFpm = new SGFingerPrintManager();
             EnumerateBtn_Click(sender, e);
 
+            tbRegistration.SelectedTab = tbVoterInfo;
             var voterRegistration    = new VoterRegistration();
             voterPin = voterRegistration.GetVoterId();
         }
@@ -72,7 +74,7 @@ namespace VotingSystem
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MetroMessageBox.Show(this,ex.Message, "Message");
             }
         }
 
@@ -358,7 +360,7 @@ namespace VotingSystem
                     statusBar.Text = _error.DisplayError(@"MatchTemplate()", iError);
             }
             else
-                MessageBox.Show(@"Please load an image", @"Error Loading Image");
+                MetroMessageBox.Show(this,@"Please load an image", @"Error Loading Image");
             return checkVoter;
         }
         private int Verify(Byte[] image1, Byte[] image2, Byte[] image3)
@@ -407,10 +409,8 @@ namespace VotingSystem
         {
             if (IsValidateData())
             {
-                var r = MessageBox.Show(@"Are you sure you want to SUBMIT?", @"eVoting System",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2,
-                MessageBoxOptions.DefaultDesktopOnly);
-
+                var r = MetroMessageBox.Show(this,@"Are you sure you want to SUBMIT?", @"eVoting System",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
             
                 if (r == DialogResult.Yes)
                 {
@@ -425,7 +425,6 @@ namespace VotingSystem
                                 using (_cmd = new SqlCommand("spAddVoter", _cnn))
                                 {
                                     _cmd.CommandType = CommandType.StoredProcedure;
-                                    //_cmd.Transaction = _myTransaction;
                                     _cmd.Parameters.AddWithValue("@voterPin", voterPin);
                                     _cmd.Parameters.AddWithValue("@firstName", txtFirstname.Text);
                                     _cmd.Parameters.AddWithValue("@lastName", txtLastname.Text);
@@ -451,32 +450,32 @@ namespace VotingSystem
                                     {
                                         _cmd.ExecuteNonQuery();
                                         voterId = outParameter.Value.ToString();
-                                        MessageBox.Show(@"Data Submitted Successfully!", @"eVoting System",
+                                        MetroMessageBox.Show(this,@"Data Submitted Successfully!", @"eVoting System",
                                             MessageBoxButtons.OK,
                                             MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                                        //SendSms(voterPin, voterId);
                                         ClearAll();
                                     }
                                     catch (SqlException ex)
                                     {
-                                        MessageBox.Show(@"Data unable to save due to " + ex.Message);
+                                        MetroMessageBox.Show(this,@"Data unable to save due to " + ex.Message);
                                     }
                                 }
                             }
                             else
                             {
-                                MessageBox.Show(@"You have registered before", @"eVoting System", MessageBoxButtons.OK,
+                                MetroMessageBox.Show(this,@"You have registered before", @"eVoting System", MessageBoxButtons.OK,
                                     MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                                 _mFpm.EnableAutoOnEvent(false, 0);
                             }
                         }
                         else
                         {
-                            MessageBox.Show(@"Fingerprint does no match", @"eVoting System", MessageBoxButtons.OK,
+                            MetroMessageBox.Show(this,@"Fingerprint does no match", @"eVoting System", MessageBoxButtons.OK,
                                     MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                         }
                     }
                 }
-                SendSms(voterPin, voterId);
             }
             
         }
@@ -508,8 +507,6 @@ namespace VotingSystem
                     errProvider.SetError(txtEmail, @"Wrong email format");
                     txtEmail.Focus();
                     txtEmail.SelectAll();
-                    //MessageBox.Show(@"E-Mail expected", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                   
                     e.Cancel = true;
                 }
                 else
@@ -523,11 +520,12 @@ namespace VotingSystem
         {
             if ((e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar >= 97 && e.KeyChar <= 122) || e.KeyChar == 32 || e.KeyChar == 8)
             {
+                errProvider.SetError(txtFirstname, "");
                 e.Handled = false;
             }
             else
             {
-                MessageBox.Show(@"Invalid Input, Characters only", @"Wrong Input Data");
+                MetroMessageBox.Show(this,@"Invalid Input, Characters only", @"Wrong Input Data");
                 e.Handled = true;
             }
         }
@@ -539,7 +537,6 @@ namespace VotingSystem
             {
                 if (!matchPhoneNumberPattern.IsMatch(txtPhoneNumber.Text))
                 {
-                    //MessageBox.Show(@"Wrong phone number format", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     errProvider.SetError(txtPhoneNumber, @"Wrong phone number format");
                     txtPhoneNumber.Focus();
                     txtPhoneNumber.SelectAll();
@@ -598,14 +595,14 @@ namespace VotingSystem
 
             newSms.CallBack = "Chuzksy Solutions";
             newSms.Destination = new ArrayOfString {txtPhoneNumber.Text};
-            newSms.Message = "Hi, you are registered successfully. Your security key is " +voterId +". Your VoterID is " +voterPin;
+            newSms.Message = "Hi, you are registered successfully. Your security key is " +securityKey +". Your VoterID is " +id;
             response = sms.SendSMS("8ebf9ffc-b6ca-40d0-8ede-baad3360d982", newSms);
             if (response.ErrorCode == 0)
             {
-                MessageBox.Show(@"Message sent. The message Id is: " + response.ExtraMessage, @"SMS Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MetroMessageBox.Show(this,@"Message sent. The message Id is: " + response.ExtraMessage, @"SMS Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
-                MessageBox.Show(@"Error! Message not sent. Reason: " + response.ErrorMessage, @"SMS Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroMessageBox.Show(this,@"Error! Message not sent. Reason: " + response.ErrorMessage, @"SMS Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -622,21 +619,20 @@ namespace VotingSystem
                 voter.Phonenumber = txtPhoneNumber.Text.Trim();
                 voter.VoterImg = picImage.Image;
 
-                var r = MessageBox.Show(@"Are you sure you want to UPDATE this record?", @"eVoting System",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2,
-                 MessageBoxOptions.DefaultDesktopOnly);
+                var r = MetroMessageBox.Show(this,@"Are you sure you want to UPDATE this record?", @"eVoting System",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
                 if (r == DialogResult.Yes)
                 {
                     var rowAffected = updateVoter.UpdateVoter(voter, voterPin);
                     if (rowAffected == -1)
                     {
-                        MessageBox.Show(@"Record not updated successful", @"Voting System", MessageBoxButtons.OK,
+                        MetroMessageBox.Show(this,@"Record not updated successful", @"Voting System", MessageBoxButtons.OK,
                             MessageBoxIcon.Error);
                     }
                     else if (rowAffected == 1)
                     {
-                        MessageBox.Show(@"Record has been updated successful", @"Voting System", MessageBoxButtons.OK,
+                        MetroMessageBox.Show(this,@"Record has been updated successful", @"Voting System", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
                         ClearAll();
                         btnUpdate.Enabled = false;
@@ -658,7 +654,7 @@ namespace VotingSystem
             {
                 if (!string.IsNullOrWhiteSpace(msg))
                 {
-                    MessageBox.Show(msg, @"Voting System", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(this,msg, @"Voting System", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     //btnDelete.Enabled = false;
                 }
                 else
@@ -689,9 +685,8 @@ namespace VotingSystem
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            var r = MessageBox.Show(@"Are you sure you want to DELETE this record?", @"eVoting System",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2,
-                 MessageBoxOptions.DefaultDesktopOnly);
+            var r = MetroMessageBox.Show(this,@"Are you sure you want to DELETE this record?", @"eVoting System",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
             if (r == DialogResult.Yes)
             {
@@ -701,7 +696,7 @@ namespace VotingSystem
                     var rowAffected = voterPin.DeleteVoter(txtSearch.Text);
                     if (rowAffected == 1)
                     {
-                        MessageBox.Show(@"Record DELETED successfully", @"Electronic Voting System",
+                        MetroMessageBox.Show(this,@"Record DELETED successfully", @"Electronic Voting System",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
                         ClearAll();
@@ -712,12 +707,34 @@ namespace VotingSystem
                     }
                     else if (rowAffected == -1)
                     {
-                        MessageBox.Show(@"Record NOT found", @"Electronic Voting System", MessageBoxButtons.OK,
+                        MetroMessageBox.Show(this,@"Record NOT found", @"Electronic Voting System", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
                     }
                 }
             }
             
+        }
+
+        private void txtFirstname_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtFirstname.Text))
+            {
+                errProvider.SetError(txtFirstname, "Wrong data entered");
+                e.Cancel = true;
+            }
+            else
+                errProvider.SetError(txtFirstname, null);
+        }
+
+        private void txtLastname_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtLastname.Text))
+            {
+                errProvider.SetError(txtLastname, "Wrong data entered");
+                e.Cancel = true;
+            }
+            else
+                errProvider.SetError(txtLastname, null);
         }
     }
 }

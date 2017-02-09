@@ -9,5 +9,10 @@ namespace VotingSystem.Models
         public int NoOfCandidates { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
+
+        public override string ToString()
+        {
+            return $"{ElectionId}: {Post} ";
+        }
     }
 }

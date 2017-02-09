@@ -6,14 +6,15 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using MetroFramework;
+using MetroFramework.Controls;
 using SecuGen.FDxSDKPro.Windows;
-using Telerik.WinControls.UI;
 using VotingSystem.Models;
 using VotingSystem.Properties;
 
 namespace VotingSystem
 {
-    public partial class FrmElectionModule : Form
+    public partial class FrmElectionModule : MetroFramework.Forms.MetroForm
     {
         private SqlConnection _cnn;
         private SqlCommand _cmd;
@@ -22,6 +23,7 @@ namespace VotingSystem
         private readonly List<Election> _electionList = new List<Election>();
         private List<Candidate> candidates = new List<Candidate>(); 
         private List<string> links = new List<string>(4);
+        private string candidatePin;
 
         private Error _error = new Error();
         private SGFingerPrintManager _mFpm;
@@ -37,35 +39,6 @@ namespace VotingSystem
         {
             InitializeComponent();
         }
-
-        #region GetBtn_Click
-        //private void GetBtn_Click(object sender, EventArgs e)
-        //{
-        //    //SGFPMDeviceInfoParam pInfo = new SGFPMDeviceInfoParam();
-        //    //Int32 iError = _mFpm.GetDeviceInfo(pInfo);
-
-        //    //if (iError == (Int32) SGFPMError.ERROR_NONE)
-        //    //{
-        //    //    _mImageWidth = pInfo.ImageWidth;
-        //    //    _mImageHeight = pInfo.ImageHeight;
-
-        //    //    textDeviceID.Text = Convert.ToString(pInfo.DeviceID);
-        //    //    textImageDPI.Text = Convert.ToString(pInfo.ImageDPI);
-        //    //    textFWVersion.Text = Convert.ToString(pInfo.FWVersion, 16);
-
-        //    //    ASCIIEncoding encoding = new ASCIIEncoding();
-        //    //    textSerialNum.Text = encoding.GetString(pInfo.DeviceSN);
-
-        //    //    textImageHeight.Text = Convert.ToString(pInfo.ImageHeight);
-        //    //    textImageWidth.Text = Convert.ToString(pInfo.ImageWidth);
-        //    //    textBrightness.Text = Convert.ToString(pInfo.Brightness);
-        //    //    textContrast.Text = Convert.ToString(pInfo.Contrast);
-        //    //    textGain.Text = Convert.ToString(pInfo.Gain);
-
-        //    //    BrightnessUpDown.Value = pInfo.Brightness;
-        //    //}
-        //} 
-        #endregion
 
         private void DrawImage(Byte[] imgData, PictureBox picBox)
         {
@@ -184,36 +157,8 @@ namespace VotingSystem
             }
             else
                 error.DisplayError("OpenDevice()", iError);
+            panel2.Enabled = true;
         }
-
-        #region ConfigBtn_Click
-
-        //private void ConfigBtn_Click(object sender, EventArgs e)
-        //{
-        //    _mFpm.Configure((int) this.Handle);
-        //}
-
-        #endregion
-
-        #region SetBrighnessBtn_Click
-
-        //private void SetBrightnessBtn_Click(object sender, EventArgs e)
-        //{
-        //    Int32 iError;
-        //    Int32 brightness;
-
-        //    brightness = (int)BrightnessUpDown.Value;
-        //    iError = _mFpm.SetBrightness(brightness);
-        //    if (iError == (Int32)SGFPMError.ERROR_NONE)
-        //    {
-        //        Status.Text = @" SetBrightness success";
-        //        GetBtn_Click(sender, e);
-        //    }
-        //    else
-        //        Status.Text = _error.DisplayError(" SetBrightness()", iError);
-        //}
-
-        #endregion
 
         private void CheckBoxAutoOn_CheckedChanged(object sender, EventArgs e)
         {
@@ -339,7 +284,6 @@ namespace VotingSystem
         private void btnScan_Click(object sender, EventArgs e)
         {
             Status.Text = "";
-            toolStripProgressBar1.Value = 0;
             Int32 iError;
             Byte[] fp_image;
             Int32 img_qlty;
@@ -350,7 +294,6 @@ namespace VotingSystem
             iError = _mFpm.GetImage(fp_image);
 
             _mFpm.GetImageQuality(_mImageWidth, _mImageHeight, fp_image, ref img_qlty);
-            toolStripProgressBar1.Value = img_qlty;
 
             if (iError == (int) SGFPMError.ERROR_NONE)
             {
@@ -364,9 +307,15 @@ namespace VotingSystem
                         lblName.Text = voters.Firstname + @" " + voters.Lastname;
                         lblVoterPin.Text = voters.VoterPin;
                         picImage.Image = voters.VoterImg;
+                        radioButton4.Checked = false;
+                        radioButton3.Checked = false;
+                        radioButton2.Checked = false;
+                        radioButton1.Checked = false;
+                        btnCastVote.Enabled = false;
+                        metroPanel3.Visible = true;
                     }
                     else
-                        MessageBox.Show(@"Your record not found in the database", @"eVoting System",
+                        MetroMessageBox.Show(this,@"Your record not found in the database", @"eVoting System",
                             MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
                 else
@@ -378,24 +327,21 @@ namespace VotingSystem
 
         private void cmbElectionId_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var noOfCandidates =
-                _electionList.Where(x => x.Post == cmbElectionId.Text).Select(x => x.NoOfCandidates).First();
+            //var noOfCandidates =
+            //    _electionList.Where(x => x.Post == cmbElectionId.Text).Select(x => x.NoOfCandidates).First();
             var loadElection = LoadElection.ElectionList();
             var selectedCandidates = loadElection.Where(x => x.Post == cmbElectionId.Text).ToList();
             candidates = selectedCandidates;
             var countCnd = selectedCandidates.Count;
-            var links = new List<LinkLabel> {linkLabel4, linkLabel3, linkLabel2, linkLabel1};
-
-            //var radios = new List<RadioButton> { radioButton1, radioButton2, radioButton3, radioButton4 };
-
+            var metroLinks = new List<MetroLink> {linkLabel4, linkLabel3, linkLabel2, linkLabel1};
             #region LotsOfLogic
 
             if (countCnd == 0)
             {
-                radioButton4.Visible = false;
-                radioButton3.Visible = false;
-                radioButton2.Visible = false;
                 radioButton1.Visible = false;
+                radioButton2.Visible = false;
+                radioButton3.Visible = false;
+                radioButton4.Visible = false;
                 linkLabel4.Visible = false;
                 linkLabel3.Visible = false;
                 linkLabel2.Visible = false;
@@ -405,75 +351,96 @@ namespace VotingSystem
             else if (countCnd == 1)
             {
                 int counter = 0;
-                foreach (var radio in from object control in groupBox3.Controls select control as RadioButton)
+                foreach (var radio in from object control in metroPanel.Controls select control as MetroRadioButton)
                 {
                     if (radio != null)
                     {
                         radio.Text = selectedCandidates[counter].Fullname;
-                        links[counter].Text = selectedCandidates[counter].CandidatePin;
+                        metroLinks[counter].Text = selectedCandidates[counter].CandidatePin;
                         counter++;
                     }
                     if (counter != countCnd) continue;
                     break;
                 }
-                radioButton3.Visible = false;
                 radioButton2.Visible = false;
+                radioButton3.Visible = false;
                 radioButton1.Visible = false;
+                radioButton4.Visible = true;
                 linkLabel3.Visible = false;
                 linkLabel2.Visible = false;
                 linkLabel1.Visible = false;
+                linkLabel4.Visible = true;
 
             }
             else if (countCnd == 2)
             {
                 int counter = 0;
-                foreach (var radio in from object control in groupBox3.Controls select control as RadioButton)
+                foreach (var radio in from object control in metroPanel.Controls select control as MetroRadioButton)
                 {
                     if (radio != null)
                     {
                         radio.Text = selectedCandidates[counter].Fullname;
-                        links[counter].Text = selectedCandidates[counter].CandidatePin;
+                        metroLinks[counter].Text = selectedCandidates[counter].CandidatePin;
                         counter++;
                     }
                     if (counter != countCnd) continue;
                     break;
                 }
+                radioButton1.Visible = true;
+                radioButton4.Visible = true;
                 radioButton2.Visible = false;
-                radioButton1.Visible = false;
+                radioButton3.Visible = false;
                 linkLabel2.Visible = false;
                 linkLabel1.Visible = false;
+                linkLabel4.Visible = true;
+                linkLabel3.Visible = true;
             }
             else if (countCnd == 3)
             {
                 int counter = 0;
-                foreach (var radio in from object control in groupBox3.Controls select control as RadioButton)
+                foreach (var control in metroPanel.Controls)
                 {
+                    var radio = control as MetroRadioButton;
                     if (radio != null)
                     {
                         radio.Text = selectedCandidates[counter].Fullname;
-                        links[counter].Text = selectedCandidates[counter].CandidatePin;
+                        metroLinks[counter].Text = selectedCandidates[counter].CandidatePin;
                         counter++;
                     }
                     if (counter != countCnd) continue;
                     break;
                 }
-                radioButton1.Visible = false;
+                radioButton1.Visible = true;
+                radioButton2.Visible = true;
+                radioButton4.Visible = true;
+                radioButton3.Visible = false;
                 linkLabel1.Visible = false;
+                linkLabel2.Visible = true;
+                linkLabel3.Visible = true;
+                linkLabel4.Visible = true;
             }
             else if (countCnd == 4)
             {
                 int counter = 0;
-                foreach (var radio in from object control in groupBox3.Controls select control as RadioButton)
+                foreach (var radio in from object control in metroPanel.Controls select control as MetroRadioButton)
                 {
                     if (radio != null)
                     {
                         radio.Text = selectedCandidates[counter].Fullname;
-                        links[counter].Text = selectedCandidates[counter].CandidatePin;
+                        metroLinks[counter].Text = selectedCandidates[counter].CandidatePin;
                         counter++;
                     }
                     if (counter != countCnd) continue;
                     break;
                 }
+                radioButton1.Visible = true;
+                radioButton2.Visible = true;
+                radioButton4.Visible = true;
+                radioButton3.Visible = true;
+                linkLabel1.Visible = true;
+                linkLabel2.Visible = true;
+                linkLabel3.Visible = true;
+                linkLabel4.Visible = true;
             }
 
             #endregion
@@ -516,30 +483,96 @@ namespace VotingSystem
 
             #endregion
 
+            metroPanel.Visible = true;
+            radioButton4.Checked = false;
+            radioButton3.Checked = false;
+            radioButton2.Checked = false;
+            radioButton1.Checked = false;
+            btnCastVote.Enabled = false;
+        }
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton4.Checked || radioButton3.Checked || radioButton2.Checked || radioButton1.Checked)
+            {
+                btnCastVote.Enabled = true;
+            }
         }
 
-        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnCastVote_Click(object sender, EventArgs e)
+        {
+            var check = VoterProcess.CheckIfVoted(lblVoterPin.Text, cmbElectionId.Text);
+            if (check)
+            {
+                if (radioButton4.Checked)
+                {
+                    var saveVote = VoterProcess.SaveVote(lblVoterPin.Text, linkLabel1.Text, cmbElectionId.Text, 1);
+                    if (saveVote > 0)
+                    {
+                        MetroMessageBox.Show(this,@"You have voted successfully", @"eVoting System", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                    }
+                }else if(radioButton3.Checked)
+                {
+                    var saveVote = VoterProcess.SaveVote(lblVoterPin.Text, linkLabel2.Text, cmbElectionId.Text, 1);
+                    if (saveVote > 0)
+                    {
+                        MetroMessageBox.Show(this,@"You have voted successfully", @"eVoting System", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                    }
+                }
+                else if (radioButton2.Checked)
+                {
+                    var saveVote = VoterProcess.SaveVote(lblVoterPin.Text, linkLabel3.Text, cmbElectionId.Text, 1);
+                    if (saveVote > 0)
+                    {
+                        MetroMessageBox.Show(this,@"You have voted successfully", @"eVoting System", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                    }
+                }
+                else if (radioButton1.Checked)
+                {
+                    var saveVote = VoterProcess.SaveVote(lblVoterPin.Text, linkLabel4.Text, cmbElectionId.Text, 1);
+                    if (saveVote > 0)
+                    {
+                        MetroMessageBox.Show(this,@"You have voted successfully", @"eVoting System", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                    }
+                }
+            }
+            else
+            {
+                MetroMessageBox.Show(this,@"Sorry! You can only vote for this Position once ", @"eVoting System",
+                    MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+        }
+
+        private void linkLabel4_Click(object sender, EventArgs e)
         {
             FrmCandidateProfile.Candidates = candidates.Where(x => x.CandidatePin == linkLabel4.Text).ToList();
             var showForm = new FrmCandidateProfile();
             showForm.ShowDialog();
         }
 
-        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLabel3_Click(object sender, EventArgs e)
         {
             FrmCandidateProfile.Candidates = candidates.Where(x => x.CandidatePin == linkLabel3.Text).ToList();
             var showForm = new FrmCandidateProfile();
             showForm.ShowDialog();
         }
 
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLabel2_Click(object sender, EventArgs e)
         {
             FrmCandidateProfile.Candidates = candidates.Where(x => x.CandidatePin == linkLabel2.Text).ToList();
             var showForm = new FrmCandidateProfile();
             showForm.ShowDialog();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLabel1_Click(object sender, EventArgs e)
         {
             FrmCandidateProfile.Candidates = candidates.Where(x => x.CandidatePin == linkLabel1.Text).ToList();
             var showForm = new FrmCandidateProfile();

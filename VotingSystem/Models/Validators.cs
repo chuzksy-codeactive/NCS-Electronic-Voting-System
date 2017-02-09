@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using MetroFramework.Controls;
 
 namespace VotingSystem.Models
 {
@@ -21,7 +22,6 @@ namespace VotingSystem.Models
                 if (pictureBox.Image == null)
                 {
                     errProvider.SetError(pictureBox, pictureBox.Tag + @" is a required.");
-                    MessageBox.Show(pictureBox.Tag + @" is a required.", Title);
                     pictureBox.Focus();
                     return false;
                 }
@@ -33,9 +33,9 @@ namespace VotingSystem.Models
 
         public static bool IsPresent(Control control)
         {
-            if (control.GetType().ToString() == "System.Windows.Forms.TextBox")
+            if (control.GetType().ToString() == "MetroFramework.Controls.MetroTextBox")
             {
-                TextBox textBox = (TextBox)control;
+                var textBox = (MetroTextBox)control;
                 if (textBox.Text == "")
                 {
                     // MessageBox.Show(textBox.Tag + @" is a required field.", Title);
@@ -51,9 +51,9 @@ namespace VotingSystem.Models
                     return true;
                 }
             }
-            else if (control.GetType().ToString() == "System.Windows.Forms.ComboBox")
+            else if (control.GetType().ToString() == "MetroFramework.Controls.MetroComboBox" )
             {
-                ComboBox comboBox = (ComboBox)control;
+                var comboBox = (MetroComboBox)control;
                 if (comboBox.Text == "")
                 {
                     //MessageBox.Show(comboBox.Tag.ToString() + " is a required field.", Title);

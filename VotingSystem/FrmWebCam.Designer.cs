@@ -28,72 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmbDeviceName = new System.Windows.Forms.ComboBox();
-            this.btnStart = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSaveImage = new System.Windows.Forms.Button();
-            this.btnCaptureImage = new System.Windows.Forms.Button();
             this.picCapture = new System.Windows.Forms.PictureBox();
             this.picVideo = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
+            this.cmbDeviceName = new MetroFramework.Controls.MetroComboBox();
+            this.btnStart = new MetroFramework.Controls.MetroButton();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.btnCaptureImage = new MetroFramework.Controls.MetroButton();
+            this.btnSaveImage = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.picCapture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVideo)).BeginInit();
+            this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // cmbDeviceName
-            // 
-            this.cmbDeviceName.FormattingEnabled = true;
-            this.cmbDeviceName.Location = new System.Drawing.Point(13, 24);
-            this.cmbDeviceName.Name = "cmbDeviceName";
-            this.cmbDeviceName.Size = new System.Drawing.Size(153, 21);
-            this.cmbDeviceName.TabIndex = 0;
-            // 
-            // btnStart
-            // 
-            this.btnStart.Location = new System.Drawing.Point(172, 24);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 23);
-            this.btnStart.TabIndex = 1;
-            this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = true;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.btnSaveImage);
-            this.panel1.Controls.Add(this.btnCaptureImage);
-            this.panel1.Controls.Add(this.picCapture);
-            this.panel1.Controls.Add(this.picVideo);
-            this.panel1.Location = new System.Drawing.Point(13, 58);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(234, 155);
-            this.panel1.TabIndex = 2;
-            // 
-            // btnSaveImage
-            // 
-            this.btnSaveImage.Location = new System.Drawing.Point(121, 120);
-            this.btnSaveImage.Name = "btnSaveImage";
-            this.btnSaveImage.Size = new System.Drawing.Size(100, 23);
-            this.btnSaveImage.TabIndex = 9;
-            this.btnSaveImage.Text = "Save Image";
-            this.btnSaveImage.UseVisualStyleBackColor = true;
-            this.btnSaveImage.Click += new System.EventHandler(this.btnSaveImage_Click);
-            // 
-            // btnCaptureImage
-            // 
-            this.btnCaptureImage.Location = new System.Drawing.Point(11, 120);
-            this.btnCaptureImage.Name = "btnCaptureImage";
-            this.btnCaptureImage.Size = new System.Drawing.Size(100, 23);
-            this.btnCaptureImage.TabIndex = 8;
-            this.btnCaptureImage.Text = "Capture Image";
-            this.btnCaptureImage.UseVisualStyleBackColor = true;
-            this.btnCaptureImage.Click += new System.EventHandler(this.btnCaptureImage_Click);
             // 
             // picCapture
             // 
             this.picCapture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picCapture.Location = new System.Drawing.Point(121, 7);
+            this.picCapture.Location = new System.Drawing.Point(141, 17);
             this.picCapture.Name = "picCapture";
             this.picCapture.Size = new System.Drawing.Size(100, 107);
             this.picCapture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -103,43 +53,99 @@
             // picVideo
             // 
             this.picVideo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picVideo.Location = new System.Drawing.Point(11, 7);
+            this.picVideo.Location = new System.Drawing.Point(16, 17);
             this.picVideo.Name = "picVideo";
             this.picVideo.Size = new System.Drawing.Size(100, 107);
             this.picVideo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picVideo.TabIndex = 6;
             this.picVideo.TabStop = false;
             // 
+            // cmbDeviceName
+            // 
+            this.cmbDeviceName.FormattingEnabled = true;
+            this.cmbDeviceName.ItemHeight = 23;
+            this.cmbDeviceName.Location = new System.Drawing.Point(24, 64);
+            this.cmbDeviceName.Name = "cmbDeviceName";
+            this.cmbDeviceName.Size = new System.Drawing.Size(173, 29);
+            this.cmbDeviceName.TabIndex = 3;
+            this.cmbDeviceName.UseSelectable = true;
+            // 
+            // btnStart
+            // 
+            this.btnStart.Location = new System.Drawing.Point(203, 64);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(85, 29);
+            this.btnStart.TabIndex = 4;
+            this.btnStart.Text = "Start WebCam";
+            this.btnStart.UseSelectable = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // metroPanel1
+            // 
+            this.metroPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.metroPanel1.Controls.Add(this.btnSaveImage);
+            this.metroPanel1.Controls.Add(this.btnCaptureImage);
+            this.metroPanel1.Controls.Add(this.picCapture);
+            this.metroPanel1.Controls.Add(this.picVideo);
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(24, 106);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(264, 173);
+            this.metroPanel1.TabIndex = 5;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // btnCaptureImage
+            // 
+            this.btnCaptureImage.Location = new System.Drawing.Point(16, 131);
+            this.btnCaptureImage.Name = "btnCaptureImage";
+            this.btnCaptureImage.Size = new System.Drawing.Size(100, 23);
+            this.btnCaptureImage.TabIndex = 8;
+            this.btnCaptureImage.Text = "Capture Image";
+            this.btnCaptureImage.UseSelectable = true;
+            this.btnCaptureImage.Click += new System.EventHandler(this.btnCaptureImage_Click);
+            // 
+            // btnSaveImage
+            // 
+            this.btnSaveImage.Location = new System.Drawing.Point(141, 131);
+            this.btnSaveImage.Name = "btnSaveImage";
+            this.btnSaveImage.Size = new System.Drawing.Size(100, 23);
+            this.btnSaveImage.TabIndex = 9;
+            this.btnSaveImage.Text = "Save Image";
+            this.btnSaveImage.UseSelectable = true;
+            this.btnSaveImage.Click += new System.EventHandler(this.btnSaveImage_Click);
+            // 
             // FrmWebCam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(269, 233);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(316, 302);
+            this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.cmbDeviceName);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmWebCam";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WebCam";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmWebCam_FormClosing);
             this.Load += new System.EventHandler(this.FrmWebCam_Load);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picCapture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVideo)).EndInit();
+            this.metroPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cmbDeviceName;
-        private System.Windows.Forms.Button btnStart;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnSaveImage;
-        private System.Windows.Forms.Button btnCaptureImage;
         private System.Windows.Forms.PictureBox picCapture;
         private System.Windows.Forms.PictureBox picVideo;
+        private MetroFramework.Controls.MetroComboBox cmbDeviceName;
+        private MetroFramework.Controls.MetroButton btnStart;
+        private MetroFramework.Controls.MetroPanel metroPanel1;
+        private MetroFramework.Controls.MetroButton btnSaveImage;
+        private MetroFramework.Controls.MetroButton btnCaptureImage;
     }
 }

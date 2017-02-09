@@ -15,7 +15,12 @@ namespace VotingSystem.Models
         public string Manifesto { get; set; }
         public Image PicImage { get; set; }
         public byte[] Img { get; set; }
-        public string Fullname { get; set; }
 
+        public string Fullname => $"{Firstname} {Lastname}";
+
+        public override string ToString()
+        {
+            return $"{CandidatePin}: {Firstname} {Lastname}";
+        }
     }
 }

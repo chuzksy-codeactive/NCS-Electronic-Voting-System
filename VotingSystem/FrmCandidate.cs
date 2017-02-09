@@ -8,12 +8,13 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using MetroFramework;
 using VotingSystem.Models;
 using VotingSystem.Properties;
 
 namespace VotingSystem
 {
-    public partial class FrmCandidate : Form
+    public partial class FrmCandidate : MetroFramework.Forms.MetroForm
     {
         private SqlConnection cnn;
         private SqlCommand cmd;
@@ -34,6 +35,10 @@ namespace VotingSystem
         private void btnNew_Click(object sender, EventArgs e)
         {
             ClearAll();
+            txtFirstname.Focus();
+            btnDelete.Enabled = false;
+            btnUpdate.Enabled = false;
+            btnSubmit.Enabled = true;
         }
 
         private void ClearAll()
@@ -71,12 +76,13 @@ namespace VotingSystem
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MetroMessageBox.Show(this,ex.Message);
             }
         }
 
         private void FrmCandidate_Load(object sender, EventArgs e)
         {
+            txtFirstname.Focus();
             btnDelete.Enabled = false;
             btnUpdate.Enabled = false;
             using (cnn = new SqlConnection(Settings.Default.DbConn))
@@ -114,15 +120,15 @@ namespace VotingSystem
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            var candidateRegistration = new CandidateRegistration();
-            var result = candidateRegistration.CountCandidates(cmbPost.Text);
+            
             if (IsValidateData() )
             {
+                var candidateRegistration = new CandidateRegistration();
+                var result = candidateRegistration.CountCandidates(cmbPost.Text);
                 if (result)
                 {
-                    var r = MessageBox.Show(@"Are you sure you want to SUBMIT?", @"eVoting System",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2,
-                    MessageBoxOptions.DefaultDesktopOnly);
+                    var r = MetroMessageBox.Show(this,@"Are you sure you want to SUBMIT?", @"eVoting System",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
 
                     if (r != DialogResult.Yes) return;
@@ -142,14 +148,14 @@ namespace VotingSystem
                     int insertedRow = candidateRegistration.InsertCandidate(candidate);
                     if (insertedRow == 1)
                     {
-                        MessageBox.Show(@"Data Submitted Successfully!", @"eVoting System",
+                        MetroMessageBox.Show(this,@"Data Submitted Successfully!", @"eVoting System",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                         ClearAll();
                     }
                     else
                     {
-                        MessageBox.Show(@"Error submitting data Successfully!", @"eVoting System",
+                        MetroMessageBox.Show(this,@"Error submitting data Successfully!", @"eVoting System",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                     }
@@ -239,7 +245,7 @@ namespace VotingSystem
                 candidate = candidateRegistration.SearchCandidate(txtSearch.Text.Trim(), out message);
                 if (!string.IsNullOrWhiteSpace(message))
                 {
-                    MessageBox.Show(message, @"Voting System", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(this,message, @"Voting System", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -255,12 +261,13 @@ namespace VotingSystem
                     btnDelete.Enabled = true;
                     btnUpdate.Enabled = true;
                     btnSubmit.Enabled = false;
+                    cmbPost.Enabled = false;
                 }
                 
             }
             else
             {
-                MessageBox.Show(@"Search textbox is empty", @"eVoting System", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MetroMessageBox.Show(this,@"Search textbox is empty", @"eVoting System", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 
@@ -268,57 +275,49 @@ namespace VotingSystem
         {
             var candidate = new Candidate();
             var candidateRegistration = new CandidateRegistration();
-            var result = candidateRegistration.CountCandidates(cmbPost.Text);
-            if (result)
+            //var result = candidateRegistration.CountCandidates(cmbPost.Text);
+            if (IsValidateData())
             {
-                if (IsValidateData())
+                candidate.CandidatePin = CandidatePin;
+                candidate.Firstname = txtFirstname.Text.Trim().ToUpper();
+                candidate.Lastname = txtLastname.Text.Trim().ToUpper();
+                candidate.Email = txtEmail.Text.Trim();
+                candidate.Phonenumber = txtPhoneNumber.Text.Trim();
+                candidate.Gender = cmbGender.Text;
+                candidate.PicImage = picImage.Image;
+                candidate.Post = cmbPost.Text;
+                candidate.Manifesto = txtManifesto.Text;
+
+                var r = MetroMessageBox.Show(this,@"Are you sure you want to UPDATE this record?", @"eVoting System",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                if (r == DialogResult.Yes)
                 {
-                    candidate.CandidatePin = CandidatePin;
-                    candidate.Firstname = txtFirstname.Text.Trim().ToUpper();
-                    candidate.Lastname = txtLastname.Text.Trim().ToUpper();
-                    candidate.Email = txtEmail.Text.Trim();
-                    candidate.Phonenumber = txtPhoneNumber.Text.Trim();
-                    candidate.Gender = cmbGender.Text;
-                    candidate.PicImage = picImage.Image;
-                    candidate.Post = cmbPost.Text;
-                    candidate.Manifesto = txtManifesto.Text;
-
-                    var r = MessageBox.Show(@"Are you sure you want to UPDATE this record?", @"eVoting System",
-                        MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2,
-                        MessageBoxOptions.DefaultDesktopOnly);
-
-                    if (r == DialogResult.Yes)
+                    var rowAffected = candidateRegistration.UpdateCandidate(candidate);
+                    if (rowAffected == -1)
                     {
-                        var rowAffected = candidateRegistration.UpdateCandidate(candidate);
-                        if (rowAffected == -1)
-                        {
-                            MessageBox.Show(@"Record not updated successful", @"Voting System", MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-                        }
-                        else if (rowAffected == 1)
-                        {
-                            MessageBox.Show(@"Record has been updated successful", @"Voting System",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-                            ClearAll();
-                            btnUpdate.Enabled = false;
-                            btnDelete.Enabled = false;
-                            btnSubmit.Enabled = true;
-                        }
+                        MetroMessageBox.Show(this,@"Record not updated successful", @"Voting System", MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+                    }
+                    else if (rowAffected == 1)
+                    {
+                        MetroMessageBox.Show(this,@"Record has been updated successful", @"Voting System",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                        ClearAll();
+                        btnUpdate.Enabled = false;
+                        btnDelete.Enabled = false;
+                        btnSubmit.Enabled = true;
                     }
                 }
             }
-            else
-            {
-                errProvider.SetError(cmbPost, "Sorry! You can't register for this post");
-            }
+            cmbPost.Enabled = true;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            var r = MessageBox.Show(@"Are you sure you want to DELETE this record?", @"eVoting System",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2,
-                 MessageBoxOptions.DefaultDesktopOnly);
+            var r = MetroMessageBox.Show(this,@"Are you sure you want to DELETE this record?", @"eVoting System",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
             if (r == DialogResult.Yes)
             {
@@ -328,7 +327,7 @@ namespace VotingSystem
                     var rowAffected = candidateRegistration.DeleteCandidate(txtSearch.Text);
                     if (rowAffected == 1)
                     {
-                        MessageBox.Show(@"Record DELETED successfully", @"Electronic Voting System",
+                        MetroMessageBox.Show(this,@"Record DELETED successfully", @"Electronic Voting System",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
                         ClearAll();
@@ -338,7 +337,7 @@ namespace VotingSystem
                     }
                     else if (rowAffected == -1)
                     {
-                        MessageBox.Show(@"Record NOT found", @"Electronic Voting System", MessageBoxButtons.OK,
+                        MetroMessageBox.Show(this,@"Record NOT found", @"Electronic Voting System", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
                     }
                 }
