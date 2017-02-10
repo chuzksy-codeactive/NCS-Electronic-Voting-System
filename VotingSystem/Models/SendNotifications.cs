@@ -15,10 +15,12 @@ namespace VotingSystem.Models
             if (string.IsNullOrWhiteSpace(email))
             {
                 login = new NetworkCredential("ncsprojectx", "password001");
-                client = new SmtpClient("stmp.gmail.com");
-                client.Port = 587;
-                client.EnableSsl = true;
-                client.Credentials = login;
+                client = new SmtpClient("stmp.gmail.com")
+                {
+                    Port = 587,
+                    EnableSsl = true,
+                    Credentials = login
+                };
                 msg = new MailMessage
                 {
                     From = new MailAddress("chuzksy@gmail.com", "Chuzksy Solutions", Encoding.UTF8),
@@ -31,12 +33,9 @@ namespace VotingSystem.Models
                 client.SendCompleted += Client_SendCompleted;
                 const string userstate = "Sending...";
                 client.SendAsync(msg, userstate);
+                return message;
             }
-            else
-            {
-                return "Please! Provide an email address";
-            }
-            return message;
+            return "Please! Provide an email address";
         }
 
         private void Client_SendCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
