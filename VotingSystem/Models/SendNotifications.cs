@@ -12,20 +12,30 @@ namespace VotingSystem.Models
         string message = string.Empty;
         public string SendEmail(string email)
         {
-            login = new NetworkCredential("ncsprojectx", "password001");
-            client = new SmtpClient("stmp.gmail.com");
-            client.Port = 587;
-            client.EnableSsl = true;
-            client.Credentials = login;
-            msg = new MailMessage {From = new MailAddress("chuzksy@gmail.com", "Chuzksy Solutions", Encoding.UTF8)};
-            msg.Subject = "Voters Registration PIN";
-            msg.BodyEncoding = Encoding.UTF8;
-            msg.IsBodyHtml = true;
-            msg.Priority = MailPriority.Normal;
-            msg.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
-            client.SendCompleted += Client_SendCompleted;
-            const string userstate = "Sending...";
-            client.SendAsync(msg, userstate);
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                login = new NetworkCredential("ncsprojectx", "password001");
+                client = new SmtpClient("stmp.gmail.com");
+                client.Port = 587;
+                client.EnableSsl = true;
+                client.Credentials = login;
+                msg = new MailMessage
+                {
+                    From = new MailAddress("chuzksy@gmail.com", "Chuzksy Solutions", Encoding.UTF8),
+                    Subject = "Voters Registration PIN",
+                    BodyEncoding = Encoding.UTF8,
+                    IsBodyHtml = true,
+                    Priority = MailPriority.Normal,
+                    DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure
+                };
+                client.SendCompleted += Client_SendCompleted;
+                const string userstate = "Sending...";
+                client.SendAsync(msg, userstate);
+            }
+            else
+            {
+                return "Please! Provide an email address";
+            }
             return message;
         }
 
