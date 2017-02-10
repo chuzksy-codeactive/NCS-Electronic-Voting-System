@@ -8,6 +8,7 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using MetroFramework;
 using SecuGen.FDxSDKPro.Windows;
+using Tulpep.NotificationWindow;
 using VotingSystem.Models;
 using VotingSystem.SMSLive247Api;
 
@@ -407,6 +408,9 @@ namespace VotingSystem
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            var popup = new PopupNotifier();
+            popup.Image = Properties.Resources.email;
+            popup.TitleText = "Email Notification";
             if (IsValidateData())
             {
                 var r = MetroMessageBox.Show(this,@"Are you sure you want to SUBMIT?", @"eVoting System",
@@ -450,11 +454,17 @@ namespace VotingSystem
                                     {
                                         _cmd.ExecuteNonQuery();
                                         voterId = outParameter.Value.ToString();
+                                        var body =
+                                            string.Format(
+                                                "Hi, you are registered successfully. " + Environment.NewLine +
+                                                "Your Security Key is {0}. Your Voter ID is {1}", voterId, voterPin);
+                                        var emailReply = SendNotifications.SendEmail(txtEmail.Text, body);
+                                        if (emailReply != null) popup.ContentText = emailReply;
                                         MetroMessageBox.Show(this,@"Data Submitted Successfully!", @"eVoting System",
                                             MessageBoxButtons.OK,
                                             MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
-                                        //SendSms(voterPin, voterId);
                                         ClearAll();
+                                        popup.Popup();
                                     }
                                     catch (SqlException ex)
                                     {
@@ -580,29 +590,6 @@ namespace VotingSystem
             }
             else
                 return false;
-        }
-
-        private void SendSms(string id, string securityKey)
-        {
-            var newSms = new MessageInfo();
-            var sms = new SMSSiteAdminClient();
-            var response = new ResponseInfo();
-
-            const string password = "lillyr055y";
-            const string siteId = "chuzksy@yahoo.com:CHUZKSY";
-            sms.Login(siteId, password);
-            newSms.MessageType = SMSTypeEnum.TEXT;
-
-            newSms.CallBack = "Chuzksy Solutions";
-            newSms.Destination = new ArrayOfString {txtPhoneNumber.Text};
-            newSms.Message = "Hi, you are registered successfully. Your security key is " +securityKey +". Your VoterID is " +id;
-            response = sms.SendSMS("8ebf9ffc-b6ca-40d0-8ede-baad3360d982", newSms);
-            if (response.ErrorCode == 0)
-            {
-                MetroMessageBox.Show(this,@"Message sent. The message Id is: " + response.ExtraMessage, @"SMS Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-                MetroMessageBox.Show(this,@"Error! Message not sent. Reason: " + response.ErrorMessage, @"SMS Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

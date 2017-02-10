@@ -75,6 +75,10 @@
     <Reference Include="Telerik.WinControls, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="TelerikCommon, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Tulpep.NotificationWindow, Version=1.0.18.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tulpep.NotificationWindow.1.0.18\lib\net40\Tulpep.NotificationWindow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Z.IconLibrary.FarmFresh16, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Z.IconLibrary.FarmFresh16.2.0.0\lib\net35\Z.IconLibrary.FarmFresh16.dll</HintPath>
       <Private>True</Private>
@@ -327,6 +331,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\email.png" />
     <None Include="Resources\application_form_magnify.png" />
     <None Include="Resources\boxtrapper.png" />
     <None Include="Resources\search_accounts1.png" />

@@ -68,8 +68,7 @@
             this.btnSubmit = new MetroFramework.Controls.MetroButton();
             this.btnUpdate = new MetroFramework.Controls.MetroButton();
             this.btnDelete = new MetroFramework.Controls.MetroButton();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.statusBar = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusBar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             this.tbRegistration.SuspendLayout();
             this.tbVoterInfo.SuspendLayout();
@@ -79,7 +78,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgR1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgR2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgR3)).BeginInit();
-            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // picImage
@@ -185,6 +183,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.statusBar);
             this.panel2.Controls.Add(this.metroButton2);
             this.panel2.Controls.Add(this.metroButton1);
             this.panel2.Controls.Add(this.cmbDeviceName);
@@ -201,7 +200,7 @@
             // 
             // metroButton2
             // 
-            this.metroButton2.Location = new System.Drawing.Point(329, 19);
+            this.metroButton2.Location = new System.Drawing.Point(302, 7);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(75, 29);
             this.metroButton2.TabIndex = 19;
@@ -211,7 +210,7 @@
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(259, 19);
+            this.metroButton1.Location = new System.Drawing.Point(232, 7);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(64, 29);
             this.metroButton1.TabIndex = 18;
@@ -223,7 +222,7 @@
             // 
             this.cmbDeviceName.FormattingEnabled = true;
             this.cmbDeviceName.ItemHeight = 23;
-            this.cmbDeviceName.Location = new System.Drawing.Point(27, 19);
+            this.cmbDeviceName.Location = new System.Drawing.Point(0, 7);
             this.cmbDeviceName.Name = "cmbDeviceName";
             this.cmbDeviceName.Size = new System.Drawing.Size(226, 29);
             this.cmbDeviceName.TabIndex = 17;
@@ -634,28 +633,21 @@
             this.btnDelete.UseSelectable = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.statusBar});
-            this.statusStrip1.Location = new System.Drawing.Point(20, 540);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(875, 22);
-            this.statusStrip1.TabIndex = 20;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
             // statusBar
             // 
+            this.statusBar.AutoSize = true;
+            this.statusBar.BackColor = System.Drawing.Color.Transparent;
+            this.statusBar.ForeColor = System.Drawing.Color.DarkGreen;
+            this.statusBar.Location = new System.Drawing.Point(0, 42);
             this.statusBar.Name = "statusBar";
-            this.statusBar.Size = new System.Drawing.Size(118, 17);
-            this.statusBar.Text = "toolStripStatusLabel1";
+            this.statusBar.Size = new System.Drawing.Size(0, 13);
+            this.statusBar.TabIndex = 20;
             // 
             // FrmVotersRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(915, 582);
-            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSubmit);
@@ -671,15 +663,13 @@
             this.tbVoterInfo.ResumeLayout(false);
             this.tbVoterInfo.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.pnlBiometric.ResumeLayout(false);
             this.metroPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgR1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgR2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgR3)).EndInit();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -707,8 +697,6 @@
         private MetroFramework.Controls.MetroButton btnSubmit;
         private MetroFramework.Controls.MetroButton btnUpdate;
         private MetroFramework.Controls.MetroButton btnDelete;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel statusBar;
         private MetroFramework.Controls.MetroPanel pnlBiometric;
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroButton btnRegister;
@@ -726,6 +714,7 @@
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroComboBox cmbDeviceName;
+        private System.Windows.Forms.Label statusBar;
     }
 }
 

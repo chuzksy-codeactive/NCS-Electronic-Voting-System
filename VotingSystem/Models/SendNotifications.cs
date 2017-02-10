@@ -1,57 +1,22 @@
 ﻿using System.Net;
 using System.Net.Mail;
 using System.Text;
+using System.ComponentModel;
 
 namespace VotingSystem.Models
 {
     public class SendNotifications
     {
-        private NetworkCredential login;
-        private SmtpClient client;
-        private MailMessage msg;
-        string message = string.Empty;
-        public string SendEmail(string email)
+        public static string SendEmail(string email, string body)
         {
-            if (string.IsNullOrWhiteSpace(email))
-            {
-                login = new NetworkCredential("ncsprojectx", "password001");
-                client = new SmtpClient("stmp.gmail.com")
-                {
-                    Port = 587,
-                    EnableSsl = true,
-                    Credentials = login
-                };
-                msg = new MailMessage
-                {
-                    From = new MailAddress("chuzksy@gmail.com", "Chuzksy Solutions", Encoding.UTF8),
-                    Subject = "Voters Registration PIN",
-                    BodyEncoding = Encoding.UTF8,
-                    IsBodyHtml = true,
-                    Priority = MailPriority.Normal,
-                    DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure
-                };
-                client.SendCompleted += Client_SendCompleted;
-                const string userstate = "Sending...";
-                client.SendAsync(msg, userstate);
-                return message;
-            }
-            return "Please! Provide an email address";
-        }
-
-        private void Client_SendCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
-        {
-            if (e.Cancelled)
-            {
-                message = "Sending email cancelled " + e.UserState;
-            }
-            if (e.Error != null)
-            {
-                message = e.UserState + " " + e.Error;
-            }
-            else
-            {
-                message = "Your email has been sent successfully";
-            }
+            if (string.IsNullOrWhiteSpace(email)) return "Please! Provide an email address";
+            var mail = new MailMessage("chuzksy@gmail.com", email, "Voter Registration Pin", body);
+            var client = new SmtpClient("smtp.gmail.com");
+            client.Port = 587;
+            client.Credentials = new NetworkCredential("ncsprojectx@gmail.com", "password001");
+            client.EnableSsl = true;
+            client.Send(mail);
+            return "Email was sent successfull to the receipient";
         }
     }
 }
