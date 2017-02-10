@@ -162,6 +162,7 @@
     <Compile Include="Models\GroupCandidate.cs" />
     <Compile Include="Models\LoadElection.cs" />
     <Compile Include="Models\Privilege.cs" />
+    <Compile Include="Models\SendNotifications.cs" />
     <Compile Include="Models\Validators.cs" />
     <Compile Include="Models\VoterProcess.cs" />
     <Compile Include="Models\VoterRegistration.cs" />
