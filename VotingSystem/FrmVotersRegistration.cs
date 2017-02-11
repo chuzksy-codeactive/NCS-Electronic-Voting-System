@@ -411,7 +411,7 @@ namespace VotingSystem
             var popup = new PopupNotifier();
             popup.Image = Properties.Resources.email;
             popup.TitleText = "Email Notification";
-            if (IsValidateData())
+            if (ValidateChildren(ValidationConstraints.Enabled))
             {
                 var r = MetroMessageBox.Show(this,@"Are you sure you want to SUBMIT?", @"eVoting System",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
@@ -510,7 +510,7 @@ namespace VotingSystem
         private void txtEmail_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
              var rEMail = new Regex(@"^[a-zA-Z][\w\.-]{2,28}[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$");
-            if (txtEmail.Text.Length > 0)
+            if (!string.IsNullOrWhiteSpace(txtEmail.Text))
             {
                 if (!rEMail.IsMatch(txtEmail.Text))
                 {
@@ -521,8 +521,14 @@ namespace VotingSystem
                 }
                 else
                 {
+                    e.Cancel = false;
                     errProvider.SetError(txtEmail, "");
                 }
+            }
+            else
+            {
+                e.Cancel = true;
+                errProvider.SetError(txtEmail, "Email address is required");
             }
         }
 
@@ -535,7 +541,7 @@ namespace VotingSystem
             }
             else
             {
-                MetroMessageBox.Show(this,@"Invalid Input, Characters only", @"Wrong Input Data");
+                MetroMessageBox.Show(this, @"Invalid Input, Characters only", @"Wrong Input Data");
                 e.Handled = true;
             }
         }
@@ -543,19 +549,23 @@ namespace VotingSystem
         private void txtPhoneNumber_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
             var matchPhoneNumberPattern = new Regex(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$");
-            if (txtPhoneNumber.Text.Length > 0)
+            if (!string.IsNullOrWhiteSpace(txtPhoneNumber.Text))
             {
                 if (!matchPhoneNumberPattern.IsMatch(txtPhoneNumber.Text))
                 {
                     errProvider.SetError(txtPhoneNumber, @"Wrong phone number format");
-                    txtPhoneNumber.Focus();
-                    txtPhoneNumber.SelectAll();
                     e.Cancel = true;
                 }
                 else
                 {
+                    e.Cancel = false;
                     errProvider.SetError(txtPhoneNumber, "");
                 }
+            }
+            else
+            {
+                e.Cancel = true;
+                errProvider.SetError(txtPhoneNumber, "Phone number is required");
             }
         }
 
@@ -706,22 +716,84 @@ namespace VotingSystem
         {
             if (string.IsNullOrWhiteSpace(txtFirstname.Text))
             {
-                errProvider.SetError(txtFirstname, "Wrong data entered");
+                errProvider.SetError(txtFirstname, "Firsname should not be left blank");
                 e.Cancel = true;
             }
             else
+            {
+                e.Cancel = false;
                 errProvider.SetError(txtFirstname, null);
+            }
+                
         }
 
         private void txtLastname_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtLastname.Text))
             {
-                errProvider.SetError(txtLastname, "Wrong data entered");
+                errProvider.SetError(txtLastname, "Lastname should not be left blank");
                 e.Cancel = true;
             }
             else
+            {
+                e.Cancel = false;
                 errProvider.SetError(txtLastname, null);
+            }
+               
+        }
+
+        private void cmbGender_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (cmbGender.SelectedIndex == -1)
+            {
+                e.Cancel = true;
+                cmbGender.Focus();
+                errProvider.SetError(cmbGender, "Select a gender");
+            }
+            else
+            {
+                e.Cancel = false;
+                errProvider.SetError(cmbGender, "");
+            }
+        }
+
+        private void txtLastname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar >= 97 && e.KeyChar <= 122) || e.KeyChar == 32 || e.KeyChar == 8)
+            {
+                errProvider.SetError(txtLastname, "");
+                e.Handled = false;
+            }
+            else
+            {
+                MetroMessageBox.Show(this, @"Invalid Input, Characters only", @"Wrong Input Data");
+                e.Handled = true;
+            }
+        }
+
+        private void cmbGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbGender.SelectedIndex == -1)
+            {
+                cmbGender.Focus();
+                errProvider.SetError(cmbGender, "Select a gender");
+            }
+            else
+            {
+                errProvider.SetError(cmbGender, "");
+            }
+        }
+
+        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+            errProvider.SetError(txtEmail, "");
+        }
+
+        private void txtPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+            errProvider.SetError(txtPhoneNumber, "");
         }
     }
 }

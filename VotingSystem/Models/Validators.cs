@@ -77,6 +77,7 @@ namespace VotingSystem.Models
                     errProvider.SetError(makBox, makBox.Tag + @" is a required field ");
                     makBox.Focus();
                     makBox.SelectAll();
+                    
                 }
                 else
                 {

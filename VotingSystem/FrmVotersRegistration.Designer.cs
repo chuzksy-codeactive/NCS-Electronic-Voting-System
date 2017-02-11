@@ -35,6 +35,7 @@
             this.tbRegistration = new MetroFramework.Controls.MetroTabControl();
             this.tbVoterInfo = new MetroFramework.Controls.MetroTabPage();
             this.panel2 = new MetroFramework.Controls.MetroPanel();
+            this.statusBar = new System.Windows.Forms.Label();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.cmbDeviceName = new MetroFramework.Controls.MetroComboBox();
@@ -68,7 +69,6 @@
             this.btnSubmit = new MetroFramework.Controls.MetroButton();
             this.btnUpdate = new MetroFramework.Controls.MetroButton();
             this.btnDelete = new MetroFramework.Controls.MetroButton();
-            this.statusBar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             this.tbRegistration.SuspendLayout();
             this.tbVoterInfo.SuspendLayout();
@@ -197,6 +197,16 @@
             this.panel2.VerticalScrollbarBarColor = true;
             this.panel2.VerticalScrollbarHighlightOnWheel = false;
             this.panel2.VerticalScrollbarSize = 10;
+            // 
+            // statusBar
+            // 
+            this.statusBar.AutoSize = true;
+            this.statusBar.BackColor = System.Drawing.Color.Transparent;
+            this.statusBar.ForeColor = System.Drawing.Color.DarkGreen;
+            this.statusBar.Location = new System.Drawing.Point(0, 42);
+            this.statusBar.Name = "statusBar";
+            this.statusBar.Size = new System.Drawing.Size(0, 13);
+            this.statusBar.TabIndex = 20;
             // 
             // metroButton2
             // 
@@ -434,6 +444,7 @@
             this.txtPhoneNumber.UseSelectable = true;
             this.txtPhoneNumber.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtPhoneNumber.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNumber_KeyPress);
             this.txtPhoneNumber.Validating += new System.ComponentModel.CancelEventHandler(this.txtPhoneNumber_Validating);
             // 
             // txtEmail
@@ -466,6 +477,7 @@
             this.txtEmail.UseSelectable = true;
             this.txtEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
             this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // cmbGender
@@ -481,6 +493,8 @@
             this.cmbGender.TabIndex = 2;
             this.cmbGender.Tag = "Gender";
             this.cmbGender.UseSelectable = true;
+            this.cmbGender.SelectedIndexChanged += new System.EventHandler(this.cmbGender_SelectedIndexChanged);
+            this.cmbGender.Validating += new System.ComponentModel.CancelEventHandler(this.cmbGender_Validating);
             // 
             // txtLastname
             // 
@@ -512,7 +526,7 @@
             this.txtLastname.UseSelectable = true;
             this.txtLastname.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtLastname.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtLastname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFirstname_KeyPress);
+            this.txtLastname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastname_KeyPress);
             this.txtLastname.Validating += new System.ComponentModel.CancelEventHandler(this.txtLastname_Validating);
             // 
             // txtFirstname
@@ -633,20 +647,11 @@
             this.btnDelete.UseSelectable = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // statusBar
-            // 
-            this.statusBar.AutoSize = true;
-            this.statusBar.BackColor = System.Drawing.Color.Transparent;
-            this.statusBar.ForeColor = System.Drawing.Color.DarkGreen;
-            this.statusBar.Location = new System.Drawing.Point(0, 42);
-            this.statusBar.Name = "statusBar";
-            this.statusBar.Size = new System.Drawing.Size(0, 13);
-            this.statusBar.TabIndex = 20;
-            // 
             // FrmVotersRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.ClientSize = new System.Drawing.Size(915, 582);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
