@@ -140,6 +140,12 @@
     <Compile Include="FrmTheme.Designer.cs">
       <DependentUpon>FrmTheme.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmVoteByPin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVoteByPin.Designer.cs">
+      <DependentUpon>FrmVoteByPin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmVotersRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,12 @@
     <Compile Include="FrmVoteStats.Designer.cs">
       <DependentUpon>FrmVoteStats.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmWaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWaitForm.Designer.cs">
+      <DependentUpon>FrmWaitForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmWebCam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +175,7 @@
     <Compile Include="Models\CandidateRegistration.cs" />
     <Compile Include="Models\Election.cs" />
     <Compile Include="Models\GetVoteCount.cs" />
+    <Compile Include="Models\GetVoter.cs" />
     <Compile Include="Models\GroupCandidate.cs" />
     <Compile Include="Models\LoadElection.cs" />
     <Compile Include="Models\Privilege.cs" />
@@ -206,11 +219,17 @@
     <EmbeddedResource Include="FrmTheme.resx">
       <DependentUpon>FrmTheme.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmVoteByPin.resx">
+      <DependentUpon>FrmVoteByPin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmVotersRegistration.resx">
       <DependentUpon>FrmVotersRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVoteStats.resx">
       <DependentUpon>FrmVoteStats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWaitForm.resx">
+      <DependentUpon>FrmWaitForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmWebCam.resx">
       <DependentUpon>FrmWebCam.cs</DependentUpon>

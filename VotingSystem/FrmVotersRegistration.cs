@@ -413,9 +413,9 @@ namespace VotingSystem
             popup.TitleText = "Email Notification";
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
-                var r = MetroMessageBox.Show(this,@"Are you sure you want to SUBMIT?", @"eVoting System",
+                var r = MetroMessageBox.Show(this, @"Are you sure you want to SUBMIT?", @"eVoting System",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-            
+
                 if (r == DialogResult.Yes)
                 {
                     using (_cnn = new SqlConnection(Properties.Settings.Default.DbConn))
@@ -460,7 +460,7 @@ namespace VotingSystem
                                                 "Your Security Key is {0}. Your Voter ID is {1}", voterId, voterPin);
                                         var emailReply = SendNotifications.SendEmail(txtEmail.Text, body);
                                         if (emailReply != null) popup.ContentText = emailReply;
-                                        MetroMessageBox.Show(this,@"Data Submitted Successfully!", @"eVoting System",
+                                        MetroMessageBox.Show(this, @"Data Submitted Successfully!", @"eVoting System",
                                             MessageBoxButtons.OK,
                                             MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                                         ClearAll();
@@ -468,26 +468,25 @@ namespace VotingSystem
                                     }
                                     catch (SqlException ex)
                                     {
-                                        MetroMessageBox.Show(this,@"Data unable to save due to " + ex.Message);
+                                        MetroMessageBox.Show(this, @"Data unable to save due to " + ex.Message);
                                     }
                                 }
                             }
                             else
                             {
-                                MetroMessageBox.Show(this,@"You have registered before", @"eVoting System", MessageBoxButtons.OK,
+                                MetroMessageBox.Show(this, @"You have registered before", @"eVoting System", MessageBoxButtons.OK,
                                     MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                                 _mFpm.EnableAutoOnEvent(false, 0);
                             }
                         }
                         else
                         {
-                            MetroMessageBox.Show(this,@"Fingerprint does no match", @"eVoting System", MessageBoxButtons.OK,
+                            MetroMessageBox.Show(this, @"Fingerprint does no match", @"eVoting System", MessageBoxButtons.OK,
                                     MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                         }
                     }
                 }
             }
-            
         }
 
         private void ClearAll()

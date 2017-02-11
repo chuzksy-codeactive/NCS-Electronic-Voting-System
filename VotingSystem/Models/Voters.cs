@@ -11,5 +11,7 @@ namespace VotingSystem.Models
         public string Phonenumber { get; set; }
         public string Email { get; set; }
         public Image VoterImg { get; set; }
+
+        public byte[] ImgBytes { get; set; }
     }
 }
