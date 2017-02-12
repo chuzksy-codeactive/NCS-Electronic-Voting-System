@@ -44,14 +44,15 @@
       <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Desktop\Compressed\metroframework-modern-ui-master\metroframework-modern-ui-master\MetroFramework.Demo\bin\Release\MetroFramework.dll</HintPath>
     </Reference>
-    <Reference Include="MetroFramework.Design">
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Desktop\Compressed\metroframework-modern-ui-master\metroframework-modern-ui-master\MetroFramework.Demo\bin\Release\MetroFramework.Design.dll</HintPath>
     </Reference>
-    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Desktop\Compressed\metroframework-modern-ui-master\metroframework-modern-ui-master\MetroFramework.Demo\bin\Release\MetroFramework.Fonts.dll</HintPath>
     </Reference>
@@ -77,10 +78,6 @@
     <Reference Include="TelerikCommon, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Tulpep.NotificationWindow, Version=1.0.18.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Tulpep.NotificationWindow.1.0.18\lib\net40\Tulpep.NotificationWindow.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Z.IconLibrary.FarmFresh16, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Z.IconLibrary.FarmFresh16.2.0.0\lib\net35\Z.IconLibrary.FarmFresh16.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
@@ -158,6 +155,12 @@
     <Compile Include="FrmVoteStats.Designer.cs">
       <DependentUpon>FrmVoteStats.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmVoteWithPincs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVoteWithPincs.Designer.cs">
+      <DependentUpon>FrmVoteWithPincs.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmWaitForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVoteStats.resx">
       <DependentUpon>FrmVoteStats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVoteWithPincs.resx">
+      <DependentUpon>FrmVoteWithPincs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmWaitForm.resx">
       <DependentUpon>FrmWaitForm.cs</DependentUpon>
@@ -350,6 +356,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\like.png" />
+    <None Include="Resources\icon.png" />
+    <None Include="Resources\elections %286%29.png" />
+    <None Include="Resources\elections %285%29.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\add_group.png" />
+    <None Include="Resources\pin-code.png" />
+    <None Include="Resources\key.png" />
+    <None Include="Resources\users %282%29.png" />
+    <None Include="Resources\users %281%29.png" />
+    <None Include="Resources\users.png" />
+    <None Include="Resources\user1.png" />
+    <None Include="Resources\elections %284%29.png" />
+    <None Include="Resources\elections %281%29.png" />
+    <None Include="Resources\elections.png" />
     <None Include="Resources\email.png" />
     <None Include="Resources\application_form_magnify.png" />
     <None Include="Resources\boxtrapper.png" />

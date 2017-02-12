@@ -85,9 +85,9 @@
             this.positionTab.HorizontalScrollbarBarColor = true;
             this.positionTab.HorizontalScrollbarHighlightOnWheel = false;
             this.positionTab.HorizontalScrollbarSize = 10;
-            this.positionTab.Location = new System.Drawing.Point(4, 38);
+            this.positionTab.Location = new System.Drawing.Point(4, 44);
             this.positionTab.Name = "positionTab";
-            this.positionTab.Size = new System.Drawing.Size(441, 253);
+            this.positionTab.Size = new System.Drawing.Size(441, 247);
             this.positionTab.TabIndex = 0;
             this.positionTab.Text = "position";
             this.positionTab.VerticalScrollbarBarColor = true;
@@ -202,7 +202,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(499, 395);
+            this.ClientSize = new System.Drawing.Size(497, 395);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.profileTab);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
