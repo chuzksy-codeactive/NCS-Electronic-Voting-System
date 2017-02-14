@@ -30,7 +30,6 @@
         {
             this.btnCancel = new MetroFramework.Controls.MetroButton();
             this.btnCreateUser = new MetroFramework.Controls.MetroButton();
-            this.metroLink1 = new MetroFramework.Controls.MetroLink();
             this.txtConfirmPassword = new MetroFramework.Controls.MetroTextBox();
             this.txtPassword = new MetroFramework.Controls.MetroTextBox();
             this.txtUsername = new MetroFramework.Controls.MetroTextBox();
@@ -44,6 +43,7 @@
             this.btnCancel.TabIndex = 17;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseSelectable = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnCreateUser
             // 
@@ -53,18 +53,7 @@
             this.btnCreateUser.TabIndex = 16;
             this.btnCreateUser.Text = "Create User";
             this.btnCreateUser.UseSelectable = true;
-            // 
-            // metroLink1
-            // 
-            this.metroLink1.Image = global::VotingSystem.Properties.Resources.add_group;
-            this.metroLink1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.metroLink1.ImageSize = 48;
-            this.metroLink1.Location = new System.Drawing.Point(322, 8);
-            this.metroLink1.Name = "metroLink1";
-            this.metroLink1.NoFocusImage = global::VotingSystem.Properties.Resources.add_group;
-            this.metroLink1.Size = new System.Drawing.Size(76, 57);
-            this.metroLink1.TabIndex = 18;
-            this.metroLink1.UseSelectable = true;
+            this.btnCreateUser.Click += new System.EventHandler(this.btnCreateUser_Click);
             // 
             // txtConfirmPassword
             // 
@@ -173,8 +162,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackImage = global::VotingSystem.Properties.Resources.user__3_;
+            this.BackImagePadding = new System.Windows.Forms.Padding(210, 20, 0, 0);
+            this.BackMaxSize = 32;
             this.ClientSize = new System.Drawing.Size(417, 244);
-            this.Controls.Add(this.metroLink1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnCreateUser);
             this.Controls.Add(this.txtConfirmPassword);
@@ -196,6 +187,5 @@
         private MetroFramework.Controls.MetroTextBox txtConfirmPassword;
         private MetroFramework.Controls.MetroTextBox txtPassword;
         private MetroFramework.Controls.MetroTextBox txtUsername;
-        private MetroFramework.Controls.MetroLink metroLink1;
     }
 }

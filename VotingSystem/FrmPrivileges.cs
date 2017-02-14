@@ -58,7 +58,7 @@ namespace VotingSystem
 
         private void lstUsers_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SelectedItem = lstUsers.SelectedItems[0].Text;
+            SelectedItem = lstUsers.Text;
             const string @select = "Select * from [User] where Username = @username";
             using (_cnn = new SqlConnection(Settings.Default.DbConn))
             {

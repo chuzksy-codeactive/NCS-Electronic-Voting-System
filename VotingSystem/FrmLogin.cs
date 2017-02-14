@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using MetroFramework;
@@ -35,8 +36,10 @@ namespace VotingSystem
             }
             else
             {
+                Cursor.Current = Cursors.WaitCursor;
                 if (CheckUser(txtUsername.Text, txtPassword.Text))
                 {
+                    FrmIndex.Username = txtUsername.Text;
                     txtUsername.Clear();
                     txtPassword.Clear();
                     Hide();
@@ -45,12 +48,13 @@ namespace VotingSystem
                 }
                 else
                 {
-                    MetroMessageBox.Show(this,@"You have entered a wrong username or password", @"User Login", 
+                    MetroMessageBox.Show(this, @"You have entered a wrong username or password", @"User Login",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtPassword.Clear();
                     txtUsername.Clear();
                     txtUsername.Focus();
                 }
+                Cursor.Current = Cursors.Default;
             }
         }
 

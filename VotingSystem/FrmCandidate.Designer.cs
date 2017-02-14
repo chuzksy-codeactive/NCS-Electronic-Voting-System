@@ -478,7 +478,7 @@
             this.txtSearch.CustomButton.UseSelectable = true;
             this.txtSearch.CustomButton.Visible = false;
             this.txtSearch.DisplayIcon = true;
-            this.txtSearch.Icon = global::VotingSystem.Properties.Resources.search_accounts1;
+            this.txtSearch.Icon = global::VotingSystem.Properties.Resources.search;
             this.txtSearch.Lines = new string[0];
             this.txtSearch.Location = new System.Drawing.Point(679, 41);
             this.txtSearch.MaxLength = 32767;
@@ -502,6 +502,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+            this.BackImage = global::VotingSystem.Properties.Resources.candidate_for_elections__1_;
+            this.BackImagePadding = new System.Windows.Forms.Padding(280, 20, 0, 0);
+            this.BackMaxSize = 32;
             this.ClientSize = new System.Drawing.Size(975, 509);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnDelete);

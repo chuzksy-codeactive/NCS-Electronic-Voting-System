@@ -44,13 +44,13 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.cmbPost = new MetroFramework.Controls.MetroComboBox();
             this.grdCandidate = new MetroFramework.Controls.MetroGrid();
-            this.btnView = new MetroFramework.Controls.MetroButton();
-            this.lblVoterPin = new MetroFramework.Controls.MetroLabel();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.View = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnView = new MetroFramework.Controls.MetroButton();
+            this.lblVoterPin = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.grdVoter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdCandidate)).BeginInit();
@@ -71,7 +71,7 @@
             this.txtSearch.CustomButton.UseSelectable = true;
             this.txtSearch.CustomButton.Visible = false;
             this.txtSearch.DisplayIcon = true;
-            this.txtSearch.Icon = global::VotingSystem.Properties.Resources.search_accounts1;
+            this.txtSearch.Icon = global::VotingSystem.Properties.Resources.search;
             this.txtSearch.Lines = new string[0];
             this.txtSearch.Location = new System.Drawing.Point(23, 98);
             this.txtSearch.MaxLength = 32767;
@@ -249,27 +249,6 @@
             this.grdCandidate.TabIndex = 5;
             this.grdCandidate.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdCandidate_CellContentClick);
             // 
-            // btnView
-            // 
-            this.btnView.Location = new System.Drawing.Point(445, 352);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(43, 29);
-            this.btnView.TabIndex = 6;
-            this.btnView.Text = "View";
-            this.btnView.UseSelectable = true;
-            this.btnView.Click += new System.EventHandler(this.btnView_Click);
-            // 
-            // lblVoterPin
-            // 
-            this.lblVoterPin.AutoSize = true;
-            this.lblVoterPin.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblVoterPin.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblVoterPin.Location = new System.Drawing.Point(505, 245);
-            this.lblVoterPin.Name = "lblVoterPin";
-            this.lblVoterPin.Size = new System.Drawing.Size(58, 25);
-            this.lblVoterPin.TabIndex = 7;
-            this.lblVoterPin.Text = "Voter";
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -304,10 +283,34 @@
             this.View.Text = "View Profile";
             this.View.UseColumnTextForButtonValue = true;
             // 
+            // btnView
+            // 
+            this.btnView.Location = new System.Drawing.Point(445, 352);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(43, 29);
+            this.btnView.TabIndex = 6;
+            this.btnView.Text = "View";
+            this.btnView.UseSelectable = true;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            // 
+            // lblVoterPin
+            // 
+            this.lblVoterPin.AutoSize = true;
+            this.lblVoterPin.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblVoterPin.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblVoterPin.Location = new System.Drawing.Point(505, 245);
+            this.lblVoterPin.Name = "lblVoterPin";
+            this.lblVoterPin.Size = new System.Drawing.Size(58, 25);
+            this.lblVoterPin.TabIndex = 7;
+            this.lblVoterPin.Text = "Voter";
+            // 
             // FrmVoteByPin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackImage = global::VotingSystem.Properties.Resources.voting__2_;
+            this.BackImagePadding = new System.Windows.Forms.Padding(300, 15, 0, 0);
+            this.BackMaxSize = 32;
             this.ClientSize = new System.Drawing.Size(640, 553);
             this.Controls.Add(this.lblVoterPin);
             this.Controls.Add(this.btnView);

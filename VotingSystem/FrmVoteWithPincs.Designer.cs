@@ -32,6 +32,7 @@
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroTabControl2 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.picImage = new System.Windows.Forms.PictureBox();
             this.lblEmail = new MetroFramework.Controls.MetroLabel();
             this.lblPhonenumber = new MetroFramework.Controls.MetroLabel();
             this.lblFullname = new MetroFramework.Controls.MetroLabel();
@@ -39,22 +40,20 @@
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.lblVoterPin = new MetroFramework.Controls.MetroLabel();
-            this.lblVoterFullname = new MetroFramework.Controls.MetroLabel();
+            this.picVoterImg = new System.Windows.Forms.PictureBox();
             this.lblVoterEmail = new MetroFramework.Controls.MetroLabel();
+            this.lblVoterFullname = new MetroFramework.Controls.MetroLabel();
+            this.lblVoterPin = new MetroFramework.Controls.MetroLabel();
             this.lblDenied = new MetroFramework.Controls.MetroLink();
             this.metroLink2 = new MetroFramework.Controls.MetroLink();
-            this.metroLink1 = new MetroFramework.Controls.MetroLink();
-            this.picVoterImg = new System.Windows.Forms.PictureBox();
-            this.picImage = new System.Windows.Forms.PictureBox();
             this.metroPanel1.SuspendLayout();
             this.metroTabControl2.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             this.metroPanel2.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picVoterImg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             this.SuspendLayout();
             // 
             // metroPanel1
@@ -100,6 +99,16 @@
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
+            // 
+            // picImage
+            // 
+            this.picImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picImage.Location = new System.Drawing.Point(237, 6);
+            this.picImage.Name = "picImage";
+            this.picImage.Size = new System.Drawing.Size(83, 102);
+            this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImage.TabIndex = 25;
+            this.picImage.TabStop = false;
             // 
             // lblEmail
             // 
@@ -180,23 +189,15 @@
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
             // 
-            // lblVoterPin
+            // picVoterImg
             // 
-            this.lblVoterPin.AutoSize = true;
-            this.lblVoterPin.Location = new System.Drawing.Point(16, 23);
-            this.lblVoterPin.Name = "lblVoterPin";
-            this.lblVoterPin.Size = new System.Drawing.Size(83, 19);
-            this.lblVoterPin.TabIndex = 2;
-            this.lblVoterPin.Text = "metroLabel6";
-            // 
-            // lblVoterFullname
-            // 
-            this.lblVoterFullname.AutoSize = true;
-            this.lblVoterFullname.Location = new System.Drawing.Point(16, 57);
-            this.lblVoterFullname.Name = "lblVoterFullname";
-            this.lblVoterFullname.Size = new System.Drawing.Size(83, 19);
-            this.lblVoterFullname.TabIndex = 3;
-            this.lblVoterFullname.Text = "metroLabel7";
+            this.picVoterImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picVoterImg.Location = new System.Drawing.Point(236, 6);
+            this.picVoterImg.Name = "picVoterImg";
+            this.picVoterImg.Size = new System.Drawing.Size(83, 102);
+            this.picVoterImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picVoterImg.TabIndex = 26;
+            this.picVoterImg.TabStop = false;
             // 
             // lblVoterEmail
             // 
@@ -207,11 +208,29 @@
             this.lblVoterEmail.TabIndex = 4;
             this.lblVoterEmail.Text = "metroLabel1";
             // 
+            // lblVoterFullname
+            // 
+            this.lblVoterFullname.AutoSize = true;
+            this.lblVoterFullname.Location = new System.Drawing.Point(16, 57);
+            this.lblVoterFullname.Name = "lblVoterFullname";
+            this.lblVoterFullname.Size = new System.Drawing.Size(83, 19);
+            this.lblVoterFullname.TabIndex = 3;
+            this.lblVoterFullname.Text = "metroLabel7";
+            // 
+            // lblVoterPin
+            // 
+            this.lblVoterPin.AutoSize = true;
+            this.lblVoterPin.Location = new System.Drawing.Point(16, 23);
+            this.lblVoterPin.Name = "lblVoterPin";
+            this.lblVoterPin.Size = new System.Drawing.Size(83, 19);
+            this.lblVoterPin.TabIndex = 2;
+            this.lblVoterPin.Text = "metroLabel6";
+            // 
             // lblDenied
             // 
             this.lblDenied.Image = global::VotingSystem.Properties.Resources.icon;
             this.lblDenied.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblDenied.Location = new System.Drawing.Point(235, 383);
+            this.lblDenied.Location = new System.Drawing.Point(252, 383);
             this.lblDenied.Name = "lblDenied";
             this.lblDenied.NoFocusImage = global::VotingSystem.Properties.Resources.icon;
             this.lblDenied.Size = new System.Drawing.Size(307, 32);
@@ -236,49 +255,18 @@
             this.metroLink2.UseSelectable = true;
             this.metroLink2.Click += new System.EventHandler(this.metroLink2_Click);
             // 
-            // metroLink1
-            // 
-            this.metroLink1.Image = global::VotingSystem.Properties.Resources.elections__1_;
-            this.metroLink1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.metroLink1.ImageSize = 48;
-            this.metroLink1.Location = new System.Drawing.Point(688, 30);
-            this.metroLink1.Name = "metroLink1";
-            this.metroLink1.NoFocusImage = global::VotingSystem.Properties.Resources.elections__4_;
-            this.metroLink1.Size = new System.Drawing.Size(49, 58);
-            this.metroLink1.TabIndex = 2;
-            this.metroLink1.UseSelectable = true;
-            // 
-            // picVoterImg
-            // 
-            this.picVoterImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picVoterImg.Location = new System.Drawing.Point(236, 6);
-            this.picVoterImg.Name = "picVoterImg";
-            this.picVoterImg.Size = new System.Drawing.Size(83, 102);
-            this.picVoterImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picVoterImg.TabIndex = 26;
-            this.picVoterImg.TabStop = false;
-            // 
-            // picImage
-            // 
-            this.picImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picImage.Location = new System.Drawing.Point(237, 6);
-            this.picImage.Name = "picImage";
-            this.picImage.Size = new System.Drawing.Size(83, 102);
-            this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picImage.TabIndex = 25;
-            this.picImage.TabStop = false;
-            // 
             // FrmVoteWithPincs
             // 
             this.ApplyImageInvert = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BackImagePadding = new System.Windows.Forms.Padding(210, 10, 0, 0);
+            this.BackImage = global::VotingSystem.Properties.Resources.elections__8_;
+            this.BackImagePadding = new System.Windows.Forms.Padding(280, 16, 0, 0);
+            this.BackMaxSize = 32;
             this.ClientSize = new System.Drawing.Size(760, 453);
             this.Controls.Add(this.lblDenied);
             this.Controls.Add(this.metroLink2);
-            this.Controls.Add(this.metroLink1);
             this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.metroPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -289,12 +277,12 @@
             this.metroTabControl2.ResumeLayout(false);
             this.metroTabPage2.ResumeLayout(false);
             this.metroTabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
             this.metroPanel2.ResumeLayout(false);
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             this.metroTabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picVoterImg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -317,7 +305,6 @@
         private MetroFramework.Controls.MetroLabel lblVoterFullname;
         private MetroFramework.Controls.MetroLabel lblVoterPin;
         private MetroFramework.Controls.MetroLink metroLink2;
-        private MetroFramework.Controls.MetroLink metroLink1;
         private MetroFramework.Controls.MetroLink lblDenied;
     }
 }

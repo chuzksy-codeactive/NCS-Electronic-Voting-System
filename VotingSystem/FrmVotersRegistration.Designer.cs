@@ -180,6 +180,7 @@
             this.tbVoterInfo.VerticalScrollbarBarColor = true;
             this.tbVoterInfo.VerticalScrollbarHighlightOnWheel = false;
             this.tbVoterInfo.VerticalScrollbarSize = 10;
+            this.tbVoterInfo.Click += new System.EventHandler(this.tbVoterInfo_Click);
             // 
             // panel2
             // 
@@ -652,7 +653,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-            this.BackImagePadding = new System.Windows.Forms.Padding(210, 0, 0, 0);
+            this.BackImage = global::VotingSystem.Properties.Resources.clipboard_with_pencil___1_;
+            this.BackImagePadding = new System.Windows.Forms.Padding(220, 18, 0, 0);
+            this.BackMaxSize = 32;
             this.ClientSize = new System.Drawing.Size(915, 582);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
@@ -662,7 +665,7 @@
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
             this.Name = "FrmVotersRegistration";
-            this.Text = "Registration New Voter";
+            this.Text = "Register New Voter";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
             this.tbRegistration.ResumeLayout(false);

@@ -33,8 +33,8 @@
             this.cmbDeviceName = new MetroFramework.Controls.MetroComboBox();
             this.btnStart = new MetroFramework.Controls.MetroButton();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.btnCaptureImage = new MetroFramework.Controls.MetroButton();
             this.btnSaveImage = new MetroFramework.Controls.MetroButton();
+            this.btnCaptureImage = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.picCapture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVideo)).BeginInit();
             this.metroPanel1.SuspendLayout();
@@ -98,16 +98,6 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // btnCaptureImage
-            // 
-            this.btnCaptureImage.Location = new System.Drawing.Point(16, 131);
-            this.btnCaptureImage.Name = "btnCaptureImage";
-            this.btnCaptureImage.Size = new System.Drawing.Size(100, 23);
-            this.btnCaptureImage.TabIndex = 8;
-            this.btnCaptureImage.Text = "Capture Image";
-            this.btnCaptureImage.UseSelectable = true;
-            this.btnCaptureImage.Click += new System.EventHandler(this.btnCaptureImage_Click);
-            // 
             // btnSaveImage
             // 
             this.btnSaveImage.Location = new System.Drawing.Point(141, 131);
@@ -118,10 +108,23 @@
             this.btnSaveImage.UseSelectable = true;
             this.btnSaveImage.Click += new System.EventHandler(this.btnSaveImage_Click);
             // 
+            // btnCaptureImage
+            // 
+            this.btnCaptureImage.Location = new System.Drawing.Point(16, 131);
+            this.btnCaptureImage.Name = "btnCaptureImage";
+            this.btnCaptureImage.Size = new System.Drawing.Size(100, 23);
+            this.btnCaptureImage.TabIndex = 8;
+            this.btnCaptureImage.Text = "Capture Image";
+            this.btnCaptureImage.UseSelectable = true;
+            this.btnCaptureImage.Click += new System.EventHandler(this.btnCaptureImage_Click);
+            // 
             // FrmWebCam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackImage = global::VotingSystem.Properties.Resources.webcam__1_;
+            this.BackImagePadding = new System.Windows.Forms.Padding(120, 17, 0, 0);
+            this.BackMaxSize = 32;
             this.ClientSize = new System.Drawing.Size(316, 302);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.btnStart);

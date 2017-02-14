@@ -53,9 +53,9 @@
             this.linkLabel3 = new MetroFramework.Controls.MetroLink();
             this.linkLabel4 = new MetroFramework.Controls.MetroLink();
             this.radioButton4 = new MetroFramework.Controls.MetroRadioButton();
-            this.radioButton3 = new MetroFramework.Controls.MetroRadioButton();
-            this.radioButton2 = new MetroFramework.Controls.MetroRadioButton();
             this.radioButton1 = new MetroFramework.Controls.MetroRadioButton();
+            this.radioButton2 = new MetroFramework.Controls.MetroRadioButton();
+            this.radioButton3 = new MetroFramework.Controls.MetroRadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.metroPanel1.SuspendLayout();
@@ -349,16 +349,16 @@
             this.radioButton4.UseSelectable = true;
             this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
-            // radioButton3
+            // radioButton1
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(3, 92);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(127, 15);
-            this.radioButton3.TabIndex = 1;
-            this.radioButton3.Text = "metroRadioButton3";
-            this.radioButton3.UseSelectable = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(3, 39);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(127, 15);
+            this.radioButton1.TabIndex = 3;
+            this.radioButton1.Text = "metroRadioButton1";
+            this.radioButton1.UseSelectable = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -371,21 +371,24 @@
             this.radioButton2.UseSelectable = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
-            // radioButton1
+            // radioButton3
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(3, 39);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(127, 15);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.Text = "metroRadioButton1";
-            this.radioButton1.UseSelectable = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(3, 92);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(127, 15);
+            this.radioButton3.TabIndex = 1;
+            this.radioButton3.Text = "metroRadioButton3";
+            this.radioButton3.UseSelectable = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // FrmElectionModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackImage = global::VotingSystem.Properties.Resources.elections__8_;
+            this.BackImagePadding = new System.Windows.Forms.Padding(160, 16, 0, 0);
+            this.BackMaxSize = 32;
             this.ClientSize = new System.Drawing.Size(517, 589);
             this.Controls.Add(this.metroPanel);
             this.Controls.Add(this.statusStrip1);

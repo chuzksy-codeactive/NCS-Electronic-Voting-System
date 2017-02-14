@@ -28,25 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroLink1 = new MetroFramework.Controls.MetroLink();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.btnCancel = new MetroFramework.Controls.MetroButton();
             this.btnLogin = new MetroFramework.Controls.MetroButton();
             this.txtPassword = new MetroFramework.Controls.MetroTextBox();
             this.txtUsername = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
-            // 
-            // metroLink1
-            // 
-            this.metroLink1.Image = global::VotingSystem.Properties.Resources.user1;
-            this.metroLink1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.metroLink1.ImageSize = 48;
-            this.metroLink1.Location = new System.Drawing.Point(344, 9);
-            this.metroLink1.Name = "metroLink1";
-            this.metroLink1.NoFocusImage = global::VotingSystem.Properties.Resources.user1;
-            this.metroLink1.Size = new System.Drawing.Size(50, 55);
-            this.metroLink1.TabIndex = 8;
-            this.metroLink1.UseSelectable = true;
             // 
             // metroLabel3
             // 
@@ -147,15 +134,18 @@
             // 
             // FrmLogin
             // 
+            this.ApplyImageInvert = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackImage = global::VotingSystem.Properties.Resources.add_user;
+            this.BackImagePadding = new System.Windows.Forms.Padding(140, 20, 0, 0);
+            this.BackMaxSize = 32;
             this.ClientSize = new System.Drawing.Size(412, 217);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.metroLink1);
             this.MaximizeBox = false;
             this.Name = "FrmLogin";
             this.Resizable = false;
@@ -166,7 +156,6 @@
         }
 
         #endregion
-        private MetroFramework.Controls.MetroLink metroLink1;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroButton btnCancel;
         private MetroFramework.Controls.MetroButton btnLogin;

@@ -371,6 +371,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackImage = global::VotingSystem.Properties.Resources.pie_chart;
+            this.BackImagePadding = new System.Windows.Forms.Padding(170, 20, 0, 0);
+            this.BackMaxSize = 32;
             this.ClientSize = new System.Drawing.Size(919, 485);
             this.Controls.Add(this.lblPosition);
             this.Controls.Add(this.metroLabel1);

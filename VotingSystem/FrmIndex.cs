@@ -1,19 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework;
 using MetroFramework.Components;
+using System.Data;
+using System.Data.SqlClient;
+using VotingSystem.Properties;
 
 namespace VotingSystem
 {
     public partial class FrmIndex : MetroFramework.Forms.MetroForm
     {
+        public static string Username { get; set; }
+        private SqlConnection _cnn;
+        private SqlCommand _cmd;
+        private SqlDataReader _dr;
         public static MetroStyleManager Index { get; set; }
         public FrmIndex()
         {
@@ -24,7 +24,24 @@ namespace VotingSystem
 
         private void FrmIndex_Load(object sender, EventArgs e)
         {
-
+            lblUsername.Text = Username.ToLower();
+            var @select = "Select Registration, CastVote, [Admin], [View] From [User] Where Username=@username";
+            using (_cnn = new SqlConnection(Settings.Default.DbConn))
+            {
+                _cnn.Open();
+                using (_cmd = new SqlCommand(select, _cnn))
+                {
+                    _cmd.Parameters.AddWithValue("@username", Username);
+                    using (_dr = _cmd.ExecuteReader())
+                    {
+                        _dr.Read();
+                        registerMenu.Visible = _dr.GetValue(0).ToString() != "0";
+                        castVoteMenu.Visible = _dr.GetValue(1).ToString() != "0";
+                        adminMenu.Visible = _dr.GetValue(2).ToString() != "0";
+                        viewMenu.Visible = _dr.GetValue(3).ToString() != "0";
+                    }
+                }
+            }
         }
 
         private bool _logOut;
@@ -316,6 +333,27 @@ namespace VotingSystem
         private void purpleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             msmIndex.Style = (MetroColorStyle)12;
+        }
+
+        private FrmVoteByPin vote;
+        private void usingPINToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (vote == null)
+            {
+                vote = new FrmVoteByPin {MdiParent = this};
+                vote.Closed += Vote_Closed;
+                vote.Show();
+            }
+            else
+            {
+                vote.Activate();
+                vote.WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void Vote_Closed(object sender, EventArgs e)
+        {
+            vote = null;
         }
     }
 }

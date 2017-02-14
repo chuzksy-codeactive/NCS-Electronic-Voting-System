@@ -60,6 +60,7 @@
             this.Controls.Add(this.metroProgressBar1);
             this.Name = "FrmWaitForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Load += new System.EventHandler(this.FrmWaitForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

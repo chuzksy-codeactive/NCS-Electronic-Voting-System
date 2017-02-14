@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.cmbNoOfCandidates = new MetroFramework.Controls.MetroComboBox();
             this.txtElectionPost = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
@@ -39,7 +40,6 @@
             this.dtStartDate = new MetroFramework.Controls.MetroDateTime();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.cmbNoOfCandidates = new MetroFramework.Controls.MetroComboBox();
             this.btnNew = new MetroFramework.Controls.MetroButton();
             this.btnSubmit = new MetroFramework.Controls.MetroButton();
             this.btnCancel = new MetroFramework.Controls.MetroButton();
@@ -76,6 +76,20 @@
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // cmbNoOfCandidates
+            // 
+            this.cmbNoOfCandidates.FormattingEnabled = true;
+            this.cmbNoOfCandidates.ItemHeight = 23;
+            this.cmbNoOfCandidates.Items.AddRange(new object[] {
+            "2",
+            "3",
+            "4"});
+            this.cmbNoOfCandidates.Location = new System.Drawing.Point(133, 84);
+            this.cmbNoOfCandidates.Name = "cmbNoOfCandidates";
+            this.cmbNoOfCandidates.Size = new System.Drawing.Size(195, 29);
+            this.cmbNoOfCandidates.TabIndex = 2;
+            this.cmbNoOfCandidates.UseSelectable = true;
             // 
             // txtElectionPost
             // 
@@ -222,20 +236,6 @@
             this.metroLabel4.TabIndex = 25;
             this.metroLabel4.Text = "Election Start Date:";
             // 
-            // cmbNoOfCandidates
-            // 
-            this.cmbNoOfCandidates.FormattingEnabled = true;
-            this.cmbNoOfCandidates.ItemHeight = 23;
-            this.cmbNoOfCandidates.Items.AddRange(new object[] {
-            "2",
-            "3",
-            "4"});
-            this.cmbNoOfCandidates.Location = new System.Drawing.Point(133, 84);
-            this.cmbNoOfCandidates.Name = "cmbNoOfCandidates";
-            this.cmbNoOfCandidates.Size = new System.Drawing.Size(195, 29);
-            this.cmbNoOfCandidates.TabIndex = 2;
-            this.cmbNoOfCandidates.UseSelectable = true;
-            // 
             // btnNew
             // 
             this.btnNew.Location = new System.Drawing.Point(23, 419);
@@ -346,6 +346,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackImage = global::VotingSystem.Properties.Resources.poster;
+            this.BackImagePadding = new System.Windows.Forms.Padding(210, 20, 0, 0);
+            this.BackMaxSize = 32;
             this.ClientSize = new System.Drawing.Size(886, 489);
             this.Controls.Add(this.lstViewElection);
             this.Controls.Add(this.btnDelete);

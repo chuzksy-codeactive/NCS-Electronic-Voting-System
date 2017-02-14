@@ -46,15 +46,15 @@
     </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Desktop\Compressed\metroframework-modern-ui-master\metroframework-modern-ui-master\MetroFramework.Demo\bin\Release\MetroFramework.dll</HintPath>
+      <HintPath>..\..\MetroFramework.ModernUI.Version.1.4.0\MetroFramework.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Desktop\Compressed\metroframework-modern-ui-master\metroframework-modern-ui-master\MetroFramework.Demo\bin\Release\MetroFramework.Design.dll</HintPath>
+      <HintPath>..\..\MetroFramework.ModernUI.Version.1.4.0\MetroFramework.Design.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Desktop\Compressed\metroframework-modern-ui-master\metroframework-modern-ui-master\MetroFramework.Demo\bin\Release\MetroFramework.Fonts.dll</HintPath>
+      <HintPath>..\..\MetroFramework.ModernUI.Version.1.4.0\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="SecuGen.FDxSDKPro.Windows">
       <HintPath>..\SecuGen.FDxSDKPro.Windows.dll</HintPath>
@@ -356,6 +356,28 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\webcam %281%29.png" />
+    <None Include="Resources\pie-chart.png" />
+    <None Include="Resources\clipboard-with-pencil- %281%29.png" />
+    <None Include="Resources\voting %282%29.png" />
+    <None Include="Resources\room-key.png" />
+    <None Include="Resources\add-user.png" />
+    <None Include="Resources\elections %288%29.png" />
+    <None Include="Resources\candidate-for-elections %281%29.png" />
+    <None Include="Resources\poster.png" />
+    <None Include="Resources\user %283%29.png" />
+    <None Include="Resources\icon %282%29.png" />
+    <None Include="Resources\user %282%29.png" />
+    <None Include="Resources\webcam.png" />
+    <None Include="Resources\clipboard-with-pencil-.png" />
+    <None Include="Resources\voting %281%29.png" />
+    <None Include="Resources\keywords.png" />
+    <None Include="Resources\icon %281%29.png" />
+    <None Include="Resources\elections %287%29.png" />
+    <None Include="Resources\voting.png" />
+    <None Include="Resources\candidate-for-elections.png" />
+    <None Include="Resources\user %281%29.png" />
+    <None Include="Resources\GitHub-Mark.png" />
     <None Include="Resources\like.png" />
     <None Include="Resources\icon.png" />
     <None Include="Resources\elections %286%29.png" />

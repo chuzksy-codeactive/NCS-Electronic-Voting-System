@@ -418,6 +418,7 @@ namespace VotingSystem
 
                 if (r == DialogResult.Yes)
                 {
+                    Cursor.Current = Cursors.WaitCursor;
                     using (_cnn = new SqlConnection(Properties.Settings.Default.DbConn))
                     {
                         _cnn.Open();
@@ -485,6 +486,7 @@ namespace VotingSystem
                                     MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                         }
                     }
+                    Cursor.Current = Cursors.Default;
                 }
             }
         }
@@ -496,7 +498,7 @@ namespace VotingSystem
             txtEmail.Clear();
             txtPhoneNumber.Clear();
             txtSearch.Clear();
-            cmbGender.SelectedIndex = -1;
+            //cmbGender.SelectedIndex = -1;
             picImage.Image = null;
             imgR1.Image = null;
             imgR2.Image = null;
@@ -793,6 +795,11 @@ namespace VotingSystem
         {
             
             errProvider.SetError(txtPhoneNumber, "");
+        }
+
+        private void tbVoterInfo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

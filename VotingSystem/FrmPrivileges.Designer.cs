@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.chkListbox = new System.Windows.Forms.CheckedListBox();
-            this.lstUsers = new System.Windows.Forms.ListView();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.cmbDeleteUser = new MetroFramework.Controls.MetroComboBox();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
+            this.lstUsers = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // chkListbox
@@ -50,18 +50,6 @@
             this.chkListbox.Name = "chkListbox";
             this.chkListbox.Size = new System.Drawing.Size(178, 224);
             this.chkListbox.TabIndex = 1;
-            // 
-            // lstUsers
-            // 
-            this.lstUsers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lstUsers.Font = new System.Drawing.Font("Segoe UI Historic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstUsers.Location = new System.Drawing.Point(23, 160);
-            this.lstUsers.Name = "lstUsers";
-            this.lstUsers.Size = new System.Drawing.Size(141, 224);
-            this.lstUsers.TabIndex = 2;
-            this.lstUsers.UseCompatibleStateImageBehavior = false;
-            this.lstUsers.View = System.Windows.Forms.View.List;
-            this.lstUsers.SelectedIndexChanged += new System.EventHandler(this.lstUsers_SelectedIndexChanged);
             // 
             // metroButton1
             // 
@@ -112,17 +100,31 @@
             this.metroButton3.UseSelectable = true;
             this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
             // 
+            // lstUsers
+            // 
+            this.lstUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstUsers.FormattingEnabled = true;
+            this.lstUsers.ItemHeight = 20;
+            this.lstUsers.Location = new System.Drawing.Point(24, 157);
+            this.lstUsers.Name = "lstUsers";
+            this.lstUsers.Size = new System.Drawing.Size(138, 224);
+            this.lstUsers.TabIndex = 8;
+            this.lstUsers.SelectedIndexChanged += new System.EventHandler(this.lstUsers_SelectedIndexChanged);
+            // 
             // FrmPrivileges
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackImage = global::VotingSystem.Properties.Resources.room_key;
+            this.BackImagePadding = new System.Windows.Forms.Padding(250, 20, 0, 0);
+            this.BackMaxSize = 32;
             this.ClientSize = new System.Drawing.Size(395, 437);
+            this.Controls.Add(this.lstUsers);
             this.Controls.Add(this.metroButton3);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.cmbDeleteUser);
             this.Controls.Add(this.metroButton1);
-            this.Controls.Add(this.lstUsers);
             this.Controls.Add(this.chkListbox);
             this.Name = "FrmPrivileges";
             this.Text = "Set Privileges to Users";
@@ -134,11 +136,11 @@
 
         #endregion
         private System.Windows.Forms.CheckedListBox chkListbox;
-        private System.Windows.Forms.ListView lstUsers;
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroComboBox cmbDeleteUser;
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroButton metroButton3;
+        private System.Windows.Forms.ListBox lstUsers;
     }
 }
