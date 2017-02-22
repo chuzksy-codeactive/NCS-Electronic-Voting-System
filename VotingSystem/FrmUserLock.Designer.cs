@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.lnkUser = new MetroFramework.Controls.MetroLabel();
-            this.txtPassword = new MetroFramework.Controls.MetroTextBox();
             this.btnPassword = new MetroFramework.Controls.MetroButton();
+            this.txtPassword = new MetroFramework.Controls.MetroTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -41,6 +41,7 @@
             // metroPanel1
             // 
             this.metroPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.metroPanel1.Controls.Add(this.btnPassword);
             this.metroPanel1.Controls.Add(this.txtPassword);
             this.metroPanel1.Controls.Add(this.lnkUser);
@@ -53,20 +54,10 @@
             this.metroPanel1.Name = "metroPanel1";
             this.metroPanel1.Size = new System.Drawing.Size(1102, 217);
             this.metroPanel1.TabIndex = 0;
+            this.metroPanel1.UseCustomBackColor = true;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Image = global::VotingSystem.Properties.Resources.logo_generic__2_1;
-            this.pictureBox1.Location = new System.Drawing.Point(416, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(343, 96);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // metroLabel1
             // 
@@ -77,6 +68,7 @@
             this.metroLabel1.Size = new System.Drawing.Size(264, 19);
             this.metroLabel1.TabIndex = 3;
             this.metroLabel1.Text = "This program is in use and has been locked.";
+            this.metroLabel1.UseCustomBackColor = true;
             // 
             // lnkUser
             // 
@@ -86,6 +78,17 @@
             this.lnkUser.TabIndex = 4;
             this.lnkUser.Text = "metroLabel2";
             this.lnkUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lnkUser.UseCustomBackColor = true;
+            // 
+            // btnPassword
+            // 
+            this.btnPassword.Location = new System.Drawing.Point(649, 175);
+            this.btnPassword.Name = "btnPassword";
+            this.btnPassword.Size = new System.Drawing.Size(75, 23);
+            this.btnPassword.TabIndex = 6;
+            this.btnPassword.Text = "&Unlock";
+            this.btnPassword.UseSelectable = true;
+            this.btnPassword.Click += new System.EventHandler(this.btnPassword_Click);
             // 
             // txtPassword
             // 
@@ -122,15 +125,16 @@
             this.txtPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // btnPassword
+            // pictureBox1
             // 
-            this.btnPassword.Location = new System.Drawing.Point(649, 175);
-            this.btnPassword.Name = "btnPassword";
-            this.btnPassword.Size = new System.Drawing.Size(75, 23);
-            this.btnPassword.TabIndex = 6;
-            this.btnPassword.Text = "&Unlock";
-            this.btnPassword.UseSelectable = true;
-            this.btnPassword.Click += new System.EventHandler(this.btnPassword_Click);
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Image = global::VotingSystem.Properties.Resources.logo_generic__2_1;
+            this.pictureBox1.Location = new System.Drawing.Point(416, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(343, 96);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmUserLock
             // 

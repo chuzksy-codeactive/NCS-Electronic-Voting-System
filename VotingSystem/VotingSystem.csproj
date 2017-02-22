@@ -297,6 +297,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControlSlides\PnlChangePassword.resx">
+      <DependentUpon>PnlChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlSlides\PnlLogin.resx">
       <DependentUpon>PnlLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -411,6 +414,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\user %2810%291.png" />
+    <None Include="Resources\user %2810%29.png" />
+    <None Include="Resources\user %289%29.png" />
+    <None Include="Resources\user %288%29.png" />
     <None Include="Resources\logo-generic %282%292.png" />
     <None Include="Resources\database.png" />
     <None Include="Resources\calendar.png" />

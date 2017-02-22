@@ -122,13 +122,14 @@
             this.toolStripMenuItem1,
             this.exitToolStripMenuItem});
             this.mContextMenuUser.Name = "mContextMenuUser";
-            this.mContextMenuUser.Size = new System.Drawing.Size(167, 120);
+            this.mContextMenuUser.Size = new System.Drawing.Size(167, 98);
             // 
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
             this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.changePasswordToolStripMenuItem.Text = "change password";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // lockToolStripMenuItem
             // 

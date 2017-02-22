@@ -17,6 +17,7 @@ namespace VotingSystem
     {
         PnlLogin _login = null;
         private PnlMenu _menu = null;
+        private PnlChangePassword _change = null;
         public static string Username { get; set; }
         public FrmMain()
         {
@@ -27,16 +28,44 @@ namespace VotingSystem
 
             _login = new PnlLogin(this);
             _menu = new PnlMenu(this);
+            _change = new PnlChangePassword(this);
             
             _login.SettingClosed += _login_SettingClosed;
             _login.LogInSuccess += _login_LogInSuccess;
+            _change.Close += _change_Close;
             PnlLogin.LogOff += _login_LogOff;
             PnlLogin.ShowDem += ShowDem;
+            //PnlChangePassword.Open += Open;
+            PnlChangePassword.SlideBack += SlideBack;
 
             _login.Swipe();
 
             StyleManager.Theme = Settings.Default.Theme;
             StyleManager.Style = Settings.Default.Style;
+        }
+
+        private void SlideBack(object sender, EventArgs eventArgs)
+        {
+            _change.Swipe(false);
+            _menu = new PnlMenu(this);
+            _menu.Swipe();
+            lnkUser.Visible = true;
+        }
+
+        //private void Open(object sender, EventArgs eventArgs)
+        //{
+        //    _change.Swipe(false);
+        //    _menu = new PnlMenu(this);
+        //    _menu.Swipe(false);
+        //    lnkUser.Visible = false;
+        //}
+
+        private void _change_Close(object sender, EventArgs e)
+        {
+            _change.Swipe(false);
+            _menu = new PnlMenu(this);
+            _menu.Swipe();
+            lnkUser.Visible = true;
         }
 
         private void ShowDem(object sender, EventArgs eventArgs)
@@ -63,6 +92,7 @@ namespace VotingSystem
             lnkUser.Visible = true;
             lnkUser.Text = Username;
             FrmUserLock.Username = Username;
+            PnlChangePassword.Username = Username;
         }
 
         private void _login_SettingClosed(object sender, EventArgs e)
@@ -71,7 +101,7 @@ namespace VotingSystem
             lnkClose.Visible = true;
         }
 
-        public void _login_LogInSuccess(object sender, EventArgs e)
+        private void _login_LogInSuccess(object sender, EventArgs e)
         {
             _login.Swipe(false);
             _menu.Swipe();
@@ -80,6 +110,8 @@ namespace VotingSystem
             lnkUser.Visible = true;
             lnkUser.Text = Username;
             FrmUserLock.Username = Username;
+            PnlChangePassword.Username = Username;
+
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
@@ -125,6 +157,14 @@ namespace VotingSystem
         {
             var user = new FrmUserLock();
             user.ShowDialog(this);
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _menu.Swipe(false);
+            _change = new PnlChangePassword(this);
+            _change.Swipe();
+            lnkUser.Visible = false;
         }
     }
 }
