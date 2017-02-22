@@ -77,7 +77,7 @@
             this.txtSearch.MaxLength = 32767;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PromptText = "Search by PIN, Firstname or Lastname";
+            this.txtSearch.WaterMark = "Search by PIN, Firstname or Lastname";
             this.txtSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtSearch.SelectedText = "";
             this.txtSearch.SelectionLength = 0;

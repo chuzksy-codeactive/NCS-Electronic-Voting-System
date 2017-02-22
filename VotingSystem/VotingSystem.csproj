@@ -76,6 +76,9 @@
     <Reference Include="Telerik.WinControls, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="TelerikCommon, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Transitions">
+      <HintPath>..\..\..\..\Desktop\Compressed\ModernUiProject\DLL\Transitions.dll</HintPath>
+    </Reference>
     <Reference Include="Tulpep.NotificationWindow, Version=1.0.18.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Tulpep.NotificationWindow.1.0.18\lib\net40\Tulpep.NotificationWindow.dll</HintPath>
       <Private>True</Private>
@@ -125,6 +128,12 @@
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrivileges.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +145,12 @@
     </Compile>
     <Compile Include="FrmTheme.Designer.cs">
       <DependentUpon>FrmTheme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUserLock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUserLock.Designer.cs">
+      <DependentUpon>FrmUserLock.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmVoteByPin.cs">
       <SubType>Form</SubType>
@@ -177,6 +192,7 @@
     <Compile Include="Models\Candidate.cs" />
     <Compile Include="Models\CandidateRegistration.cs" />
     <Compile Include="Models\Election.cs" />
+    <Compile Include="Models\Functions.cs" />
     <Compile Include="Models\GetVoteCount.cs" />
     <Compile Include="Models\GetVoter.cs" />
     <Compile Include="Models\GroupCandidate.cs" />
@@ -194,6 +210,30 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSlides\PnlChangePassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSlides\PnlChangePassword.Designer.cs">
+      <DependentUpon>PnlChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSlides\PnlLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSlides\PnlLogin.Designer.cs">
+      <DependentUpon>PnlLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSlides\PnlMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSlides\PnlMenu.Designer.cs">
+      <DependentUpon>PnlMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSlides\pnlSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSlides\pnlSlider.Designer.cs">
+      <DependentUpon>pnlSlider.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CreateUser.resx">
       <DependentUpon>CreateUser.cs</DependentUpon>
@@ -216,11 +256,17 @@
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPrivileges.resx">
       <DependentUpon>FrmPrivileges.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTheme.resx">
       <DependentUpon>FrmTheme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUserLock.resx">
+      <DependentUpon>FrmUserLock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVoteByPin.resx">
       <DependentUpon>FrmVoteByPin.cs</DependentUpon>
@@ -251,6 +297,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControlSlides\PnlLogin.resx">
+      <DependentUpon>PnlLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSlides\PnlMenu.resx">
+      <DependentUpon>PnlMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSlides\pnlSlider.resx">
+      <DependentUpon>pnlSlider.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -356,6 +411,33 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\logo-generic %282%292.png" />
+    <None Include="Resources\database.png" />
+    <None Include="Resources\calendar.png" />
+    <None Include="Resources\bar-chart.png" />
+    <None Include="Resources\command.png" />
+    <None Include="Resources\open-lock.png" />
+    <None Include="Resources\fingerprint-with-crosshair-focus.png" />
+    <None Include="Resources\election-envelopes-and-box.png" />
+    <None Include="Resources\icon %284%29.png" />
+    <None Include="Resources\lectern-speech.png" />
+    <None Include="Resources\user %287%29.png" />
+    <None Include="Resources\user %286%29.png" />
+    <None Include="Resources\logo-generic %282%291.png" />
+    <None Include="Resources\settings %282%29.png" />
+    <None Include="Resources\logo-generic %282%29.png" />
+    <None Include="Resources\logo-generic %281%29.png" />
+    <None Include="Resources\cancel %282%29.png" />
+    <None Include="Resources\left-arrow %282%29.png" />
+    <None Include="Resources\left-arrow %283%29.png" />
+    <None Include="Resources\left-arrow %281%29.png" />
+    <None Include="Resources\left-arrow.png" />
+    <None Include="Resources\back-arrow.png" />
+    <None Include="Resources\company_logo.jpg" />
+    <None Include="Resources\settings %281%29.png" />
+    <None Include="Resources\settings.png" />
+    <None Include="Resources\cancel %281%29.png" />
+    <None Include="Resources\cancel.png" />
     <None Include="Resources\webcam %281%29.png" />
     <None Include="Resources\pie-chart.png" />
     <None Include="Resources\clipboard-with-pencil- %281%29.png" />
@@ -402,6 +484,7 @@
     <None Include="Resources\login.png" />
     <None Include="Resources\user.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

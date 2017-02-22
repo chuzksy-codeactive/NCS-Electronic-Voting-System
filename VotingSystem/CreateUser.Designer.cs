@@ -75,7 +75,7 @@
             this.txtConfirmPassword.MaxLength = 32767;
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.PasswordChar = '●';
-            this.txtConfirmPassword.PromptText = "Confirm password";
+            this.txtConfirmPassword.WaterMark = "Confirm password";
             this.txtConfirmPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtConfirmPassword.SelectedText = "";
             this.txtConfirmPassword.SelectionLength = 0;
@@ -110,7 +110,7 @@
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '●';
-            this.txtPassword.PromptText = "Enter password";
+            this.txtPassword.WaterMark = "Enter password";
             this.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtPassword.SelectedText = "";
             this.txtPassword.SelectionLength = 0;
@@ -145,7 +145,7 @@
             this.txtUsername.MaxLength = 32767;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
-            this.txtUsername.PromptText = "Enter a new username";
+            this.txtUsername.WaterMark = "Enter a new username";
             this.txtUsername.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtUsername.SelectedText = "";
             this.txtUsername.SelectionLength = 0;
