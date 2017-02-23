@@ -2,6 +2,8 @@
 using System;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data;
+using MetroFramework.Components;
 using VotingSystem.Properties;
 
 namespace VotingSystem.UserControlSlides
@@ -9,7 +11,7 @@ namespace VotingSystem.UserControlSlides
     public partial class PnlMenu : pnlSlider
     {
         private Form _owner = null;
-        private FrmMain _main = null;
+        public MetroStyleManager Style { get; set; }
         public static string Username { get; set; }
         private SqlConnection _cnn;
         private SqlCommand _cmd;
@@ -19,19 +21,21 @@ namespace VotingSystem.UserControlSlides
             InitializeComponent();
             _owner = owner;
             Username = FrmMain.Username;
-            _main = new FrmMain();
+            StyleManager = Settings.Default.StyleManager;
         }
 
         private void metroTile2_Click(object sender, System.EventArgs e)
         {
             var form = new FrmCandidate();
-            form.ShowDialog();
+            Settings.Default.StyleManager.Clone(form);
+            form.ShowDialog(this);
         }
 
         private void metroTile4_Click(object sender, System.EventArgs e)
         {
-            var form = new FrmElectionModule();
-            form.ShowDialog();
+            var form = new FrmAddNewElection();
+            Settings.Default.StyleManager.Clone(form);
+            form.ShowDialog(this);
         }
 
         private void PnlMenu_Load(object sender, EventArgs e)
@@ -65,36 +69,43 @@ namespace VotingSystem.UserControlSlides
         private void mtVoter_Click(object sender, EventArgs e)
         {
             var form = new FrmVotersRegistration();
-            form.ShowDialog();
+            Settings.Default.StyleManager.Clone(form);
+            form.ShowDialog(this);
         }
 
         private void mtPin_Click(object sender, EventArgs e)
         {
             var form = new FrmVoteByPin();
-            form.ShowDialog();
+            Settings.Default.StyleManager.Clone(form);
+            form.ShowDialog(this);
         }
 
         private void mtPrivilege_Click(object sender, EventArgs e)
         {
             var form = new FrmPrivileges();
-            form.ShowDialog();
+            Settings.Default.StyleManager.Clone(form);
+            form.ShowDialog(this);
         }
 
         private void mtUser_Click(object sender, EventArgs e)
         {
-            mtUser.Click += new EventHandler(new FrmMain().btnUser_Click);
+            var form = new FrmCreateUser();
+            Settings.Default.StyleManager.Clone(form);
+            form.ShowDialog(this);
         }
 
         private void mtStatistics_Click(object sender, EventArgs e)
         {
             var form = new FrmVoteStats();
-            form.ShowDialog();
+            Settings.Default.StyleManager.Clone(form);
+            form.ShowDialog(this);
         }
 
         private void mtSetDate_Click(object sender, EventArgs e)
         {
             var form = new FrmAddNewElection();
-            form.ShowDialog();
+            Settings.Default.StyleManager.Clone(form);
+            form.ShowDialog(this);
         }
     }
 }

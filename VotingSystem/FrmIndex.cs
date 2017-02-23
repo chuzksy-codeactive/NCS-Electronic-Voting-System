@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using MetroFramework;
 using MetroFramework.Components;
+using System.Data;
 using System.Data.SqlClient;
 using VotingSystem.Properties;
 

@@ -2,6 +2,8 @@
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using VotingSystem.Properties;
+using System.Data;
+using System.Data.SqlClient;
 using VotingSystem.Models;
 
 namespace VotingSystem

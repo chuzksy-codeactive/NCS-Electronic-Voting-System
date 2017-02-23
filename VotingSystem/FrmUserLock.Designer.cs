@@ -50,9 +50,9 @@
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(1, 42);
+            this.metroPanel1.Location = new System.Drawing.Point(1, 63);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(1119, 217);
+            this.metroPanel1.Size = new System.Drawing.Size(1119, 232);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.UseCustomBackColor = true;
             this.metroPanel1.VerticalScrollbarBarColor = true;
@@ -61,7 +61,8 @@
             // 
             // btnPassword
             // 
-            this.btnPassword.Location = new System.Drawing.Point(649, 175);
+            this.btnPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPassword.Location = new System.Drawing.Point(611, 196);
             this.btnPassword.Name = "btnPassword";
             this.btnPassword.Size = new System.Drawing.Size(75, 23);
             this.btnPassword.TabIndex = 6;
@@ -71,6 +72,7 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             // 
             // 
             // 
@@ -84,9 +86,9 @@
             this.txtPassword.CustomButton.UseSelectable = true;
             this.txtPassword.CustomButton.Visible = false;
             this.txtPassword.DisplayIcon = true;
-            this.txtPassword.Icon = global::VotingSystem.Properties.Resources.key;
+            this.txtPassword.Icon = global::VotingSystem.Properties.Resources.padlock;
             this.txtPassword.Lines = new string[0];
-            this.txtPassword.Location = new System.Drawing.Point(470, 143);
+            this.txtPassword.Location = new System.Drawing.Point(432, 164);
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '●';
@@ -106,7 +108,8 @@
             // 
             // lnkUser
             // 
-            this.lnkUser.Location = new System.Drawing.Point(460, 121);
+            this.lnkUser.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lnkUser.Location = new System.Drawing.Point(427, 129);
             this.lnkUser.Name = "lnkUser";
             this.lnkUser.Size = new System.Drawing.Size(264, 23);
             this.lnkUser.TabIndex = 4;
@@ -118,7 +121,7 @@
             // 
             this.metroLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(468, 102);
+            this.metroLabel1.Location = new System.Drawing.Point(427, 110);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(264, 19);
             this.metroLabel1.TabIndex = 3;
@@ -129,18 +132,19 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = global::VotingSystem.Properties.Resources.logo_generic__2_1;
-            this.pictureBox1.Location = new System.Drawing.Point(424, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(388, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(343, 96);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FrmUserLock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1120, 300);
+            this.ClientSize = new System.Drawing.Size(1120, 343);
             this.ControlBox = false;
             this.Controls.Add(this.metroPanel1);
             this.MaximizeBox = false;

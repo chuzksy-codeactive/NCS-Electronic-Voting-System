@@ -23,16 +23,6 @@ namespace VotingSystem.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=VotingSystem;Integrated Security=True")]
-        public string DbConn {
-            get {
-                return ((string)(this["DbConn"]));
-            }
-        }
-        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("localhost")]
@@ -114,6 +104,27 @@ namespace VotingSystem.Properties {
             }
             set {
                 this["Style"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=VotingSystem;Integrated Security=True")]
+        public string DbConn {
+            get {
+                return ((string)(this["DbConn"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::MetroFramework.Components.MetroStyleManager StyleManager {
+            get {
+                return ((global::MetroFramework.Components.MetroStyleManager)(this["StyleManager"]));
+            }
+            set {
+                this["StyleManager"] = value;
             }
         }
     }

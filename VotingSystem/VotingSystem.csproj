@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ProductIcon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
       <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
@@ -46,15 +49,15 @@
     </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\MetroFramework.ModernUI.Version.1.4.0\MetroFramework.dll</HintPath>
+      <HintPath>..\..\..\..\..\OneDrive\NCS\MetroFramework.ModernUI.Version.1.4.0\MetroFramework.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\MetroFramework.ModernUI.Version.1.4.0\MetroFramework.Design.dll</HintPath>
+      <HintPath>..\..\..\..\..\OneDrive\NCS\MetroFramework.ModernUI.Version.1.4.0\MetroFramework.Design.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\MetroFramework.ModernUI.Version.1.4.0\MetroFramework.Fonts.dll</HintPath>
+      <HintPath>..\..\..\..\..\OneDrive\NCS\MetroFramework.ModernUI.Version.1.4.0\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="SecuGen.FDxSDKPro.Windows">
       <HintPath>..\SecuGen.FDxSDKPro.Windows.dll</HintPath>
@@ -77,7 +80,7 @@
     <Reference Include="Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="TelerikCommon, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Transitions">
-      <HintPath>..\..\..\..\Desktop\Compressed\ModernUiProject\DLL\Transitions.dll</HintPath>
+      <HintPath>..\..\..\..\..\OneDrive\NCS\VotingSystem\VotingSystem\bin\Debug\Transitions.dll</HintPath>
     </Reference>
     <Reference Include="Tulpep.NotificationWindow, Version=1.0.18.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Tulpep.NotificationWindow.1.0.18\lib\net40\Tulpep.NotificationWindow.dll</HintPath>
@@ -217,12 +220,6 @@
     <Compile Include="UserControlSlides\PnlChangePassword.Designer.cs">
       <DependentUpon>PnlChangePassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlSlides\PnlCreateUser.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControlSlides\PnlCreateUser.Designer.cs">
-      <DependentUpon>PnlCreateUser.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControlSlides\PnlLogin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -305,9 +302,6 @@
     </Compile>
     <EmbeddedResource Include="UserControlSlides\PnlChangePassword.resx">
       <DependentUpon>PnlChangePassword.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControlSlides\PnlCreateUser.resx">
-      <DependentUpon>PnlCreateUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlSlides\PnlLogin.resx">
       <DependentUpon>PnlLogin.cs</DependentUpon>
@@ -423,6 +417,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <Content Include="ProductIcon.ico" />
     <None Include="Resources\backgrond.png" />
     <None Include="Resources\fingerprint-scan-loading %281%29.png" />
     <None Include="Resources\fingerprint-scan-loading.png" />

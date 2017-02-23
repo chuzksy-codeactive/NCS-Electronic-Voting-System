@@ -265,12 +265,13 @@
             this.BackImagePadding = new System.Windows.Forms.Padding(280, 16, 0, 0);
             this.BackMaxSize = 32;
             this.ClientSize = new System.Drawing.Size(760, 453);
-            this.ControlBox = false;
             this.Controls.Add(this.lblDenied);
             this.Controls.Add(this.metroLink2);
             this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.metroPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmVoteWithPincs";
             this.Text = "Voting Process Using PIN";
             this.Load += new System.EventHandler(this.FrmVoteWithPincs_Load);

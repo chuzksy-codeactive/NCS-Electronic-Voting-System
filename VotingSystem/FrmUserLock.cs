@@ -1,7 +1,10 @@
 ﻿using System.Data.SqlClient;
+using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 using MetroFramework;
 using VotingSystem.Properties;
+using VotingSystem.SMSLive247Api;
 
 
 namespace VotingSystem
@@ -59,6 +62,11 @@ namespace VotingSystem
         private void FrmUserLock_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true;
+
+        }
+
+        private void pictureBox1_Click(object sender, System.EventArgs e)
+        {
 
         }
     }

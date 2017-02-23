@@ -375,11 +375,12 @@
             this.BackImagePadding = new System.Windows.Forms.Padding(170, 20, 0, 0);
             this.BackMaxSize = 32;
             this.ClientSize = new System.Drawing.Size(919, 485);
-            this.ControlBox = false;
             this.Controls.Add(this.lblPosition);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.lstPosition);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmVoteStats";
             this.Text = "Vote Statistics";
             this.Load += new System.EventHandler(this.FrmVoteStats_Load);

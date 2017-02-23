@@ -84,6 +84,7 @@
             this.metroLabel1.Size = new System.Drawing.Size(69, 19);
             this.metroLabel1.TabIndex = 20;
             this.metroLabel1.Text = "Firstname:";
+            this.metroLabel1.UseCustomBackColor = true;
             // 
             // metroLabel2
             // 
@@ -93,6 +94,7 @@
             this.metroLabel2.Size = new System.Drawing.Size(67, 19);
             this.metroLabel2.TabIndex = 21;
             this.metroLabel2.Text = "Lastname:";
+            this.metroLabel2.UseCustomBackColor = true;
             // 
             // metroLabel3
             // 
@@ -102,6 +104,7 @@
             this.metroLabel3.Size = new System.Drawing.Size(56, 19);
             this.metroLabel3.TabIndex = 22;
             this.metroLabel3.Text = "Gender:";
+            this.metroLabel3.UseCustomBackColor = true;
             // 
             // metroLabel4
             // 
@@ -111,6 +114,7 @@
             this.metroLabel4.Size = new System.Drawing.Size(44, 19);
             this.metroLabel4.TabIndex = 23;
             this.metroLabel4.Text = "Email:";
+            this.metroLabel4.UseCustomBackColor = true;
             // 
             // metroLabel5
             // 
@@ -120,6 +124,7 @@
             this.metroLabel5.Size = new System.Drawing.Size(100, 19);
             this.metroLabel5.TabIndex = 24;
             this.metroLabel5.Text = "Phone number:";
+            this.metroLabel5.UseCustomBackColor = true;
             // 
             // metroLabel6
             // 
@@ -129,6 +134,7 @@
             this.metroLabel6.Size = new System.Drawing.Size(57, 19);
             this.metroLabel6.TabIndex = 25;
             this.metroLabel6.Text = "Position:";
+            this.metroLabel6.UseCustomBackColor = true;
             // 
             // metroLabel7
             // 
@@ -138,6 +144,7 @@
             this.metroLabel7.Size = new System.Drawing.Size(66, 19);
             this.metroLabel7.TabIndex = 26;
             this.metroLabel7.Text = "Manifesto";
+            this.metroLabel7.UseCustomBackColor = true;
             // 
             // txtFirstname
             // 
@@ -370,6 +377,7 @@
             this.metroPanel1.Name = "metroPanel1";
             this.metroPanel1.Size = new System.Drawing.Size(522, 343);
             this.metroPanel1.TabIndex = 2;
+            this.metroPanel1.UseCustomBackColor = true;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
@@ -440,6 +448,7 @@
             this.listView1.Size = new System.Drawing.Size(399, 343);
             this.listView1.TabIndex = 41;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.UseCustomBackColor = true;
             this.listView1.UseSelectable = true;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
@@ -506,7 +515,6 @@
             this.BackImagePadding = new System.Windows.Forms.Padding(280, 20, 0, 0);
             this.BackMaxSize = 32;
             this.ClientSize = new System.Drawing.Size(975, 509);
-            this.ControlBox = false;
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
@@ -515,6 +523,8 @@
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmCandidate";
             this.Text = "Register New Candidate";
             this.Load += new System.EventHandler(this.FrmCandidate_Load);

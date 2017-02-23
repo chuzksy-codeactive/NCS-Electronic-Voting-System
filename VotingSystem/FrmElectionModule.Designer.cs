@@ -390,7 +390,6 @@
             this.BackImagePadding = new System.Windows.Forms.Padding(160, 16, 0, 0);
             this.BackMaxSize = 32;
             this.ClientSize = new System.Drawing.Size(517, 589);
-            this.ControlBox = false;
             this.Controls.Add(this.metroPanel);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnCastVote);
@@ -399,6 +398,8 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnScan);
             this.Controls.Add(this.metroPanel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmElectionModule";
             this.Text = "Cast Election ";
             this.Load += new System.EventHandler(this.FrmElectionModule_Load);

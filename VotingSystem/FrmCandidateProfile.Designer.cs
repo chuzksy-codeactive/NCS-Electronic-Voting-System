@@ -67,6 +67,7 @@
             this.profileTab.SelectedIndex = 0;
             this.profileTab.Size = new System.Drawing.Size(449, 295);
             this.profileTab.TabIndex = 8;
+            this.profileTab.UseCustomBackColor = true;
             this.profileTab.UseSelectable = true;
             // 
             // positionTab
@@ -90,6 +91,7 @@
             this.positionTab.Size = new System.Drawing.Size(441, 247);
             this.positionTab.TabIndex = 0;
             this.positionTab.Text = "position";
+            this.positionTab.UseCustomBackColor = true;
             this.positionTab.VerticalScrollbarBarColor = true;
             this.positionTab.VerticalScrollbarHighlightOnWheel = false;
             this.positionTab.VerticalScrollbarSize = 10;
@@ -101,6 +103,7 @@
             this.lblManifesto.Size = new System.Drawing.Size(283, 87);
             this.lblManifesto.TabIndex = 11;
             this.lblManifesto.Text = "Candidate Pin:";
+            this.lblManifesto.UseCustomBackColor = true;
             // 
             // lblEmail
             // 
@@ -110,6 +113,7 @@
             this.lblEmail.Size = new System.Drawing.Size(94, 19);
             this.lblEmail.TabIndex = 10;
             this.lblEmail.Text = "Candidate Pin:";
+            this.lblEmail.UseCustomBackColor = true;
             // 
             // lblPhonenumber
             // 
@@ -119,6 +123,7 @@
             this.lblPhonenumber.Size = new System.Drawing.Size(94, 19);
             this.lblPhonenumber.TabIndex = 9;
             this.lblPhonenumber.Text = "Candidate Pin:";
+            this.lblPhonenumber.UseCustomBackColor = true;
             // 
             // lblFullname
             // 
@@ -128,6 +133,7 @@
             this.lblFullname.Size = new System.Drawing.Size(94, 19);
             this.lblFullname.TabIndex = 8;
             this.lblFullname.Text = "Candidate Pin:";
+            this.lblFullname.UseCustomBackColor = true;
             // 
             // lblCandidatePin
             // 
@@ -137,6 +143,7 @@
             this.lblCandidatePin.Size = new System.Drawing.Size(94, 19);
             this.lblCandidatePin.TabIndex = 7;
             this.lblCandidatePin.Text = "Candidate Pin:";
+            this.lblCandidatePin.UseCustomBackColor = true;
             // 
             // metroLabel5
             // 
@@ -147,6 +154,7 @@
             this.metroLabel5.Size = new System.Drawing.Size(79, 19);
             this.metroLabel5.TabIndex = 6;
             this.metroLabel5.Text = "Manifesto:";
+            this.metroLabel5.UseCustomBackColor = true;
             // 
             // metroLabel4
             // 
@@ -157,6 +165,7 @@
             this.metroLabel4.Size = new System.Drawing.Size(107, 19);
             this.metroLabel4.TabIndex = 5;
             this.metroLabel4.Text = "Email Address:";
+            this.metroLabel4.UseCustomBackColor = true;
             // 
             // metroLabel3
             // 
@@ -167,6 +176,7 @@
             this.metroLabel3.Size = new System.Drawing.Size(108, 19);
             this.metroLabel3.TabIndex = 4;
             this.metroLabel3.Text = "Phonenumber:";
+            this.metroLabel3.UseCustomBackColor = true;
             // 
             // metroLabel2
             // 
@@ -177,6 +187,7 @@
             this.metroLabel2.Size = new System.Drawing.Size(125, 19);
             this.metroLabel2.TabIndex = 3;
             this.metroLabel2.Text = "Candidate Name:";
+            this.metroLabel2.UseCustomBackColor = true;
             // 
             // metroLabel1
             // 
@@ -187,6 +198,7 @@
             this.metroLabel1.Size = new System.Drawing.Size(106, 19);
             this.metroLabel1.TabIndex = 2;
             this.metroLabel1.Text = "Candidate Pin:";
+            this.metroLabel1.UseCustomBackColor = true;
             // 
             // btnClose
             // 

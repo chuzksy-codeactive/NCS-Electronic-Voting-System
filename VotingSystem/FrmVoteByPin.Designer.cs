@@ -312,7 +312,6 @@
             this.BackImagePadding = new System.Windows.Forms.Padding(300, 15, 0, 0);
             this.BackMaxSize = 32;
             this.ClientSize = new System.Drawing.Size(640, 553);
-            this.ControlBox = false;
             this.Controls.Add(this.lblVoterPin);
             this.Controls.Add(this.btnView);
             this.Controls.Add(this.grdCandidate);
@@ -321,6 +320,8 @@
             this.Controls.Add(this.picImage);
             this.Controls.Add(this.grdVoter);
             this.Controls.Add(this.txtSearch);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmVoteByPin";
             this.Text = "Vote Process by Voters PIN";
             this.Load += new System.EventHandler(this.FrmVoteByPin_Load);

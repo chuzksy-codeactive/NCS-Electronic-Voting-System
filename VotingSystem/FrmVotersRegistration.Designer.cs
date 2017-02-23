@@ -657,7 +657,6 @@
             this.BackImagePadding = new System.Windows.Forms.Padding(220, 18, 0, 0);
             this.BackMaxSize = 32;
             this.ClientSize = new System.Drawing.Size(915, 582);
-            this.ControlBox = false;
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSubmit);
@@ -665,6 +664,8 @@
             this.Controls.Add(this.tbRegistration);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmVotersRegistration";
             this.Text = "Register New Voter";
             this.Load += new System.EventHandler(this.Form1_Load);

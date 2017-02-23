@@ -1,8 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework;
+using VotingSystem.UserControlSlides;
 using MetroFramework.Controls;
 using MetroFramework.Forms;
 using VotingSystem.Models;
@@ -103,6 +109,7 @@ namespace VotingSystem.UserControlSlides
             Settings.Default.Password = mtDbPassword.Text;
             Settings.Default.Theme = ((MetroForm)this.Parent).StyleManager.Theme;
             Settings.Default.Style = ((MetroForm)this.Parent).StyleManager.Style;
+            Settings.Default.StyleManager = ((MetroForm) Parent).StyleManager;
             Settings.Default.Save();
         }
 

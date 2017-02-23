@@ -119,7 +119,6 @@
             this.BackImagePadding = new System.Windows.Forms.Padding(250, 20, 0, 0);
             this.BackMaxSize = 32;
             this.ClientSize = new System.Drawing.Size(395, 437);
-            this.ControlBox = false;
             this.Controls.Add(this.lstUsers);
             this.Controls.Add(this.metroButton3);
             this.Controls.Add(this.metroLabel1);
@@ -127,6 +126,8 @@
             this.Controls.Add(this.cmbDeleteUser);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.chkListbox);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmPrivileges";
             this.Text = "Set Privileges to Users";
             this.Load += new System.EventHandler(this.FrmPrivileges_Load);

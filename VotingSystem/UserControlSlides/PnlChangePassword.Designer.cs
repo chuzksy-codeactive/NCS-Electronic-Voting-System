@@ -30,11 +30,11 @@
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.btnChangePassword = new MetroFramework.Controls.MetroButton();
-            this.lnkBack = new MetroFramework.Controls.MetroLink();
             this.txtConfirmPassword = new MetroFramework.Controls.MetroTextBox();
             this.txtNewPassword = new MetroFramework.Controls.MetroTextBox();
             this.txtOldPassword = new MetroFramework.Controls.MetroTextBox();
             this.lnkUsername = new MetroFramework.Controls.MetroLink();
+            this.lnkBack = new MetroFramework.Controls.MetroLink();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,19 +69,6 @@
             this.btnChangePassword.Text = "change password";
             this.btnChangePassword.UseSelectable = true;
             this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
-            // 
-            // lnkBack
-            // 
-            this.lnkBack.Image = global::VotingSystem.Properties.Resources.left_arrow__2_;
-            this.lnkBack.ImageSize = 32;
-            this.lnkBack.Location = new System.Drawing.Point(902, 3);
-            this.lnkBack.Name = "lnkBack";
-            this.lnkBack.NoFocusImage = global::VotingSystem.Properties.Resources.left_arrow__3_;
-            this.lnkBack.Size = new System.Drawing.Size(42, 31);
-            this.lnkBack.TabIndex = 1;
-            this.lnkBack.UseCustomBackColor = true;
-            this.lnkBack.UseSelectable = true;
-            this.lnkBack.Click += new System.EventHandler(this.lnkBack_Click);
             // 
             // txtConfirmPassword
             // 
@@ -208,6 +195,19 @@
             this.lnkUsername.Text = "username";
             this.lnkUsername.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lnkUsername.UseSelectable = true;
+            // 
+            // lnkBack
+            // 
+            this.lnkBack.Image = global::VotingSystem.Properties.Resources.left_arrow__2_;
+            this.lnkBack.ImageSize = 32;
+            this.lnkBack.Location = new System.Drawing.Point(3, 3);
+            this.lnkBack.Name = "lnkBack";
+            this.lnkBack.NoFocusImage = global::VotingSystem.Properties.Resources.left_arrow__3_;
+            this.lnkBack.Size = new System.Drawing.Size(42, 31);
+            this.lnkBack.TabIndex = 1;
+            this.lnkBack.UseCustomBackColor = true;
+            this.lnkBack.UseSelectable = true;
+            this.lnkBack.Click += new System.EventHandler(this.lnkBack_Click);
             // 
             // PnlChangePassword
             // 

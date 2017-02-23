@@ -1,7 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.Linq;
+using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Components;
 using MetroFramework.Forms;
 using VotingSystem.Properties;
 using VotingSystem.UserControlSlides;
@@ -13,32 +20,27 @@ namespace VotingSystem
         PnlLogin _login = null;
         private PnlMenu _menu = null;
         private PnlChangePassword _change = null;
-        private PnlCreateUser _user = null;
         public static string Username { get; set; }
         public FrmMain()
         {
-            //var t = new Thread(StartForm);
-            //t.Start();
-            //Thread.Sleep(2000);
+            var t = new Thread(StartForm);
+            t.Start();
+            Thread.Sleep(2000);
             InitializeComponent();
-            //t.Abort();
+            t.Abort();
             StyleManager = msmMain;
-
-            Shown += FrmMain_Shown;
 
             _login = new PnlLogin(this);
             _menu = new PnlMenu(this);
             _change = new PnlChangePassword(this);
-            _user = new PnlCreateUser(this);
+            Settings.Default.StyleManager = msmMain;
             
             _login.SettingClosed += _login_SettingClosed;
             _login.LogInSuccess += _login_LogInSuccess;
             _change.Close += _change_Close;
-            //_user.Close += UserOnClose;
             PnlLogin.LogOff += _login_LogOff;
             PnlLogin.ShowDem += ShowDem;
             PnlChangePassword.SlideBack += SlideBack;
-            //PnlCreateUser.SlideBack += User_SlideBack;
 
             _login.Swipe();
 
@@ -46,26 +48,10 @@ namespace VotingSystem
             StyleManager.Style = Settings.Default.Style;
         }
 
-        private void User_SlideBack(object sender, EventArgs eventArgs)
+        public void StartForm()
         {
-            _user.Swipe(false);
-            _menu = new PnlMenu(this);
-            _menu.Swipe();
-            lnkUser.Visible = true;
+            Application.Run(new FrmSplashScreen());
         }
-
-        private void UserOnClose(object sender, EventArgs eventArgs)
-        {
-            _user.Swipe(false);
-            _menu = new PnlMenu(this);
-            _menu.Swipe();
-            lnkUser.Visible = true;
-        }
-
-        //public void StartForm()
-        //{
-        //    Application.Run(new FrmSplashScreen());
-        //}
 
         private void SlideBack(object sender, EventArgs eventArgs)
         {
@@ -87,14 +73,6 @@ namespace VotingSystem
         {
             lnkClose.Visible = true;
             lnkSettings.Visible = true;
-        }
-
-        private void FrmMain_Shown(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Normal;
-            FormBorderStyle = FormBorderStyle.None;
-            Bounds = Screen.PrimaryScreen.Bounds;
-            Focus();
         }
 
         private void _login_LogOff(object sender, EventArgs e)
@@ -134,6 +112,7 @@ namespace VotingSystem
         private void FrmMain_Load(object sender, EventArgs e)
         {
             lnkUser.Visible = false;
+            _menu.Style = msmMain;
         }
 
         private void lnkSettings_Click(object sender, EventArgs e)
@@ -182,16 +161,6 @@ namespace VotingSystem
             _change = new PnlChangePassword(this);
             _change.Swipe();
             lnkUser.Visible = false;
-        }
-
-        public void btnUser_Click(object sender, EventArgs e)
-        {
-            _menu.Swipe(false);
-            _user = new PnlCreateUser(this);
-            _user.Swipe();
-            lnkSettings.Visible = false;
-            lnkClose.Visible = true;
-            lnkUser.Visible = true;
         }
     }
 }

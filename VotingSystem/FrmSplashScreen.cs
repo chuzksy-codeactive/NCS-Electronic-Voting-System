@@ -1,4 +1,7 @@
-﻿using MetroFramework.Forms;
+﻿using System.Threading;
+using System.Windows.Forms;
+using MetroFramework.Forms;
+using VotingSystem.UserControlSlides;
 
 namespace VotingSystem
 {

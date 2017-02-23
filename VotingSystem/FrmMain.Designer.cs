@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.lnkSettings = new MetroFramework.Controls.MetroLink();
             this.lnkClose = new MetroFramework.Controls.MetroLink();
             this.msmMain = new MetroFramework.Components.MetroStyleManager(this.components);
@@ -40,7 +41,6 @@
             this.logOffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnUser = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.msmMain)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.mContextMenuUser.SuspendLayout();
@@ -163,16 +163,6 @@
             this.exitToolStripMenuItem.Text = "exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // btnUser
-            // 
-            this.btnUser.Location = new System.Drawing.Point(726, 20);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(75, 23);
-            this.btnUser.TabIndex = 3;
-            this.btnUser.Text = "metroButton1";
-            this.btnUser.UseSelectable = true;
-            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,8 +173,9 @@
             this.ClientSize = new System.Drawing.Size(1121, 689);
             this.ControlBox = false;
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.btnUser);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMain";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.msmMain)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -199,7 +190,6 @@
 
         public MetroFramework.Controls.MetroLink lnkClose;
         public MetroFramework.Controls.MetroLink lnkSettings;
-        private MetroFramework.Components.MetroStyleManager msmMain;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private MetroFramework.Controls.MetroLink lnkUser;
         private MetroFramework.Controls.MetroContextMenu mContextMenuUser;
@@ -208,6 +198,6 @@
         private System.Windows.Forms.ToolStripMenuItem logOffToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        public MetroFramework.Controls.MetroButton btnUser;
+        public MetroFramework.Components.MetroStyleManager msmMain;
     }
 }

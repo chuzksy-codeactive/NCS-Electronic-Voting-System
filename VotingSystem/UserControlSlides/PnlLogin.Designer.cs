@@ -360,7 +360,7 @@
             this.mtbTheme.Location = new System.Drawing.Point(4, 38);
             this.mtbTheme.Name = "mtbTheme";
             this.mtbTheme.Padding = new System.Windows.Forms.Padding(0, 90, 0, 0);
-            this.mtbTheme.Size = new System.Drawing.Size(242, 319);
+            this.mtbTheme.Size = new System.Drawing.Size(242, 529);
             this.mtbTheme.TabIndex = 0;
             this.mtbTheme.Text = "&theme";
             this.mtbTheme.VerticalScrollbarBarColor = true;
@@ -417,7 +417,7 @@
             this.flpSettings.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpSettings.Location = new System.Drawing.Point(0, 90);
             this.flpSettings.Name = "flpSettings";
-            this.flpSettings.Size = new System.Drawing.Size(242, 229);
+            this.flpSettings.Size = new System.Drawing.Size(242, 439);
             this.flpSettings.TabIndex = 2;
             // 
             // lnkBack
@@ -481,7 +481,7 @@
             this.txtPassword.CustomButton.UseSelectable = true;
             this.txtPassword.CustomButton.Visible = false;
             this.txtPassword.DisplayIcon = true;
-            this.txtPassword.Icon = global::VotingSystem.Properties.Resources.key;
+            this.txtPassword.Icon = global::VotingSystem.Properties.Resources.padlock;
             this.txtPassword.Lines = new string[0];
             this.txtPassword.Location = new System.Drawing.Point(381, 148);
             this.txtPassword.MaxLength = 32767;

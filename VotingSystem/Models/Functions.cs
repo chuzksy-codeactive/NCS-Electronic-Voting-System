@@ -2,6 +2,7 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Dynamic;
 using VotingSystem.Properties;
 
 namespace VotingSystem.Models

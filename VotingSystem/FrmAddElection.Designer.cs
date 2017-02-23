@@ -72,6 +72,7 @@
             this.metroPanel1.Name = "metroPanel1";
             this.metroPanel1.Size = new System.Drawing.Size(358, 149);
             this.metroPanel1.TabIndex = 22;
+            this.metroPanel1.UseCustomBackColor = true;
             this.metroPanel1.UseStyleColors = true;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -129,6 +130,7 @@
             this.metroLabel3.Size = new System.Drawing.Size(118, 19);
             this.metroLabel3.TabIndex = 23;
             this.metroLabel3.Text = "No. of Candidates:";
+            this.metroLabel3.UseCustomBackColor = true;
             // 
             // metroLabel2
             // 
@@ -138,6 +140,7 @@
             this.metroLabel2.Size = new System.Drawing.Size(85, 19);
             this.metroLabel2.TabIndex = 24;
             this.metroLabel2.Text = "Election Post:";
+            this.metroLabel2.UseCustomBackColor = true;
             // 
             // txtElectionId
             // 
@@ -177,6 +180,7 @@
             this.metroLabel1.Size = new System.Drawing.Size(72, 19);
             this.metroLabel1.TabIndex = 25;
             this.metroLabel1.Text = "Election Id:";
+            this.metroLabel1.UseCustomBackColor = true;
             // 
             // metroPanel2
             // 
@@ -192,6 +196,7 @@
             this.metroPanel2.Name = "metroPanel2";
             this.metroPanel2.Size = new System.Drawing.Size(358, 117);
             this.metroPanel2.TabIndex = 23;
+            this.metroPanel2.UseCustomBackColor = true;
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
@@ -226,6 +231,7 @@
             this.metroLabel5.Size = new System.Drawing.Size(114, 19);
             this.metroLabel5.TabIndex = 24;
             this.metroLabel5.Text = "Election End Date:";
+            this.metroLabel5.UseCustomBackColor = true;
             // 
             // metroLabel4
             // 
@@ -235,6 +241,7 @@
             this.metroLabel4.Size = new System.Drawing.Size(120, 19);
             this.metroLabel4.TabIndex = 25;
             this.metroLabel4.Text = "Election Start Date:";
+            this.metroLabel4.UseCustomBackColor = true;
             // 
             // btnNew
             // 
@@ -282,6 +289,7 @@
             this.lstViewElection.Size = new System.Drawing.Size(440, 289);
             this.lstViewElection.TabIndex = 25;
             this.lstViewElection.UseCompatibleStateImageBehavior = false;
+            this.lstViewElection.UseCustomBackColor = true;
             this.lstViewElection.UseSelectable = true;
             this.lstViewElection.View = System.Windows.Forms.View.Details;
             this.lstViewElection.SelectedIndexChanged += new System.EventHandler(this.lstViewElection_SelectedIndexChanged);
@@ -350,7 +358,6 @@
             this.BackImagePadding = new System.Windows.Forms.Padding(210, 20, 0, 0);
             this.BackMaxSize = 32;
             this.ClientSize = new System.Drawing.Size(886, 489);
-            this.ControlBox = false;
             this.Controls.Add(this.lstViewElection);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
@@ -360,6 +367,8 @@
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.metroPanel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmAddNewElection";
             this.Text = "Add New Election";
             this.Load += new System.EventHandler(this.FrmAddNewElection_Load);
