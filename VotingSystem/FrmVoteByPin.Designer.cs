@@ -96,7 +96,6 @@
             this.grdVoter.AllowUserToAddRows = false;
             this.grdVoter.AllowUserToResizeRows = false;
             this.grdVoter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.grdVoter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdVoter.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grdVoter.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -182,7 +181,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(33, 362);
+            this.metroLabel1.Location = new System.Drawing.Point(23, 365);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(163, 19);
             this.metroLabel1.TabIndex = 3;
@@ -192,7 +191,7 @@
             // 
             this.cmbPost.FormattingEnabled = true;
             this.cmbPost.ItemHeight = 23;
-            this.cmbPost.Location = new System.Drawing.Point(202, 352);
+            this.cmbPost.Location = new System.Drawing.Point(192, 355);
             this.cmbPost.Name = "cmbPost";
             this.cmbPost.Size = new System.Drawing.Size(237, 29);
             this.cmbPost.TabIndex = 4;
@@ -203,7 +202,6 @@
             this.grdCandidate.AllowUserToAddRows = false;
             this.grdCandidate.AllowUserToResizeRows = false;
             this.grdCandidate.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.grdCandidate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdCandidate.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grdCandidate.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -285,7 +283,7 @@
             // 
             // btnView
             // 
-            this.btnView.Location = new System.Drawing.Point(445, 352);
+            this.btnView.Location = new System.Drawing.Point(435, 355);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(43, 29);
             this.btnView.TabIndex = 6;
