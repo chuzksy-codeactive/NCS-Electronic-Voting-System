@@ -217,6 +217,12 @@
     <Compile Include="UserControlSlides\PnlChangePassword.Designer.cs">
       <DependentUpon>PnlChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlSlides\PnlCreateUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSlides\PnlCreateUser.Designer.cs">
+      <DependentUpon>PnlCreateUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlSlides\PnlLogin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -299,6 +305,9 @@
     </Compile>
     <EmbeddedResource Include="UserControlSlides\PnlChangePassword.resx">
       <DependentUpon>PnlChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSlides\PnlCreateUser.resx">
+      <DependentUpon>PnlCreateUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlSlides\PnlLogin.resx">
       <DependentUpon>PnlLogin.cs</DependentUpon>

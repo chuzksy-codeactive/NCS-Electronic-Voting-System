@@ -116,7 +116,7 @@
             this.txtSearch.MaxLength = 32767;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.WaterMark = "Search by Voters\' PIN";
+            this.txtSearch.PromptText = "Search by Voters\' PIN";
             this.txtSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtSearch.SelectedText = "";
             this.txtSearch.SelectionLength = 0;
@@ -657,6 +657,7 @@
             this.BackImagePadding = new System.Windows.Forms.Padding(220, 18, 0, 0);
             this.BackMaxSize = 32;
             this.ClientSize = new System.Drawing.Size(915, 582);
+            this.ControlBox = false;
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSubmit);

@@ -4,7 +4,6 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
-using System.Windows.Forms;
 
 namespace VotingSystem.Models
 {

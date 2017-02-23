@@ -265,6 +265,7 @@
             this.BackImagePadding = new System.Windows.Forms.Padding(280, 16, 0, 0);
             this.BackMaxSize = 32;
             this.ClientSize = new System.Drawing.Size(760, 453);
+            this.ControlBox = false;
             this.Controls.Add(this.lblDenied);
             this.Controls.Add(this.metroLink2);
             this.Controls.Add(this.metroPanel2);

@@ -350,6 +350,7 @@
             this.BackImagePadding = new System.Windows.Forms.Padding(210, 20, 0, 0);
             this.BackMaxSize = 32;
             this.ClientSize = new System.Drawing.Size(886, 489);
+            this.ControlBox = false;
             this.Controls.Add(this.lstViewElection);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);

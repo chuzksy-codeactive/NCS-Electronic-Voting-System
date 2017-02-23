@@ -390,6 +390,7 @@
             this.BackImagePadding = new System.Windows.Forms.Padding(160, 16, 0, 0);
             this.BackMaxSize = 32;
             this.ClientSize = new System.Drawing.Size(517, 589);
+            this.ControlBox = false;
             this.Controls.Add(this.metroPanel);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnCastVote);

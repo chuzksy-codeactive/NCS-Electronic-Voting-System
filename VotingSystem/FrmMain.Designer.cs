@@ -40,6 +40,7 @@
             this.logOffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnUser = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.msmMain)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.mContextMenuUser.SuspendLayout();
@@ -162,6 +163,16 @@
             this.exitToolStripMenuItem.Text = "exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // btnUser
+            // 
+            this.btnUser.Location = new System.Drawing.Point(726, 20);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(75, 23);
+            this.btnUser.TabIndex = 3;
+            this.btnUser.Text = "metroButton1";
+            this.btnUser.UseSelectable = true;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,6 +183,7 @@
             this.ClientSize = new System.Drawing.Size(1121, 689);
             this.ControlBox = false;
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.btnUser);
             this.Name = "FrmMain";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.msmMain)).EndInit();
@@ -196,5 +208,6 @@
         private System.Windows.Forms.ToolStripMenuItem logOffToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        public MetroFramework.Controls.MetroButton btnUser;
     }
 }

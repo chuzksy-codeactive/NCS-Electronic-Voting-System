@@ -74,7 +74,7 @@
             // 
             this.lnkBack.Image = global::VotingSystem.Properties.Resources.left_arrow__2_;
             this.lnkBack.ImageSize = 32;
-            this.lnkBack.Location = new System.Drawing.Point(3, 3);
+            this.lnkBack.Location = new System.Drawing.Point(902, 3);
             this.lnkBack.Name = "lnkBack";
             this.lnkBack.NoFocusImage = global::VotingSystem.Properties.Resources.left_arrow__3_;
             this.lnkBack.Size = new System.Drawing.Size(42, 31);
@@ -98,7 +98,8 @@
             this.txtConfirmPassword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtConfirmPassword.CustomButton.UseSelectable = true;
             this.txtConfirmPassword.CustomButton.Visible = false;
-            this.txtConfirmPassword.Icon = global::VotingSystem.Properties.Resources.key;
+            this.txtConfirmPassword.DisplayIcon = true;
+            this.txtConfirmPassword.Icon = global::VotingSystem.Properties.Resources.password;
             this.txtConfirmPassword.Lines = new string[0];
             this.txtConfirmPassword.Location = new System.Drawing.Point(375, 241);
             this.txtConfirmPassword.MaxLength = 32767;
@@ -133,7 +134,8 @@
             this.txtNewPassword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtNewPassword.CustomButton.UseSelectable = true;
             this.txtNewPassword.CustomButton.Visible = false;
-            this.txtNewPassword.Icon = global::VotingSystem.Properties.Resources.key;
+            this.txtNewPassword.DisplayIcon = true;
+            this.txtNewPassword.Icon = global::VotingSystem.Properties.Resources.password;
             this.txtNewPassword.Lines = new string[0];
             this.txtNewPassword.Location = new System.Drawing.Point(375, 209);
             this.txtNewPassword.MaxLength = 32767;
@@ -169,7 +171,7 @@
             this.txtOldPassword.CustomButton.UseSelectable = true;
             this.txtOldPassword.CustomButton.Visible = false;
             this.txtOldPassword.DisplayIcon = true;
-            this.txtOldPassword.Icon = global::VotingSystem.Properties.Resources.key;
+            this.txtOldPassword.Icon = global::VotingSystem.Properties.Resources.padlock;
             this.txtOldPassword.Lines = new string[0];
             this.txtOldPassword.Location = new System.Drawing.Point(375, 177);
             this.txtOldPassword.MaxLength = 32767;
@@ -201,7 +203,7 @@
             this.lnkUsername.Location = new System.Drawing.Point(401, 15);
             this.lnkUsername.Name = "lnkUsername";
             this.lnkUsername.NoFocusImage = global::VotingSystem.Properties.Resources.user__10_;
-            this.lnkUsername.Size = new System.Drawing.Size(199, 156);
+            this.lnkUsername.Size = new System.Drawing.Size(219, 156);
             this.lnkUsername.TabIndex = 3;
             this.lnkUsername.Text = "username";
             this.lnkUsername.TextAlign = System.Drawing.ContentAlignment.BottomCenter;

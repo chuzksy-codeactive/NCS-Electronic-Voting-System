@@ -89,6 +89,7 @@
             this.mtVoter.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
             this.mtVoter.UseSelectable = true;
             this.mtVoter.UseTileImage = true;
+            this.mtVoter.Click += new System.EventHandler(this.mtVoter_Click);
             // 
             // mtCandidate
             // 
@@ -118,6 +119,7 @@
             this.mtPin.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
             this.mtPin.UseSelectable = true;
             this.mtPin.UseTileImage = true;
+            this.mtPin.Click += new System.EventHandler(this.mtPin_Click);
             // 
             // mtBiometric
             // 
@@ -147,6 +149,7 @@
             this.mtPrivilege.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
             this.mtPrivilege.UseSelectable = true;
             this.mtPrivilege.UseTileImage = true;
+            this.mtPrivilege.Click += new System.EventHandler(this.mtPrivilege_Click);
             // 
             // mtUser
             // 
@@ -161,6 +164,7 @@
             this.mtUser.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
             this.mtUser.UseSelectable = true;
             this.mtUser.UseTileImage = true;
+            this.mtUser.Click += new System.EventHandler(this.mtUser_Click);
             // 
             // mtStatistics
             // 
@@ -175,6 +179,7 @@
             this.mtStatistics.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
             this.mtStatistics.UseSelectable = true;
             this.mtStatistics.UseTileImage = true;
+            this.mtStatistics.Click += new System.EventHandler(this.mtStatistics_Click);
             // 
             // mtSetDate
             // 
@@ -189,6 +194,7 @@
             this.mtSetDate.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
             this.mtSetDate.UseSelectable = true;
             this.mtSetDate.UseTileImage = true;
+            this.mtSetDate.Click += new System.EventHandler(this.mtSetDate_Click);
             // 
             // mtBackupDB
             // 

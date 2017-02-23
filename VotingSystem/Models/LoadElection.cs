@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Data;
-using System.Xml.Schema;
 using VotingSystem.Properties;
 
 namespace VotingSystem.Models

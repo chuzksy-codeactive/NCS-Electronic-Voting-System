@@ -1,10 +1,7 @@
 ﻿using System.Data.SqlClient;
-using System.Data;
-using System.Drawing;
 using System.Windows.Forms;
 using MetroFramework;
 using VotingSystem.Properties;
-using VotingSystem.SMSLive247Api;
 
 
 namespace VotingSystem

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data.SqlClient;
-using System.Data;
 using System.Windows.Forms;
 using MetroFramework;
 using VotingSystem.Properties;
@@ -9,9 +8,9 @@ namespace VotingSystem.UserControlSlides
 {
     public partial class PnlChangePassword : pnlSlider
     {
-        public event EventHandler ChangePasswordSuccess;
+        //public event EventHandler ChangePasswordSuccess;
         public event EventHandler Close;
-        public static  EventHandler Open { get; set; }
+        //public static  EventHandler Open { get; set; }
         public static EventHandler SlideBack { get; set; }
         public static string Username { get; set; }
         private SqlConnection _cnn;

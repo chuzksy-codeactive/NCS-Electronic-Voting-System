@@ -77,7 +77,7 @@
             this.txtSearch.MaxLength = 32767;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.WaterMark = "Search by PIN, Firstname or Lastname";
+            this.txtSearch.PromptText = "Search by PIN, Firstname or Lastname";
             this.txtSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtSearch.SelectedText = "";
             this.txtSearch.SelectionLength = 0;
@@ -312,6 +312,7 @@
             this.BackImagePadding = new System.Windows.Forms.Padding(300, 15, 0, 0);
             this.BackMaxSize = 32;
             this.ClientSize = new System.Drawing.Size(640, 553);
+            this.ControlBox = false;
             this.Controls.Add(this.lblVoterPin);
             this.Controls.Add(this.btnView);
             this.Controls.Add(this.grdCandidate);

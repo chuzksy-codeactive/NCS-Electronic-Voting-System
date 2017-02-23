@@ -10,7 +10,6 @@ using MetroFramework;
 using SecuGen.FDxSDKPro.Windows;
 using Tulpep.NotificationWindow;
 using VotingSystem.Models;
-using VotingSystem.SMSLive247Api;
 
 namespace VotingSystem
 {
