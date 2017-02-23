@@ -115,6 +115,7 @@
             // 
             // mContextMenuUser
             // 
+            this.mContextMenuUser.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.mContextMenuUser.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.changePasswordToolStripMenuItem,
             this.lockToolStripMenuItem,
@@ -122,38 +123,42 @@
             this.toolStripMenuItem1,
             this.exitToolStripMenuItem});
             this.mContextMenuUser.Name = "mContextMenuUser";
-            this.mContextMenuUser.Size = new System.Drawing.Size(167, 98);
+            this.mContextMenuUser.Size = new System.Drawing.Size(194, 106);
             // 
             // changePasswordToolStripMenuItem
             // 
+            this.changePasswordToolStripMenuItem.Image = global::VotingSystem.Properties.Resources.password;
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(193, 24);
             this.changePasswordToolStripMenuItem.Text = "change password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // lockToolStripMenuItem
             // 
+            this.lockToolStripMenuItem.Image = global::VotingSystem.Properties.Resources.padlock;
             this.lockToolStripMenuItem.Name = "lockToolStripMenuItem";
-            this.lockToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.lockToolStripMenuItem.Size = new System.Drawing.Size(193, 24);
             this.lockToolStripMenuItem.Text = "lock";
             this.lockToolStripMenuItem.Click += new System.EventHandler(this.lockToolStripMenuItem_Click);
             // 
             // logOffToolStripMenuItem
             // 
+            this.logOffToolStripMenuItem.Image = global::VotingSystem.Properties.Resources.sign_out_option;
             this.logOffToolStripMenuItem.Name = "logOffToolStripMenuItem";
-            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(193, 24);
             this.logOffToolStripMenuItem.Text = "log off";
             this.logOffToolStripMenuItem.Click += new System.EventHandler(this.logOffToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(163, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(190, 6);
             // 
             // exitToolStripMenuItem
             // 
+            this.exitToolStripMenuItem.Image = global::VotingSystem.Properties.Resources.logout;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(193, 24);
             this.exitToolStripMenuItem.Text = "exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 

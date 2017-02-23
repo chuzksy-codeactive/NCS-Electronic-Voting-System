@@ -1,5 +1,6 @@
 ﻿using System.Data.SqlClient;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 using MetroFramework;
 using VotingSystem.Properties;
@@ -41,6 +42,7 @@ namespace VotingSystem
             }
             if (password == txtPassword.Text)
             {
+                FormClosing -= FrmUserLock_FormClosing;
                 Close();
             }
             else
@@ -53,7 +55,14 @@ namespace VotingSystem
 
         private void FrmUserLock_Load(object sender, System.EventArgs e)
         {
+            
             lnkUser.Text = $"Only {Username} can unlock this.";
+        }
+
+        private void FrmUserLock_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+
         }
     }
 }

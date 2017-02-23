@@ -140,6 +140,12 @@
     <Compile Include="FrmPrivileges.Designer.cs">
       <DependentUpon>FrmPrivileges.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSplashScreen.Designer.cs">
+      <DependentUpon>FrmSplashScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTheme.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,12 +181,6 @@
     </Compile>
     <Compile Include="FrmVoteWithPincs.Designer.cs">
       <DependentUpon>FrmVoteWithPincs.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmWaitForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmWaitForm.Designer.cs">
-      <DependentUpon>FrmWaitForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmWebCam.cs">
       <SubType>Form</SubType>
@@ -262,6 +262,9 @@
     <EmbeddedResource Include="FrmPrivileges.resx">
       <DependentUpon>FrmPrivileges.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmSplashScreen.resx">
+      <DependentUpon>FrmSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmTheme.resx">
       <DependentUpon>FrmTheme.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,9 +282,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVoteWithPincs.resx">
       <DependentUpon>FrmVoteWithPincs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmWaitForm.resx">
-      <DependentUpon>FrmWaitForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmWebCam.resx">
       <DependentUpon>FrmWebCam.cs</DependentUpon>
@@ -414,6 +414,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\backgrond.png" />
+    <None Include="Resources\fingerprint-scan-loading %281%29.png" />
+    <None Include="Resources\fingerprint-scan-loading.png" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\sign-out-option.png" />
+    <None Include="Resources\padlock.png" />
+    <None Include="Resources\password.png" />
     <None Include="Resources\user %2810%291.png" />
     <None Include="Resources\user %2810%29.png" />
     <None Include="Resources\user %289%29.png" />
@@ -491,7 +498,6 @@
     <None Include="Resources\login.png" />
     <None Include="Resources\user.png" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

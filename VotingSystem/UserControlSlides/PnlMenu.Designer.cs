@@ -211,6 +211,7 @@
             this.Controls.Add(this.metroPanel1);
             this.Name = "PnlMenu";
             this.Size = new System.Drawing.Size(1096, 530);
+            this.Load += new System.EventHandler(this.PnlMenu_Load);
             this.metroPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

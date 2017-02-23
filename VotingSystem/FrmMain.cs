@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
@@ -21,7 +22,11 @@ namespace VotingSystem
         public static string Username { get; set; }
         public FrmMain()
         {
+            var t = new Thread(StartForm);
+            t.Start();
+            Thread.Sleep(2000);
             InitializeComponent();
+            t.Abort();
             StyleManager = msmMain;
 
             Shown += FrmMain_Shown;
@@ -44,6 +49,11 @@ namespace VotingSystem
             StyleManager.Style = Settings.Default.Style;
         }
 
+        public void StartForm()
+        {
+            Application.Run(new FrmSplashScreen());
+        }
+
         private void SlideBack(object sender, EventArgs eventArgs)
         {
             _change.Swipe(false);
@@ -51,14 +61,6 @@ namespace VotingSystem
             _menu.Swipe();
             lnkUser.Visible = true;
         }
-
-        //private void Open(object sender, EventArgs eventArgs)
-        //{
-        //    _change.Swipe(false);
-        //    _menu = new PnlMenu(this);
-        //    _menu.Swipe(false);
-        //    lnkUser.Visible = false;
-        //}
 
         private void _change_Close(object sender, EventArgs e)
         {
@@ -93,6 +95,7 @@ namespace VotingSystem
             lnkUser.Text = Username;
             FrmUserLock.Username = Username;
             PnlChangePassword.Username = Username;
+            PnlMenu.Username = Username;
         }
 
         private void _login_SettingClosed(object sender, EventArgs e)
@@ -111,6 +114,7 @@ namespace VotingSystem
             lnkUser.Text = Username;
             FrmUserLock.Username = Username;
             PnlChangePassword.Username = Username;
+            PnlMenu.Username = Username;
 
         }
 
