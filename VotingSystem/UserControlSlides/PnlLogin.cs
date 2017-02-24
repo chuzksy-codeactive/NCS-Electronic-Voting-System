@@ -100,7 +100,7 @@ namespace VotingSystem.UserControlSlides
             }
             SaveSettings();
         }
-        void SaveSettings()
+        public void SaveSettings()
         {
             Settings.Default.Server = mtServer.Text;
             Settings.Default.Database = mtDatabaseName.Text;

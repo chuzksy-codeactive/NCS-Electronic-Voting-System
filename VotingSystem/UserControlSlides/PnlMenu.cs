@@ -33,7 +33,7 @@ namespace VotingSystem.UserControlSlides
 
         private void metroTile4_Click(object sender, System.EventArgs e)
         {
-            var form = new FrmAddNewElection();
+            var form = new FrmElectionModule();
             Settings.Default.StyleManager.Clone(form);
             form.ShowDialog(this);
         }

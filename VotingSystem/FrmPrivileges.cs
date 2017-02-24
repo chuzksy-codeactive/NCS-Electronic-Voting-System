@@ -20,10 +20,15 @@ namespace VotingSystem
         private SqlConnection _cnn;
         private SqlDataReader _dr;
 
-        private string Registration { get; set; }
-        private string CastVote { get; set; }
-        private string Admin { get; set; }
-        private string View { get; set; }
+        private string Voter { get; set; }
+        private string Candidate { get; set; }
+        private string Pin { get; set; }
+        private string Biometric { get; set; }
+        private string Privileges { get; set; }
+        private string CreateUser { get; set; }
+        private string ViewStats { get; set; }
+        private string  SetDate { get; set; }
+        private string DbBackUp { get; set; }
         private string SelectedItem { get; set; }
 
         public FrmPrivileges()
@@ -38,6 +43,7 @@ namespace VotingSystem
 
         private void LoadUsers()
         {
+            cmbDeleteUser.Items.Clear();
             var users = Privilege.GetAllUsers();
             foreach (var user in users)
             {
@@ -53,6 +59,11 @@ namespace VotingSystem
             chkListbox.SetItemChecked(1, false);
             chkListbox.SetItemChecked(2, false);
             chkListbox.SetItemChecked(3, false);
+            chkListbox.SetItemChecked(4, false);
+            chkListbox.SetItemChecked(5, false);
+            chkListbox.SetItemChecked(6, false);
+            chkListbox.SetItemChecked(7, false);
+            chkListbox.SetItemChecked(8, false);
             LoadUsers();
         }
 
@@ -74,6 +85,11 @@ namespace VotingSystem
                             chkListbox.SetItemChecked(1, _dr.GetValue(3).ToString() != "0");
                             chkListbox.SetItemChecked(2, _dr.GetValue(4).ToString() != "0");
                             chkListbox.SetItemChecked(3, _dr.GetValue(5).ToString() != "0");
+                            chkListbox.SetItemChecked(4, _dr.GetValue(6).ToString() != "0");
+                            chkListbox.SetItemChecked(5, _dr.GetValue(7).ToString() != "0");
+                            chkListbox.SetItemChecked(6, _dr.GetValue(8).ToString() != "0");
+                            chkListbox.SetItemChecked(7, _dr.GetValue(9).ToString() != "0");
+                            chkListbox.SetItemChecked(8, _dr.GetValue(10).ToString() != "0");
                         }
                         else
                         {
@@ -89,23 +105,35 @@ namespace VotingSystem
             
             if (!string.IsNullOrEmpty(SelectedItem))
             {
-                Registration = chkListbox.GetItemChecked(0) == false ? "0" : "1";
-                CastVote = chkListbox.GetItemChecked(1) == false ? "0" : "1";
-                Admin = chkListbox.GetItemChecked(2) == false ? "0" : "1";
-                View = chkListbox.GetItemChecked(3) == false ? "0" : "1";
+                Voter = chkListbox.GetItemChecked(0) == false ? "0" : "1";
+                Candidate = chkListbox.GetItemChecked(1) == false ? "0" : "1";
+                Pin = chkListbox.GetItemChecked(2) == false ? "0" : "1";
+                Biometric = chkListbox.GetItemChecked(3) == false ? "0" : "1";
+                Privileges = chkListbox.GetItemChecked(4) == false ? "0" : "1";
+                CreateUser = chkListbox.GetItemChecked(5) == false ? "0" : "1";
+                ViewStats = chkListbox.GetItemChecked(6) == false ? "0" : "1";
+                SetDate = chkListbox.GetItemChecked(7) == false ? "0" : "1";
+                DbBackUp = chkListbox.GetItemChecked(8) == false ? "0" : "1";
                 const string @update =
-                    "update [User] set Registration=@reg, CastVote=@cast, " +
-                    "[Admin]=@admin,[View]=@view Where Username=@username";
+                    "update [User] set Voter=@voter, Candidate=@cand, " +
+                    "Pin=@pin, Biometric=@bio, Privilege=@pre, CreateUser=@user, "+
+                    "ViewStats=@view, SetDate=@set, DbBackUp=@db "+
+                    "Where Username=@username";
                 using (_cnn = new SqlConnection(Settings.Default.DbConn))
                 {
                     _cnn.Open();
                     using (_cmd = new SqlCommand(update, _cnn))
                     {
                         _cmd.Parameters.AddWithValue("@username", SelectedItem);
-                        _cmd.Parameters.AddWithValue("@reg", Registration);
-                        _cmd.Parameters.AddWithValue("@cast", CastVote);
-                        _cmd.Parameters.AddWithValue("@admin", Admin);
-                        _cmd.Parameters.AddWithValue("@view", View);
+                        _cmd.Parameters.AddWithValue("@voter", Voter);
+                        _cmd.Parameters.AddWithValue("@cand", Candidate);
+                        _cmd.Parameters.AddWithValue("@pin", Pin);
+                        _cmd.Parameters.AddWithValue("@bio", Biometric);
+                        _cmd.Parameters.AddWithValue("@pre", Privileges);
+                        _cmd.Parameters.AddWithValue("@user", CreateUser);
+                        _cmd.Parameters.AddWithValue("@view", ViewStats);
+                        _cmd.Parameters.AddWithValue("@set", SetDate);
+                        _cmd.Parameters.AddWithValue("@db", DbBackUp);
                         _cmd.ExecuteNonQuery();
                         MetroMessageBox.Show(this,@"Privilege assigned successfully", @"Assign Privilege to Users",MessageBoxButtons.OK, MessageBoxIcon.Information);
                         GetUsers();
