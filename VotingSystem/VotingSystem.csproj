@@ -47,6 +47,9 @@
       <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Common.DatabaseServices">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Office\Office16\DCF\Common.DatabaseServices.dll</HintPath>
+    </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\OneDrive\NCS\MetroFramework.ModernUI.Version.1.4.0\MetroFramework.dll</HintPath>
@@ -58,6 +61,11 @@
     <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\OneDrive\NCS\MetroFramework.ModernUI.Version.1.4.0\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Office\Office16\DCF\Microsoft.Office.Interop.Excel.dll</HintPath>
     </Reference>
     <Reference Include="SecuGen.FDxSDKPro.Windows">
       <HintPath>..\SecuGen.FDxSDKPro.Windows.dll</HintPath>
@@ -94,11 +102,23 @@
     <Compile Include="CreateUser.Designer.cs">
       <DependentUpon>CreateUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBackup.Designer.cs">
+      <DependentUpon>FrmBackup.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCandidateProfile.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmCandidateProfile.Designer.cs">
       <DependentUpon>FrmCandidateProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDbRetore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDbRetore.Designer.cs">
+      <DependentUpon>FrmDbRetore.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmElectionModule.cs">
       <SubType>Form</SubType>
@@ -118,6 +138,12 @@
     </Compile>
     <Compile Include="FrmCandidate.Designer.cs">
       <DependentUpon>FrmCandidate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmExport.Designer.cs">
+      <DependentUpon>FrmExport.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmIndex.cs">
       <SubType>Form</SubType>
@@ -196,6 +222,7 @@
     <Compile Include="Models\CandidateRegistration.cs" />
     <Compile Include="Models\Election.cs" />
     <Compile Include="Models\Functions.cs" />
+    <Compile Include="Models\Records.cs" />
     <Compile Include="Models\GetVoteCount.cs" />
     <Compile Include="Models\GetVoter.cs" />
     <Compile Include="Models\GroupCandidate.cs" />
@@ -241,8 +268,14 @@
     <EmbeddedResource Include="CreateUser.resx">
       <DependentUpon>CreateUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmBackup.resx">
+      <DependentUpon>FrmBackup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCandidateProfile.resx">
       <DependentUpon>FrmCandidateProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDbRetore.resx">
+      <DependentUpon>FrmDbRetore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmElectionModule.resx">
       <DependentUpon>FrmElectionModule.cs</DependentUpon>
@@ -252,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCandidate.resx">
       <DependentUpon>FrmCandidate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmExport.resx">
+      <DependentUpon>FrmExport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmIndex.resx">
       <DependentUpon>FrmIndex.cs</DependentUpon>
@@ -418,6 +454,17 @@
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
     <Content Include="ProductIcon.ico" />
+    <None Include="Resources\checked %281%29.png" />
+    <None Include="Resources\checked.png" />
+    <None Include="Resources\folder %283%29.png" />
+    <None Include="Resources\folder %282%29.png" />
+    <None Include="Resources\folder %281%29.png" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\export %282%29.png" />
+    <None Include="Resources\export %281%29.png" />
+    <None Include="Resources\export.png" />
+    <None Include="Resources\cloud-computing %281%29.png" />
+    <None Include="Resources\cloud-backup-up-arrow.png" />
     <None Include="Resources\backgrond.png" />
     <None Include="Resources\fingerprint-scan-loading %281%29.png" />
     <None Include="Resources\fingerprint-scan-loading.png" />

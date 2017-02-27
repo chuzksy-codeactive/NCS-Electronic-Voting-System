@@ -23,11 +23,11 @@ namespace VotingSystem
         public static string Username { get; set; }
         public FrmMain()
         {
-            var t = new Thread(StartForm);
-            t.Start();
-            Thread.Sleep(2000);
+            //var t = new Thread(StartForm);
+            //t.Start();
+            //Thread.Sleep(2000);
             InitializeComponent();
-            t.Abort();
+            //t.Abort();
             StyleManager = msmMain;
 
             _login = new PnlLogin(this);
@@ -48,10 +48,10 @@ namespace VotingSystem
             StyleManager.Style = Settings.Default.Style;
         }
 
-        public void StartForm()
-        {
-            Application.Run(new FrmSplashScreen());
-        }
+        //public void StartForm()
+        //{
+        //    Application.Run(new FrmSplashScreen());
+        //}
 
         private void SlideBack(object sender, EventArgs eventArgs)
         {

@@ -107,5 +107,12 @@ namespace VotingSystem.UserControlSlides
             Settings.Default.StyleManager.Clone(form);
             form.ShowDialog(this);
         }
+
+        private void mtExport_Click(object sender, EventArgs e)
+        {
+            var form = new FrmExport();
+            Settings.Default.StyleManager.Clone(form);
+            form.ShowDialog(this);
+        }
     }
 }
