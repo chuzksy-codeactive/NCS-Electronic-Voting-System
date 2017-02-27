@@ -32,7 +32,7 @@ namespace VotingSystem
             {
                 txtBackupLocation.Text = dlg.FileName;
                 lblError.Text = "";
-                lblPercent.Text = @"0%";
+                lblPercent.Text = @"0 %";
                 lblStatus.Text = string.Empty;
                 progressBar.Value = 0;
             }
@@ -83,18 +83,15 @@ namespace VotingSystem
         {
             if (e.Error != null)
             {
-                Cursor.Current = Cursors.WaitCursor;
                 lblStatus.Invoke((MethodInvoker) delegate
                 {
                     lblStatus.Text = e.Error.Message;
                 });
-                Cursor.Current = Cursors.Default;
             }
         }
 
         private void DbRestore_PercentComplete(object sender, PercentCompleteEventArgs e)
         {
-            Cursor.Current = Cursors.WaitCursor;
             progressBar.Invoke((MethodInvoker) delegate
             {
                 progressBar.Value = e.Percent;
@@ -104,7 +101,6 @@ namespace VotingSystem
             {
                 lblPercent.Text = $"{e.Percent}";
             });
-            Cursor.Current = Cursors.Default;
         }
 
 

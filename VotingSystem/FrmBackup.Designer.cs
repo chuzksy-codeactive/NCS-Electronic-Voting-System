@@ -29,16 +29,22 @@
         private void InitializeComponent()
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.lblPercent = new MetroFramework.Controls.MetroLabel();
+            this.lblStatus = new MetroFramework.Controls.MetroLabel();
+            this.progressBar = new MetroFramework.Controls.MetroProgressBar();
+            this.lblError = new MetroFramework.Controls.MetroLabel();
             this.lnkBrowse = new MetroFramework.Controls.MetroLink();
             this.txtBackupLocation = new MetroFramework.Controls.MetroTextBox();
             this.lnkBackup = new MetroFramework.Controls.MetroLink();
             this.lnkCancel = new MetroFramework.Controls.MetroLink();
-            this.lblError = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroPanel1
             // 
+            this.metroPanel1.Controls.Add(this.lblPercent);
+            this.metroPanel1.Controls.Add(this.lblStatus);
+            this.metroPanel1.Controls.Add(this.progressBar);
             this.metroPanel1.Controls.Add(this.lblError);
             this.metroPanel1.Controls.Add(this.lnkBrowse);
             this.metroPanel1.Controls.Add(this.txtBackupLocation);
@@ -54,12 +60,55 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
+            // lblPercent
+            // 
+            this.lblPercent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblPercent.AutoSize = true;
+            this.lblPercent.Location = new System.Drawing.Point(430, 147);
+            this.lblPercent.Name = "lblPercent";
+            this.lblPercent.Size = new System.Drawing.Size(31, 19);
+            this.lblPercent.TabIndex = 10;
+            this.lblPercent.Text = "0 %";
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblStatus.Location = new System.Drawing.Point(2, 193);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(0, 0);
+            this.lblStatus.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblStatus.TabIndex = 9;
+            this.lblStatus.UseStyleColors = true;
+            // 
+            // progressBar
+            // 
+            this.progressBar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.progressBar.Location = new System.Drawing.Point(90, 143);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(340, 23);
+            this.progressBar.TabIndex = 8;
+            // 
+            // lblError
+            // 
+            this.lblError.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblError.AutoSize = true;
+            this.lblError.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.lblError.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblError.Location = new System.Drawing.Point(90, 92);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 0);
+            this.lblError.Style = MetroFramework.MetroColorStyle.Red;
+            this.lblError.TabIndex = 4;
+            this.lblError.UseStyleColors = true;
+            // 
             // lnkBrowse
             // 
             this.lnkBrowse.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lnkBrowse.Image = global::VotingSystem.Properties.Resources.folder__2_;
             this.lnkBrowse.ImageSize = 32;
-            this.lnkBrowse.Location = new System.Drawing.Point(430, 97);
+            this.lnkBrowse.Location = new System.Drawing.Point(430, 66);
             this.lnkBrowse.Name = "lnkBrowse";
             this.lnkBrowse.NoFocusImage = global::VotingSystem.Properties.Resources.folder__3_;
             this.lnkBrowse.Size = new System.Drawing.Size(30, 23);
@@ -85,7 +134,7 @@
             this.txtBackupLocation.DisplayIcon = true;
             this.txtBackupLocation.Icon = global::VotingSystem.Properties.Resources.folder__1_;
             this.txtBackupLocation.Lines = new string[0];
-            this.txtBackupLocation.Location = new System.Drawing.Point(90, 94);
+            this.txtBackupLocation.Location = new System.Drawing.Point(90, 63);
             this.txtBackupLocation.MaxLength = 32767;
             this.txtBackupLocation.Name = "txtBackupLocation";
             this.txtBackupLocation.PasswordChar = '\0';
@@ -135,19 +184,6 @@
             this.lnkCancel.UseSelectable = true;
             this.lnkCancel.Click += new System.EventHandler(this.lnkCancel_Click);
             // 
-            // lblError
-            // 
-            this.lblError.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblError.AutoSize = true;
-            this.lblError.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.lblError.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblError.Location = new System.Drawing.Point(90, 123);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(0, 0);
-            this.lblError.Style = MetroFramework.MetroColorStyle.Red;
-            this.lblError.TabIndex = 4;
-            this.lblError.UseStyleColors = true;
-            // 
             // FrmBackup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,5 +209,8 @@
         private MetroFramework.Controls.MetroLink lnkCancel;
         private MetroFramework.Controls.MetroLink lnkBackup;
         private MetroFramework.Controls.MetroLabel lblError;
+        private MetroFramework.Controls.MetroLabel lblPercent;
+        private MetroFramework.Controls.MetroLabel lblStatus;
+        private MetroFramework.Controls.MetroProgressBar progressBar;
     }
 }

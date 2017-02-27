@@ -82,6 +82,7 @@
             this.metroLabel1.Size = new System.Drawing.Size(145, 19);
             this.metroLabel1.TabIndex = 4;
             this.metroLabel1.Text = "Database Management";
+            this.metroLabel1.UseCustomBackColor = true;
             // 
             // metroLabel2
             // 
@@ -92,6 +93,7 @@
             this.metroLabel2.Size = new System.Drawing.Size(132, 19);
             this.metroLabel2.TabIndex = 5;
             this.metroLabel2.Text = "System Management";
+            this.metroLabel2.UseCustomBackColor = true;
             // 
             // mtVoter
             // 

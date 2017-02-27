@@ -4,6 +4,8 @@ using MetroFramework.Forms;
 using System.Data;
 using System.Data.SqlClient;
 using MetroFramework;
+using Microsoft.SqlServer.Management.Common;
+using Microsoft.SqlServer.Management.Smo;
 using VotingSystem.Properties;
 
 namespace VotingSystem
@@ -29,28 +31,58 @@ namespace VotingSystem
                 lblError.Text = @"Select a location path first";
             else
             {
+                var location = txtBackupLocation.Text +"\\"+ "VotingSystem" + DateTime.Now.Ticks + ".bak";
                 lblError.Text = string.Empty;
+                progressBar.Value = 0;
                 var result = MetroMessageBox.Show(this, "Are you sure you want to back up the database?", "Database backup",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.No) return;
-                const string database = "VotingSystem";
-                var backup = "BACKUP DATABASE " +
-                                database +
-                                " TO DISK = '" + txtBackupLocation.Text + "\\" + database + "-" +
-                                DateTime.Now.Ticks + ".bak' ";
-                using (_cnn = new SqlConnection(Settings.Default.DbConn))
+                try
                 {
-                    _cnn.Open();
-                    using (_cmd = new SqlCommand(backup, _cnn))
+                    var dbServer =
+                        new Server(new ServerConnection(Properties.Settings.Default.Server,
+                            Properties.Settings.Default.Username, Properties.Settings.Default.Password));
+                    var dbBackup = new Backup()
                     {
-                        Cursor.Current = Cursors.WaitCursor;
-                        _cmd.ExecuteNonQuery();
-                        Cursor.Current = Cursors.Default;
-                        MetroMessageBox.Show(this, "Database has been backup successfully", "Database Backup",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                        Action = BackupActionType.Database,
+                        Database = Properties.Settings.Default.Database
+                    };
+                    dbBackup.Devices.AddDevice(location, DeviceType.File);
+                    dbBackup.Initialize = true;
+                    dbBackup.PercentComplete += DbBackup_PercentComplete;
+                    dbBackup.Complete += DbBackup_Complete;
+                    dbBackup.SqlBackupAsync(dbServer);
                 }
+                catch (Exception ex)
+                {
+                    MetroMessageBox.Show(this, ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
             }
+        }
+
+        private void DbBackup_Complete(object sender, ServerMessageEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                lblStatus.Invoke((MethodInvoker)delegate
+                {
+                    lblStatus.Text = e.Error.Message;
+                });
+            }
+        }
+
+        private void DbBackup_PercentComplete(object sender, PercentCompleteEventArgs e)
+        {
+            progressBar.Invoke((MethodInvoker)delegate
+            {
+                progressBar.Value = e.Percent;
+                progressBar.Update();
+            });
+            lblPercent.Invoke((MethodInvoker)delegate
+            {
+                lblPercent.Text = $"{e.Percent}";
+            });
         }
 
         private void lnkBrowse_Click(object sender, EventArgs e)

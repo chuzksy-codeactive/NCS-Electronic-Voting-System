@@ -180,9 +180,9 @@
             this.lblPercent.AutoSize = true;
             this.lblPercent.Location = new System.Drawing.Point(432, 140);
             this.lblPercent.Name = "lblPercent";
-            this.lblPercent.Size = new System.Drawing.Size(27, 19);
+            this.lblPercent.Size = new System.Drawing.Size(31, 19);
             this.lblPercent.TabIndex = 7;
-            this.lblPercent.Text = "0%";
+            this.lblPercent.Text = "0 %";
             // 
             // FrmDbRetore
             // 

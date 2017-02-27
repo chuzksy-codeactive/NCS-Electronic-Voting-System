@@ -38,11 +38,11 @@ namespace VotingSystem
 
         private void lnkExport_Click(object sender, System.EventArgs e)
         {
-            Cursor.Current = Cursors.WaitCursor;
             using (var sfd = new SaveFileDialog() {Filter = @"Excel Workbook|*.xls", ValidateNames = true})
             {
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
+                    Cursor.Current = Cursors.WaitCursor;
                     var app = new Microsoft.Office.Interop.Excel.Application();
                     var wb = app.Workbooks.Add(XlSheetType.xlWorksheet);
                     var ws = (Worksheet) app.ActiveSheet;
@@ -73,12 +73,12 @@ namespace VotingSystem
                     wb.SaveAs(sfd.FileName, XlFileFormat.xlWorkbookDefault, Type.Missing, Type.Missing, true, false, XlSaveAsAccessMode.xlNoChange,
                         XlSaveConflictResolution.xlLocalSessionChanges, Type.Missing, Type.Missing);
                     app.Quit();
+                    Cursor.Current = Cursors.Default;
                     MetroMessageBox.Show(this, @"Your data has been successfully exported", @"Export records",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
             }
-            Cursor.Current = Cursors.Default;
         }
 
         private void metroLink1_Click(object sender, EventArgs e)
