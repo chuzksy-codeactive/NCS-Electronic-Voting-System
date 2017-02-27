@@ -237,6 +237,7 @@
             this.mtBackupDB.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
             this.mtBackupDB.UseSelectable = true;
             this.mtBackupDB.UseTileImage = true;
+            this.mtBackupDB.Click += new System.EventHandler(this.mtBackupDB_Click);
             // 
             // mtRestoreDb
             // 
@@ -251,6 +252,7 @@
             this.mtRestoreDb.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.mtRestoreDb.UseSelectable = true;
             this.mtRestoreDb.UseTileImage = true;
+            this.mtRestoreDb.Click += new System.EventHandler(this.mtRestoreDb_Click);
             // 
             // mtExport
             // 

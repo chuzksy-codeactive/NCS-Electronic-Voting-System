@@ -114,5 +114,19 @@ namespace VotingSystem.UserControlSlides
             Settings.Default.StyleManager.Clone(form);
             form.ShowDialog(this);
         }
+
+        private void mtBackupDB_Click(object sender, EventArgs e)
+        {
+            var form = new FrmBackup();
+            Settings.Default.StyleManager.Clone(form);
+            form.ShowDialog(this);
+        }
+
+        private void mtRestoreDb_Click(object sender, EventArgs e)
+        {
+            var form = new FrmDbRetore();
+            Settings.Default.StyleManager.Clone(form);
+            form.ShowDialog(this);
+        }
     }
 }

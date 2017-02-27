@@ -34,6 +34,9 @@
             this.lblError = new MetroFramework.Controls.MetroLabel();
             this.lnkBrowse = new MetroFramework.Controls.MetroLink();
             this.txtBackupLocation = new MetroFramework.Controls.MetroTextBox();
+            this.progressBar = new MetroFramework.Controls.MetroProgressBar();
+            this.lblStatus = new MetroFramework.Controls.MetroLabel();
+            this.lblPercent = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +51,7 @@
             this.lnkBackup.NoFocusImage = global::VotingSystem.Properties.Resources.checked__1_;
             this.lnkBackup.Size = new System.Drawing.Size(50, 45);
             this.lnkBackup.TabIndex = 7;
-            this.lnkBackup.Text = "&backup";
+            this.lnkBackup.Text = "&restore";
             this.lnkBackup.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lnkBackup.UseSelectable = true;
             this.lnkBackup.Click += new System.EventHandler(this.lnkBackup_Click);
@@ -71,6 +74,9 @@
             // 
             // metroPanel1
             // 
+            this.metroPanel1.Controls.Add(this.lblPercent);
+            this.metroPanel1.Controls.Add(this.lblStatus);
+            this.metroPanel1.Controls.Add(this.progressBar);
             this.metroPanel1.Controls.Add(this.lblError);
             this.metroPanel1.Controls.Add(this.lnkBrowse);
             this.metroPanel1.Controls.Add(this.txtBackupLocation);
@@ -92,7 +98,7 @@
             this.lblError.AutoSize = true;
             this.lblError.FontSize = MetroFramework.MetroLabelSize.Small;
             this.lblError.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblError.Location = new System.Drawing.Point(90, 123);
+            this.lblError.Location = new System.Drawing.Point(90, 93);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(0, 0);
             this.lblError.Style = MetroFramework.MetroColorStyle.Red;
@@ -104,7 +110,7 @@
             this.lnkBrowse.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lnkBrowse.Image = global::VotingSystem.Properties.Resources.folder__2_;
             this.lnkBrowse.ImageSize = 32;
-            this.lnkBrowse.Location = new System.Drawing.Point(430, 97);
+            this.lnkBrowse.Location = new System.Drawing.Point(430, 67);
             this.lnkBrowse.Name = "lnkBrowse";
             this.lnkBrowse.NoFocusImage = global::VotingSystem.Properties.Resources.folder__3_;
             this.lnkBrowse.Size = new System.Drawing.Size(30, 23);
@@ -130,7 +136,7 @@
             this.txtBackupLocation.DisplayIcon = true;
             this.txtBackupLocation.Icon = global::VotingSystem.Properties.Resources.folder__1_;
             this.txtBackupLocation.Lines = new string[0];
-            this.txtBackupLocation.Location = new System.Drawing.Point(90, 94);
+            this.txtBackupLocation.Location = new System.Drawing.Point(90, 64);
             this.txtBackupLocation.MaxLength = 32767;
             this.txtBackupLocation.Name = "txtBackupLocation";
             this.txtBackupLocation.PasswordChar = '\0';
@@ -147,6 +153,36 @@
             this.txtBackupLocation.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtBackupLocation.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txtBackupLocation.TextChanged += new System.EventHandler(this.txtBackupLocation_TextChanged);
+            // 
+            // progressBar
+            // 
+            this.progressBar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.progressBar.Location = new System.Drawing.Point(92, 136);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(340, 23);
+            this.progressBar.TabIndex = 5;
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblStatus.Location = new System.Drawing.Point(4, 192);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(0, 0);
+            this.lblStatus.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblStatus.TabIndex = 6;
+            this.lblStatus.UseStyleColors = true;
+            // 
+            // lblPercent
+            // 
+            this.lblPercent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblPercent.AutoSize = true;
+            this.lblPercent.Location = new System.Drawing.Point(432, 140);
+            this.lblPercent.Name = "lblPercent";
+            this.lblPercent.Size = new System.Drawing.Size(27, 19);
+            this.lblPercent.TabIndex = 7;
+            this.lblPercent.Text = "0%";
             // 
             // FrmDbRetore
             // 
@@ -173,5 +209,8 @@
         private MetroFramework.Controls.MetroLabel lblError;
         private MetroFramework.Controls.MetroLink lnkBrowse;
         private MetroFramework.Controls.MetroTextBox txtBackupLocation;
+        private MetroFramework.Controls.MetroLabel lblPercent;
+        private MetroFramework.Controls.MetroLabel lblStatus;
+        private MetroFramework.Controls.MetroProgressBar progressBar;
     }
 }
