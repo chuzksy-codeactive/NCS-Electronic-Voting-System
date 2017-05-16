@@ -50,7 +50,9 @@
             "Create a new User",
             "View Statistics",
             "Set Election Date",
-            "Db BackUp"});
+            "Db BackUp",
+            "Db Restore",
+            "Export"});
             this.chkListbox.Location = new System.Drawing.Point(179, 160);
             this.chkListbox.Name = "chkListbox";
             this.chkListbox.Size = new System.Drawing.Size(178, 224);

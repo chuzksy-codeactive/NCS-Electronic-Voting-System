@@ -60,6 +60,8 @@ namespace VotingSystem.UserControlSlides
                         mtStatistics.Enabled = _dr.GetValue(8).ToString() != "0";
                         mtSetDate.Enabled = _dr.GetValue(9).ToString() != "0";
                         mtBackupDB.Enabled = _dr.GetValue(10).ToString() != "0";
+                        mtRestoreDb.Enabled = _dr.GetValue(11).ToString() != "0";
+                        mtExport.Enabled = _dr.GetValue(12).ToString() != "0";
                     }
                 }
             }

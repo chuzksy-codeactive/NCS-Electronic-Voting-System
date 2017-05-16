@@ -29,6 +29,8 @@ namespace VotingSystem
         private string ViewStats { get; set; }
         private string  SetDate { get; set; }
         private string DbBackUp { get; set; }
+        private string DbRestore { get; set; }
+        public string Export { get; set; }
         private string SelectedItem { get; set; }
 
         public FrmPrivileges()
@@ -64,6 +66,8 @@ namespace VotingSystem
             chkListbox.SetItemChecked(6, false);
             chkListbox.SetItemChecked(7, false);
             chkListbox.SetItemChecked(8, false);
+            chkListbox.SetItemChecked(9, false);
+            chkListbox.SetItemChecked(10, false);
             LoadUsers();
         }
 
@@ -90,6 +94,8 @@ namespace VotingSystem
                             chkListbox.SetItemChecked(6, _dr.GetValue(8).ToString() != "0");
                             chkListbox.SetItemChecked(7, _dr.GetValue(9).ToString() != "0");
                             chkListbox.SetItemChecked(8, _dr.GetValue(10).ToString() != "0");
+                            chkListbox.SetItemChecked(9, _dr.GetValue(11).ToString() != "0");
+                            chkListbox.SetItemChecked(10, _dr.GetValue(12).ToString() != "0");
                         }
                         else
                         {
@@ -114,10 +120,14 @@ namespace VotingSystem
                 ViewStats = chkListbox.GetItemChecked(6) == false ? "0" : "1";
                 SetDate = chkListbox.GetItemChecked(7) == false ? "0" : "1";
                 DbBackUp = chkListbox.GetItemChecked(8) == false ? "0" : "1";
+                DbRestore = chkListbox.GetItemChecked(9) == false ? "0" : "1";
+                Export = chkListbox.GetItemChecked(10) == false ? "0" : "1";
+                
                 const string @update =
                     "update [User] set Voter=@voter, Candidate=@cand, " +
                     "Pin=@pin, Biometric=@bio, Privilege=@pre, CreateUser=@user, "+
-                    "ViewStats=@view, SetDate=@set, DbBackUp=@db "+
+                    "ViewStats=@view, SetDate=@set, DbBackUp=@db, "+
+                    "DbRestore=@res, Export=@exp " +
                     "Where Username=@username";
                 using (_cnn = new SqlConnection(Settings.Default.DbConn))
                 {
@@ -134,6 +144,8 @@ namespace VotingSystem
                         _cmd.Parameters.AddWithValue("@view", ViewStats);
                         _cmd.Parameters.AddWithValue("@set", SetDate);
                         _cmd.Parameters.AddWithValue("@db", DbBackUp);
+                        _cmd.Parameters.AddWithValue("@res", DbRestore);
+                        _cmd.Parameters.AddWithValue("@exp", Export);
                         _cmd.ExecuteNonQuery();
                         MetroMessageBox.Show(this,@"Privilege assigned successfully", @"Assign Privilege to Users",MessageBoxButtons.OK, MessageBoxIcon.Information);
                         GetUsers();
